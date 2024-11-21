@@ -89,6 +89,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -100,17 +104,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4137402379974125343, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137402379974125343, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137402379974125343, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4195534481989851636, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: Speed
@@ -125,6 +133,22 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: CanJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 5643778503946876671}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: GoatData
+      value: 
+      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5
       objectReference: {fileID: 0}
@@ -132,9 +156,29 @@ PrefabInstance:
       propertyPath: JumpForce
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _jumpForce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _airControl
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _rangeAttaque
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _layerMaskGrounded.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _layerMaskObstacle.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: field of view
-      value: 49.210537
+      value: 145.4412
       objectReference: {fileID: 0}
     - target: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_FOVAxisMode
@@ -164,5 +208,10 @@ PrefabInstance:
 --- !u!4 &314913895571788314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3250535698802893667, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 2973207517309137273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &5643778503946876671 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
   m_PrefabInstance: {fileID: 2973207517309137273}
   m_PrefabAsset: {fileID: 0}

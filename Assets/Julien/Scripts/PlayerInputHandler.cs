@@ -9,14 +9,14 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 Move;
     
     private Rigidbody2D rb2d;
-    private Movement movement;
+    private Goat _goat;
     private PlayerInput _playerInput;
     private bool _isControllerConnected;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        movement = GetComponent<Movement>();
+        _goat = GetComponent<Goat>();
         _playerInput = GetComponent<PlayerInput>();
         if (_playerInput == null) throw new NullReferenceException("PlayerInputManager is null");
     }
@@ -30,10 +30,13 @@ public class PlayerInputHandler : MonoBehaviour
         _playerInput.actions["Movement"].canceled += OnMove;
         
         _playerInput.actions["Dash"].performed += OnDash;
-        _playerInput.actions["Dash"].canceled += OnDash;
+        //_playerInput.actions["Dash"].canceled += OnDash;
+        
+        _playerInput.actions["Attaque"].performed += OnAttaque;
+        //_playerInput.actions["Attaque"].canceled += OnAttaque;
         
         _playerInput.actions["Jump"].performed += OnJump;
-        _playerInput.actions["Jump"].canceled += OnJump;
+        //_playerInput.actions["Jump"].canceled += OnJump;
         
         DetectCurrentInputDevice();
     }
@@ -48,6 +51,9 @@ public class PlayerInputHandler : MonoBehaviour
         
         _playerInput.actions["Dash"].performed -= OnDash;
         _playerInput.actions["Dash"].canceled -= OnDash;
+        
+        _playerInput.actions["Dash"].performed -= OnAttaque;
+        _playerInput.actions["Dash"].canceled -= OnAttaque;
         
         _playerInput.actions["Jump"].performed -= OnJump;
         _playerInput.actions["Jump"].canceled -= OnJump;
@@ -73,7 +79,7 @@ public class PlayerInputHandler : MonoBehaviour
     
     private void OnMove(InputAction.CallbackContext context)
     {
-        if (movement.IsDashing == false)
+        if (_goat.IsDashing == false)
         {
             Move = context.ReadValue<Vector2>();  
         }
@@ -81,17 +87,23 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        if (movement.IsDashing == false)
+        if (_goat.IsDashing == false)
         {
-            movement.OnJump(); 
+            _goat.OnJump(); 
         }
     }
 
     private void OnDash(InputAction.CallbackContext context)
     {
-        if (movement.IsDashing == false && movement.CanDash)
+        if (_goat.IsDashing == false && _goat.CanDash)
         {
-            movement.OnDash(); 
+            _goat.OnDash(); 
+            Debug.Log("Dash");
         }
+    }
+
+    private void OnAttaque(InputAction.CallbackContext context)
+    {
+        _goat.OnAttaque();
     }
 }
