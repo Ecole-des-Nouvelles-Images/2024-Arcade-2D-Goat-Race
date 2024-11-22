@@ -1,10 +1,13 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
     public static event Action<bool> OnInputDeviceChanged;
+    [SerializeField] private GameManager GameManager;
+    [SerializeField] private PlayerInputManager PlayerInputManager;
     
     public Vector2 Move;
     
@@ -30,15 +33,16 @@ public class PlayerInputHandler : MonoBehaviour
         _playerInput.actions["Movement"].canceled += OnMove;
         
         _playerInput.actions["Dash"].performed += OnDash;
-        //_playerInput.actions["Dash"].canceled += OnDash;
         
         _playerInput.actions["Attaque"].performed += OnAttaque;
-        //_playerInput.actions["Attaque"].canceled += OnAttaque;
         
         _playerInput.actions["Jump"].performed += OnJump;
-        //_playerInput.actions["Jump"].canceled += OnJump;
         
         DetectCurrentInputDevice();
+        GameManager.AddTolist(PlayerInputManager.playerPrefab);
+        
+        // GameManager.PlayerPrefabs.Add(PlayerInputManager.playerPrefab.gameObject);
+        // Debug.Log(PlayerInputManager.playerPrefab.gameObject+ " Join the game " );
     }
     
     private void OnDisable()
@@ -81,7 +85,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (_goat.IsDashing == false)
         {
-            Move = context.ReadValue<Vector2>();  
+            Move = context.ReadValue<Vector2>();
         }
     }
 
@@ -98,7 +102,6 @@ public class PlayerInputHandler : MonoBehaviour
         if (_goat.IsDashing == false && _goat.CanDash)
         {
             _goat.OnDash(); 
-            Debug.Log("Dash");
         }
     }
 

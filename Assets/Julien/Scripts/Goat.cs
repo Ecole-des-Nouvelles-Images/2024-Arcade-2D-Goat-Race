@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -10,27 +11,31 @@ using UnityEngine.UIElements;
 public class Goat : MonoBehaviour
 {
     public GoatData GoatData;
-    public Sprite SpriteRenderer;
+    public Sprite Sprite;
+    private SpriteRenderer _spriteRenderer;
+    
     private float _sizeX;
     private float _sizeY;
     private BoxCollider2D _boxCollider2D;
     private float _cameraDistance;
     [SerializeField] private Camera _camera;
-    [SerializeField] private float FOV;
+    private float CameraZ;
+    private float CameraY;
+    private float CameraX;
     
     // Les déplacement
-    [SerializeField] private float _airControl = 0.5f; 
-    [SerializeField] private float _speed =5f;
-    [SerializeField] private float _jumpForce = 3f;
+    private float _airControl = 0.5f; 
+    private float _speed =5f; 
+    private float _jumpForce = 3f;
     private Vector2 _movementInput;
     private PlayerInputHandler _playerInputHandler;
    
    // Dash
-   public bool CanDash = true;
-   public bool IsDashing;
-   [SerializeField] private float DashDelay = 1.5f;
-   [SerializeField] private float DashPower = 1.5f;
-   [SerializeField] private float DashReload = 5f;
+    public bool CanDash = true;
+    public bool IsDashing;
+    private float _dashDelay = 1.5f;
+    private float _dashPower = 1.5f;
+    private float _dashReload = 5f;
    
     // Is Grounded
     [SerializeField] private LayerMask _layerMaskGrounded;
@@ -38,6 +43,7 @@ public class Goat : MonoBehaviour
     private bool CanJump; 
     
     // Atataque
+    [SerializeField] private bool _canAttaque;
     [SerializeField] private LayerMask _layerMaskObstacle;
     [SerializeField] private float _rangeAttaque;
     [SerializeField] private int _damage;
@@ -56,21 +62,25 @@ public class Goat : MonoBehaviour
 
     private void LoadGoat()
     {
-        SpriteRenderer = GoatData.Sprite;
-        gameObject.GetComponent<SpriteRenderer>().sprite = SpriteRenderer;
+        Sprite = GoatData.Sprite;
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _spriteRenderer.sprite = Sprite;
         
         _damage = GoatData.Damage;
         _rangeAttaque = GoatData.RangeAttaque;
         _speed = GoatData.Speed;
         _jumpForce = GoatData.JumpForce;
         _rayDistance = GoatData.RayDistance;
-        _cameraDistance = GoatData.CameraFOV;
+        _cameraDistance = GoatData.CameraZ;
         
         _sizeX = GoatData.Collider2DAxeX;
         _sizeY = GoatData.Collider2DAxeY;
 
-        FOV = GoatData.CameraFOV;
-        _camera.fieldOfView = FOV;
+        CameraZ = GoatData.CameraZ;
+        CameraY = GoatData.CameraY;
+        CameraX = GoatData.CameraX;
+        
+        _camera.transform.localPosition = new Vector3(CameraX, CameraY, CameraZ);
 
         _boxCollider2D.size = new Vector2(_sizeX,_sizeY);
     }
@@ -85,24 +95,10 @@ public class Goat : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // DEPLACEMENT
-        float Horizontal = _playerInputHandler.Move.x;
-        Vector2 Velocity = rb2d.velocity;
-        Velocity.x = Horizontal * _speed;
-        
-        rb2d.velocity = Velocity;
+        OnMove();
     }
     
-    
-    // MOUVEMENT
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        _movementInput = context.ReadValue<Vector2>();
-        
-        float horizontal = _movementInput.x * Time.deltaTime * _speed;
-        Vector2 direction = new Vector2(horizontal, 0).normalized;
-        rb2d.AddForce(direction * _speed);
-    }
+    // SAUT
     public void OnJump()
     {
         if (CanJump)
@@ -111,36 +107,77 @@ public class Goat : MonoBehaviour
             Debug.Log("Jump");
         }
     }
-
+    
+    // DEPLACEMENT 
+    public void OnMove()
+    {
+        float Horizontal = _playerInputHandler.Move.x;
+        Vector2 Velocity = rb2d.velocity;
+        Velocity.x = Horizontal * _speed;
+        
+        rb2d.velocity = Velocity;
+        
+        if (_playerInputHandler.Move.x >= 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        else
+        {
+            _spriteRenderer.flipX = false;
+        }
+    }
+    
     // ATTAQUE
     public void OnAttaque()
     {
-        if (_playerInputHandler.Move.x >= 0)
+        if (_canAttaque)
         {
-            Debug.DrawRay(transform.position, Vector2.right, Color.blue, _rangeAttaque);
-            RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.right, _rangeAttaque, _layerMaskObstacle);
-            _hitResult = hit2D;
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, -Vector2.right, Color.blue, _rangeAttaque);
-            RaycastHit2D hit2D = Physics2D.Raycast(transform.position, -Vector2.right, _rangeAttaque, _layerMaskObstacle);
-            _hitResult = hit2D;
-        }
-        
+            // ATTAQUE DROITE
+            if (_playerInputHandler.Move.x >= 0)
+            {
+                Debug.DrawRay(transform.position, Vector2.right * _rangeAttaque, Color.blue, 1f);
+                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.right, _rangeAttaque, _layerMaskObstacle);
+                _hitResult = hit2D;
 
-        if (_hitResult.collider != null)
-        {
-            Debug.Log(" à toucher "  +  _hitResult.collider.name);
-            
-        }
-        else
-        {
-            Debug.Log(" touche pas ");
-        }
+                _canAttaque = false;
+                StartCoroutine("RealoadAttaque");
+            }
+            // ATTAQUE GAUCHE
+            else
+            {
+                Debug.DrawRay(transform.position, -Vector2.right * _rangeAttaque, Color.blue, 1f);
+                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, -Vector2.right, _rangeAttaque, _layerMaskObstacle);
+                _hitResult = hit2D;
+                
+                _canAttaque = false;
+                StartCoroutine("RealoadAttaque");
+            }
+        
+            // JOUER AVEC CE QUE LE RAYCAST A TOUCHER
+            if (_hitResult.collider != null)
+            {
+                Debug.Log(" à toucher "  +  _hitResult.collider.name);
+                _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
+                if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
+                {
+                    Destroy(_hitResult.collider.gameObject);
+                }
+            }
+            else
+            {
+                Debug.Log(" touche pas ");
+            }
         
         
-        Debug.Log("Attaque");
+            Debug.Log("Attaque");
+        }
+    }
+
+    public IEnumerator RealoadAttaque()
+    {
+        yield return new WaitForSeconds(1f);
+        _canAttaque = true;
+        Debug.Log("à re son attaque");
     }
 
     // DASH
@@ -150,11 +187,11 @@ public class Goat : MonoBehaviour
         
         if (_playerInputHandler.Move.x >= 0 && CanDash)
         {
-            _playerInputHandler.Move.x = DashPower;
+            _playerInputHandler.Move.x = _dashPower;
         }
         else
         {
-            _playerInputHandler.Move.x = -DashPower;
+            _playerInputHandler.Move.x = -_dashPower;
         }
         
         CanDash = false;
@@ -162,10 +199,10 @@ public class Goat : MonoBehaviour
     }
     public IEnumerator DashDelaying()
     {
-        yield return new WaitForSeconds(DashDelay);
+        yield return new WaitForSeconds(_dashDelay);
         IsDashing = false;
         _playerInputHandler.Move.x = 0;
-        yield return new WaitForSeconds(DashReload);
+        yield return new WaitForSeconds(_dashReload);
         CanDash = true;
         Debug.Log("reload dash");
     }

@@ -18,5 +18,8 @@ public class GoatData : ScriptableObject
     public float Collider2DAxeY;
 
     // La caméra distance doit être égal à Collider2DAxeY
-    public float CameraFOV;
+    public float CameraZ;
+    public float CameraY;
+    public float CameraX;
+    
 }

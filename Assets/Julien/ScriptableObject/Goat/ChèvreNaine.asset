@@ -15,10 +15,12 @@ MonoBehaviour:
   Name: "Ch\xE8vreNaine"
   Sprite: {fileID: 21300000, guid: 458a193254e77f54db8adc844b23d213, type: 3}
   Damage: 10
-  RangeAttaque: 2
-  Speed: 5
+  RangeAttaque: 5
+  Speed: 15
   JumpForce: 6
   RayDistance: 1.75
   Collider2DAxeX: 3
   Collider2DAxeY: 3.4
-  CameraFOV: 120
+  CameraZ: -38.5
+  CameraY: 2
+  CameraX: 10
