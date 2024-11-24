@@ -14,22 +14,16 @@ public class SetUpCamera : MonoBehaviour
     {
         _playerInputManager = GetComponent<PlayerInputManager>();
     }
-
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        
-    }
-
+    
     private void Update()
     {
         int PlayerCount;
         PlayerCount = _playerInputManager.playerCount;
         
+        if (PlayerCount == 1)
+        {
+            Player1Camera.rect = new Rect(0, 0, 1, 1);
+        }
         if (PlayerCount == 2)
         {
             Player1Camera.rect = new Rect(0, 0.5f, 1, 0.5f);

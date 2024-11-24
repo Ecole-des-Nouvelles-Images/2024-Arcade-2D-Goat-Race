@@ -44,6 +44,50 @@
             ],
             "bindings": [
                 {
+                    "name": "",
+                    "id": "9b5b9dff-1ae9-4814-beb5-29d255072b6c",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "StickDeadzone,NormalizeVector2",
+                    "groups": "Controller1;Controller2",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c3eac64-6a67-4e42-b3c9-55194c66f071",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Controller1;Controller2",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c4a0f13-50bb-4471-b53a-8fc3ea52161b",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Controller1;Controller2",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ed0a455-29d8-4300-a60f-58136b70954d",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Controller1;Controller2",
+                    "action": "Attaque",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "ZQSD",
                     "id": "773b5788-89e2-420c-a352-d0d38d9f08cc",
                     "path": "2DVector",
@@ -97,50 +141,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "9b5b9dff-1ae9-4814-beb5-29d255072b6c",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "StickDeadzone,NormalizeVector2",
-                    "groups": "Controller1",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5c3eac64-6a67-4e42-b3c9-55194c66f071",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "Controller1",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4c4a0f13-50bb-4471-b53a-8fc3ea52161b",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6ed0a455-29d8-4300-a60f-58136b70954d",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attaque",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
