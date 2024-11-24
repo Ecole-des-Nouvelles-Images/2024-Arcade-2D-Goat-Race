@@ -91,6 +91,20 @@ public class Goat : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.down * _rayDistance, Color.red);
         RaycastHit2D HitGround = Physics2D.Raycast(transform.position, -Vector2.up, _rayDistance, _layerMaskGrounded);
         CanJump = HitGround.collider;
+        
+        
+        // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
+        if (IsDashing == false)
+        {
+            if (_playerInputHandler.Move.x > 0)
+            {
+                _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
+            }
+            else if (_playerInputHandler.Move.x < 0)
+            {
+                _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
+            }  
+        }
     }
 
     private void FixedUpdate()
@@ -117,11 +131,12 @@ public class Goat : MonoBehaviour
         
         rb2d.velocity = Velocity;
         
-        if (_playerInputHandler.Move.x >= 0)
+        // FLIP LE SPRITE
+        if (_playerInputHandler.Move.x > 0)
         {
             _spriteRenderer.flipX = true;
         }
-        else
+        else if (_playerInputHandler.Move.x < 0)
         {
             _spriteRenderer.flipX = false;
         }

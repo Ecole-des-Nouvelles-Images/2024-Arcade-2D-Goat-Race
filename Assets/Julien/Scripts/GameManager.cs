@@ -24,11 +24,9 @@ public class GameManager : MonoBehaviour
         if (Player != null)
         { 
             PlayerPrefabs.Add(Player);
-            Debug.Log(" ajoute à la list ");
         }
         else
         {
-            Debug.Log(" n'ajoute pas à la list car Null ");
         }
     }
     

@@ -45,8 +45,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 577ac512c3793e044957a92bf469eb28, type: 2}
+    - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1530004125963205248, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
@@ -138,6 +146,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3924169058813788886, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}

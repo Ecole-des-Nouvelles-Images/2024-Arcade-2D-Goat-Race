@@ -29,7 +29,5 @@ public class SetUpCamera : MonoBehaviour
             Player1Camera.rect = new Rect(0, 0.5f, 1, 0.5f);
             Player2Camera.rect = new Rect(0, 0, 1, 0.5f);
         }
-        
-        Debug.Log(PlayerCount);
     }
 }
