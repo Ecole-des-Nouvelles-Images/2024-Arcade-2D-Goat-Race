@@ -3,11 +3,13 @@ using UnityEngine;
 namespace Julien.Scripts.BonusScripts
 {
     [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Etoile")]
-    public class Etoile : Bonus
+    public class Pics : Bonus
     {
+        public GameObject SpherePrefab;
+        public Transform PlayerTransform;
         public override void BonusEffect()
         {
-            Debug.Log(" Etoile ! ");  
+            Debug.Log(" Pic ! ");  
         }
     }
 }

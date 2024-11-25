@@ -26,19 +26,19 @@ public class InventaryBonus : MonoBehaviour
 
     public void Bonus1()
     {
-        Debug.Log("Bonus 1");
+        Debug.Log("Speed");
         BonusName = "Speed";
         _bonus = _bonusScripts[0];
     }
     public void Bonus2()
     {
-        Debug.Log("Bonus 2");
+        Debug.Log("Traverser");
         BonusName = "Traverser";
         _bonus = _bonusScripts[1];
     }
     public void Bonus3()
     {
-        Debug.Log("étoile");
+        Debug.Log("Pic");
         BonusName = "Etoile";
         _bonus = _bonusScripts[2];
     }
@@ -46,5 +46,6 @@ public class InventaryBonus : MonoBehaviour
     public void Use()
     {
         _bonus.BonusEffect();
+        Debug.Log(gameObject.transform.localPosition);
     }
 }

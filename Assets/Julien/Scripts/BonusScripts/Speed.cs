@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Julien.Scripts.BonusScripts
 {
     [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Speed")]
-    public class SuperSpeed : Bonus
+    public class Speed : Bonus
     {
         public override void BonusEffect()
         {
