@@ -40,7 +40,7 @@ public class Goat : MonoBehaviour
     // Is Grounded
     [SerializeField] private LayerMask _layerMaskGrounded;
     private float _rayDistance = 0.55f;
-    private bool CanJump; 
+    public bool CanJump; 
     
     // Atataque
     [SerializeField] private bool _canAttaque;
@@ -87,12 +87,11 @@ public class Goat : MonoBehaviour
     
     private void Update()
     {
-        // Jump HitGround
-        Debug.DrawRay(transform.position, Vector3.down * _rayDistance, Color.red);
-        RaycastHit2D HitGround = Physics2D.Raycast(transform.position, -Vector2.up, _rayDistance, _layerMaskGrounded);
-        CanJump = HitGround.collider;
-        
-        
+        // // Jump HitGround
+        // Debug.DrawRay(transform.position , Vector3.down * _rayDistance, Color.red);
+        // RaycastHit2D HitGround = Physics2D.Raycast(transform.position, -Vector2.up, _rayDistance, _layerMaskGrounded);
+        // CanJump = HitGround.collider;
+        Debug.Log(CanJump);
         // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
         if (IsDashing == false)
         {

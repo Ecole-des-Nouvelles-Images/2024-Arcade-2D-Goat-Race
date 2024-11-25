@@ -42,7 +42,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Material
@@ -54,11 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 665346668341524346, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_GravityScale
-      value: 1.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1530004125963205248, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658272548004697180, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1658272548004697180, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x

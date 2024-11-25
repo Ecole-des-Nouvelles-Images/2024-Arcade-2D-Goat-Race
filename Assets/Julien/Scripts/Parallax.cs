@@ -45,7 +45,7 @@ public class Parallax : MonoBehaviour
       {
          Plan1.gameObject.transform.Translate(Vector3.right * (_speedPlan1 * velocityX * Time.deltaTime));
       }
-      else if (_rb2dPlayer.velocity.x < 0)
+      if (_rb2dPlayer.velocity.x < 0)
       {
          Plan1.gameObject.transform.Translate(Vector3.right * (-_speedPlan1 * -velocityX * Time.deltaTime));
       }
@@ -55,7 +55,7 @@ public class Parallax : MonoBehaviour
       {
          Plan2.gameObject.transform.Translate(Vector3.right * (_speedPlan2 * velocityX * Time.deltaTime));
       }
-      else if (_rb2dPlayer.velocity.x < 0)
+      if (_rb2dPlayer.velocity.x < 0)
       {
          Plan2.gameObject.transform.Translate(Vector3.right * (-_speedPlan2 * -velocityX * Time.deltaTime));
       }
@@ -65,7 +65,7 @@ public class Parallax : MonoBehaviour
       {
          Plan3.gameObject.transform.Translate(Vector3.right * (_speedPlan3 * velocityX * Time.deltaTime));
       }
-      else if (_rb2dPlayer.velocity.x < 0)
+      if (_rb2dPlayer.velocity.x < 0)
       {
          Plan3.gameObject.transform.Translate(Vector3.right * (-_speedPlan3 * -velocityX * Time.deltaTime));
       }
@@ -74,7 +74,7 @@ public class Parallax : MonoBehaviour
       {
          Plan4.gameObject.transform.Translate(Vector3.right * ( velocityX * Time.deltaTime));
       }
-      else if (_rb2dPlayer.velocity.x < 0)
+      if (_rb2dPlayer.velocity.x < 0)
       {
          Plan4.gameObject.transform.Translate(Vector3.right * ( velocityX * Time.deltaTime));
       }
@@ -84,6 +84,7 @@ public class Parallax : MonoBehaviour
    
    private void Update()
    {
+      Debug.Log(_rb2dPlayer.velocity.x);
       if (_player1Layer)
       {
          gameObject.layer = LayerMask.NameToLayer("Parallax1");
