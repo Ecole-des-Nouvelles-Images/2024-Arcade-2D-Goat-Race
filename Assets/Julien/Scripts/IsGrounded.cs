@@ -1,21 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Julien.Scripts;
 using UnityEngine;
 
 public class IsGrounded : MonoBehaviour
 {
-
    [SerializeField] private Goat _goat;
-   private void OnTriggerEnter2D(Collider2D other)
+   
+   private void OnTriggerStay2D(Collider2D other)
    {
-      if (other.gameObject.tag == "Ground")
+      if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
       {
          _goat.CanJump = true;
       }
-      else
-      {
-         _goat.CanJump = false;
-      }
+   }
+
+   private void OnTriggerExit2D(Collider2D other)
+   {
+      _goat.CanJump = false;
    }
 }

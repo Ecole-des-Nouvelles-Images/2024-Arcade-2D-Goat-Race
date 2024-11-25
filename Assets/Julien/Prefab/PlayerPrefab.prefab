@@ -233,6 +233,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _ColliderGrounded
+      value: 
+      objectReference: {fileID: 8539802324015046263}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: _layerMaskGrounded.m_Bits
       value: 8
       objectReference: {fileID: 0}
@@ -260,6 +264,22 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _bonusScripts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _bonusScripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a92e44cddde03ac4aa53b94e30b1cc44, type: 2}
+    - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _bonusScripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 03abf48c4dc7cbd4691982f88be3fef0, type: 2}
+    - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _bonusScripts.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d3ee51f3d2a779a41808be534ee74231, type: 2}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Name
       value: Player
@@ -281,5 +301,10 @@ Transform:
 --- !u!20 &5643778503946876671 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 2973207517309137273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8539802324015046263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6899950638076243726, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
   m_PrefabInstance: {fileID: 2973207517309137273}
   m_PrefabAsset: {fileID: 0}

@@ -17,10 +17,12 @@ MonoBehaviour:
   Damage: 10
   RangeAttaque: 5
   Speed: 15
-  JumpForce: 7
+  JumpForce: 10
   RayDistance: 1.75
   Collider2DAxeX: 3
   Collider2DAxeY: 3.4
+  ColliderIsGroundedPositionY: 1.7
+  ColliderIsGroundedScaleX: 3
   CameraZ: -38.5
   CameraY: 2
   CameraX: 10

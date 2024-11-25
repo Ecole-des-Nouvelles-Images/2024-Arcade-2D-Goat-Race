@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3250535698802893667}
   - component: {fileID: 6118669829489119256}
+  - component: {fileID: 8115081932819604171}
   - component: {fileID: 4195534481989851636}
   - component: {fileID: 3924169058813788886}
   - component: {fileID: 665346668341524346}
@@ -225,11 +226,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635504da44f1cc44eb09181fdb1416a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerOne: 0
   GoatData: {fileID: 0}
   Sprite: {fileID: 0}
   _camera: {fileID: 7426522502232688518}
   CanDash: 1
   IsDashing: 0
+  _ColliderGrounded: {fileID: 0}
+  _colliderIsGroundedPositionY: 0
+  _colliderIsGroundedScaleX: 0
   _layerMaskGrounded:
     serializedVersion: 2
     m_Bits: 0
@@ -241,6 +246,18 @@ MonoBehaviour:
   _rangeAttaque: 0
   _damage: 0
   _coulDownAttaque: 0
+--- !u!114 &8115081932819604171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140188591608927331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b595a63f93e8534c99b1d381a6e43ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4195534481989851636
 MonoBehaviour:
   m_ObjectHideFlags: 0
