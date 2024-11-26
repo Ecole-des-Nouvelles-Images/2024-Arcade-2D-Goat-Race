@@ -13,5 +13,3 @@ MonoBehaviour:
   m_Name: Pic
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
-  SpherePrefab: {fileID: 3365970481721724805, guid: b477abbb312fbde41925eae92da2891b, type: 3}
-  PlayerTransform: {fileID: 6797481179233893041, guid: 9f8b43eb289002f47879ae76ded25df1, type: 3}

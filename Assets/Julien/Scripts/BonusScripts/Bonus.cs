@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Julien.Scripts.BonusScripts
@@ -6,6 +7,9 @@ namespace Julien.Scripts.BonusScripts
     {
         [SerializeField] private Sprite _sprite;
         
-        public abstract void BonusEffect();
+        public abstract void BonusEffect(GameObject PlayerPrefab,
+            GameObject SpkiePrefab);
+        public abstract void BonusReset(GameObject PlayerPrefab,
+            GameObject SpkiePrefab);
     }
 }

@@ -21,7 +21,7 @@ namespace Julien.Scripts
     
         // Les déplacement
         private float _airControl = 0.5f; 
-        private float _speed =5f; 
+        public float Speed; 
         private float _jumpForce = 3f;
         private Vector2 _movementInput;
         private PlayerInputHandler _playerInputHandler;
@@ -58,9 +58,10 @@ namespace Julien.Scripts
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
             LoadGoat();
+            
         }
 
-        private void LoadGoat()
+        public void LoadGoat()
         {
             Sprite = GoatData.Sprite;
             _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -68,7 +69,7 @@ namespace Julien.Scripts
         
             _damage = GoatData.Damage;
             _rangeAttaque = GoatData.RangeAttaque;
-            _speed = GoatData.Speed;
+            //Speed = GoatData.Speed;
             _jumpForce = GoatData.JumpForce;
             _rayDistance = GoatData.RayDistance;
             _cameraDistance = GoatData.CameraZ;
@@ -94,6 +95,11 @@ namespace Julien.Scripts
 
             _ColliderGrounded.transform.localPosition = new Vector3(0, -_colliderIsGroundedPositionY, 0);
             _ColliderGrounded.transform.localScale = new Vector3(_colliderIsGroundedScaleX, 0.3f, 0);
+        }
+
+        public void ResetData()
+        {
+            
         }
     
         private void Update()
@@ -137,7 +143,7 @@ namespace Julien.Scripts
         {
             float Horizontal = _playerInputHandler.Move.x;
             Vector2 Velocity = rb2d.velocity;
-            Velocity.x = Horizontal * _speed;
+            Velocity.x = Horizontal * (Speed + GoatData.Speed);
         
             rb2d.velocity = Velocity;
         

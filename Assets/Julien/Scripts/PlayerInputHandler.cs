@@ -44,7 +44,7 @@ namespace Julien.Scripts
             _playerInput.actions["UseBonus"].performed += OnUseBonus;
         
             DetectCurrentInputDevice();
-            GameManager.AddTolist(PlayerInputManager.playerPrefab);
+            //GameManager.AddTolist(PlayerInputManager.playerPrefab);
         
             // GameManager.PlayerPrefabs.Add(PlayerInputManager.playerPrefab.gameObject);
             // Debug.Log(PlayerInputManager.playerPrefab.gameObject+ " Join the game " );
@@ -120,11 +120,10 @@ namespace Julien.Scripts
 
         private void OnUseBonus(InputAction.CallbackContext context)
         {
-            if (_inventaryBonus.HaveBonus)
+            if (_inventaryBonus.HaveBonus && _inventaryBonus.IsUsingBonus == false)
             {
                 _inventaryBonus.Use();
                 _inventaryBonus.HaveBonus = false;
-                Debug.Log("use bonus"); 
             }
             else
             {
