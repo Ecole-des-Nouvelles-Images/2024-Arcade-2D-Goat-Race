@@ -8,7 +8,7 @@ public class EndGame : MonoBehaviour
     {
         Goat goat = other.gameObject.GetComponent<Goat>();
         
-        if (goat.PlayerOne )
+        if (goat.PlayerOne)
         {
             Debug.Log("player 1 won");
         }
