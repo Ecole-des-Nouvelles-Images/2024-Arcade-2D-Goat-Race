@@ -39,7 +39,10 @@ namespace Julien.Scripts
         
             _playerInput.actions["Attaque"].performed += OnAttaque;
         
-            _playerInput.actions["Jump"].performed += OnJump;
+            _playerInput.actions["Jump"].started += OnJump;
+            _playerInput.actions["Jump"].canceled += OnJumpCancel;
+            // _playerInput.actions["Jump"].performed += OnJumpStay;
+            // _playerInput.actions["Jump"].canceled += OnJumpStop;
             
             _playerInput.actions["UseBonus"].performed += OnUseBonus;
         
@@ -49,7 +52,7 @@ namespace Julien.Scripts
             // GameManager.PlayerPrefabs.Add(PlayerInputManager.playerPrefab.gameObject);
             // Debug.Log(PlayerInputManager.playerPrefab.gameObject+ " Join the game " );
         }
-    
+        
         private void OnDisable()
         {
             InputSystem.onDeviceChange -= OnDeviceChange;
@@ -65,7 +68,8 @@ namespace Julien.Scripts
             _playerInput.actions["Dash"].canceled -= OnAttaque;
         
             _playerInput.actions["Jump"].performed -= OnJump;
-            _playerInput.actions["Jump"].canceled -= OnJump;
+            // _playerInput.actions["Jump"].performed -= OnJumpStay;
+            // _playerInput.actions["Jump"].canceled -= OnJumpStop;
             
             _playerInput.actions["UseBonus"].performed -= OnUseBonus;
             _playerInput.actions["UseBonus"].canceled -= OnUseBonus;
@@ -84,9 +88,9 @@ namespace Julien.Scripts
             _isControllerConnected = Gamepad.all.Count > 0;
             OnInputDeviceChanged?.Invoke(_isControllerConnected);
 
-            Debug.Log(_isControllerConnected
-                ? "Controller connected: Switching to Gamepad controls."
-                : "No controller connected: Switching to Keyboard/Mouse controls.");
+            //Debug.Log(_isControllerConnected
+                //? "Controller connected: Switching to Gamepad controls."
+                //: "No controller connected: Switching to Keyboard/Mouse controls.");
         }
     
         private void OnMove(InputAction.CallbackContext context)
@@ -97,14 +101,22 @@ namespace Julien.Scripts
             }
         }
 
+        
         private void OnJump(InputAction.CallbackContext context)
         {
             if (_goat.IsDashing == false)
             {
-                _goat.OnJump(); 
+                _goat.OnJump();
+                Debug.Log("Jumped");
             }
         }
 
+        public void OnJumpCancel(InputAction.CallbackContext context)
+        {
+            _goat.OnJumpStop();
+        }
+        
+        
         private void OnDash(InputAction.CallbackContext context)
         {
             if (_goat.IsDashing == false && _goat.CanDash && _goat.CanJump)

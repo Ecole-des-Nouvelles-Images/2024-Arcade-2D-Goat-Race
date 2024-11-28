@@ -36,6 +36,12 @@ namespace Julien.Scripts
         private float _dashPower = 1.5f;
         private float _dashReload = 5f;
    
+        // Is Jump
+        private float _jumpTimeCounter;
+        private bool _isJumping;
+        private float _maxJumpTime = 0.5f;
+        private float _additionalJumpForce = 0.15f;
+        
         // Is Grounded
         [SerializeField] private GameObject _ColliderGrounded;
         [SerializeField] private float _colliderIsGroundedPositionY;
@@ -105,11 +111,6 @@ namespace Julien.Scripts
             _ColliderGrounded.transform.localPosition = new Vector3(0, -_colliderIsGroundedPositionY, 0);
             _ColliderGrounded.transform.localScale = new Vector3(_colliderIsGroundedScaleX, 0.3f, 0);
         }
-
-        public void ResetData()
-        {
-            
-        }
     
         private void Update()
         {
@@ -126,18 +127,51 @@ namespace Julien.Scripts
                 }  
             }
             
-
             if (_playerInputHandler.Move.x < 0 || _playerInputHandler.Move.x > 0)
             {
                 _animator.SetTrigger("IsMoving");
-                Debug.Log("IsMoving = True");
+                //Debug.Log("IsMoving = True");
                 _spriteRenderer.color = Color.yellow;
             }
             else
             {
                 _animator.ResetTrigger("IsMoving");
-                Debug.Log("IsMoving = False");
+                //Debug.Log("IsMoving = False");
                 _spriteRenderer.color = Color.white;
+            }
+            OnJumpStay();
+            Debug.Log(_isJumping);
+
+            Debug.Log(rb2d.velocity.y);
+            if (rb2d.velocity.y < -0.5f)
+            {
+                rb2d.gravityScale = 6f;
+            }
+            else
+            {
+                rb2d.gravityScale = 3.5f;
+            }
+            
+            // ANIMATION
+            if (_isJumping == false)
+            {
+                OnJumpStop();
+            }
+
+            if (_isJumping)
+            {
+                OnJumpStay();
+            }
+
+            if (CanJump == false)
+            {
+                _animator.SetTrigger("IsGrounded");
+                // Debug.Log("IsGrounded = True");
+                //_spriteRenderer.color = Color.blue;
+            }
+            else
+            {
+                _animator.ResetTrigger("IsGrounded");
             }
         }
 
@@ -149,21 +183,60 @@ namespace Julien.Scripts
         // SAUT
         public void OnJump()
         {
-            if (CanJump)
+            bool Release;
+            
+            if (CanJump && _isJumping == false)
             {
                 rb2d.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-                
-                _animator.SetTrigger("IsGrounded");
-                Debug.Log("IsGrounded = True");
-                _spriteRenderer.color = Color.blue;
+                _isJumping = true;
+                _jumpTimeCounter = 0f;
+                Debug.Log("1");
+            }
+            // else
+            // {
+            //     Debug.Log("2");
+            //     _isJumping = false;
+            //     //Debug.Log("IsGrounded = False");
+            // }
+        }
+
+        public void OnJumpCancel()
+        {
+            if (CanJump == false && _isJumping)
+            {
+                _isJumping = false;  
+            }
+        }
+        private void OnJumpStay()
+        {
+            if (_isJumping)
+            {
+                _jumpTimeCounter += Time.deltaTime;
+
+                if (_jumpTimeCounter < _maxJumpTime)
+                {
+                    rb2d.velocity = new Vector2(rb2d.velocity.x, _jumpForce + _additionalJumpForce * _jumpTimeCounter);
+                }
+
+                if (_jumpTimeCounter >= _maxJumpTime)
+                {
+                    OnJumpStop();
+                }
             }
             else
             {
-                _animator.ResetTrigger("IsGrounded");
-                Debug.Log("IsGrounded = False");
+                OnJumpStop();
             }
         }
-    
+
+        public void OnJumpStop()
+        {
+            if (_isJumping)
+            {
+                _isJumping = false;
+            }
+        }
+        
         // DEPLACEMENT 
         public void OnMove()
         {
