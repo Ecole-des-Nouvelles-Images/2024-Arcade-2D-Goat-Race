@@ -107,7 +107,7 @@ namespace Julien.Scripts
 
         private void OnDash(InputAction.CallbackContext context)
         {
-            if (_goat.IsDashing == false && _goat.CanDash)
+            if (_goat.IsDashing == false && _goat.CanDash && _goat.CanJump)
             {
                 _goat.OnDash(); 
             }

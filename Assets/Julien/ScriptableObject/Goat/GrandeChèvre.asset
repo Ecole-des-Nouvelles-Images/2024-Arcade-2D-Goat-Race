@@ -17,7 +17,7 @@ MonoBehaviour:
   Damage: 20
   RangeAttaque: 5
   Speed: 9
-  JumpForce: 10
+  JumpForce: 13
   RayDistance: 3.2
   Collider2DAxeX: 5
   Collider2DAxeY: 6.3

@@ -8,6 +8,7 @@ public class GoatData : ScriptableObject
 {
     public string Name;
     public Sprite Sprite;
+    public RuntimeAnimatorController AnimatorController;
     public int Damage;
     public float RangeAttaque;
     public float Speed;

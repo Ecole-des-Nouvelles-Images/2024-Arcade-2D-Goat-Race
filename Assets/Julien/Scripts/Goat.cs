@@ -5,6 +5,9 @@ namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
+        [SerializeField] private Animator _animator;
+        [SerializeField] private RuntimeAnimatorController _animatorController;
+        
         public bool PlayerOne;
         public GoatData GoatData;
         public Sprite Sprite;
@@ -57,8 +60,9 @@ namespace Julien.Scripts
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
+            _animator = gameObject.GetComponent<Animator>();
+            _animatorController = _animator.runtimeAnimatorController;
             LoadGoat();
-            
         }
 
         public void LoadGoat()
@@ -85,6 +89,11 @@ namespace Julien.Scripts
             _camera.transform.localPosition = new Vector3(CameraX, CameraY, CameraZ);
 
             _boxCollider2D.size = new Vector2(_sizeX,_sizeY);
+
+            
+            // ANIMATOR
+            _animatorController = GoatData.AnimatorController;
+            _animator.runtimeAnimatorController = _animatorController;
         
             // COLLISION DU IS GROUNDED
             _colliderIsGroundedPositionY = GoatData.ColliderIsGroundedPositionY;
@@ -104,12 +113,6 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            // // Jump HitGround
-            // Debug.DrawRay(transform.position , Vector3.down * _rayDistance, Color.red);
-            // RaycastHit2D HitGround = Physics2D.Raycast(transform.position, -Vector2.up, _rayDistance, _layerMaskGrounded);
-            // CanJump = HitGround.collider;
-        
-        
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -121,6 +124,20 @@ namespace Julien.Scripts
                 {
                     _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
                 }  
+            }
+            
+
+            if (_playerInputHandler.Move.x < 0 || _playerInputHandler.Move.x > 0)
+            {
+                _animator.SetTrigger("IsMoving");
+                Debug.Log("IsMoving = True");
+                _spriteRenderer.color = Color.yellow;
+            }
+            else
+            {
+                _animator.ResetTrigger("IsMoving");
+                Debug.Log("IsMoving = False");
+                _spriteRenderer.color = Color.white;
             }
         }
 
@@ -135,6 +152,15 @@ namespace Julien.Scripts
             if (CanJump)
             {
                 rb2d.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                
+                _animator.SetTrigger("IsGrounded");
+                Debug.Log("IsGrounded = True");
+                _spriteRenderer.color = Color.blue;
+            }
+            else
+            {
+                _animator.ResetTrigger("IsGrounded");
+                Debug.Log("IsGrounded = False");
             }
         }
     
@@ -164,7 +190,7 @@ namespace Julien.Scripts
             if (_canAttaque)
             {
                 // ATTAQUE DROITE
-                if (_playerInputHandler.Move.x >= 0)
+                if (_spriteRenderer.flipX)
                 {
                     Debug.DrawRay(transform.position, Vector2.right * _rangeAttaque, Color.blue, 1f);
                     RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.right, _rangeAttaque, _layerMaskObstacle);
@@ -172,6 +198,11 @@ namespace Julien.Scripts
 
                     _canAttaque = false;
                     StartCoroutine("RealoadAttaque");
+                    
+                    
+                    // ANIMATION 
+                    _animator.ResetTrigger("IsAttack");
+                    Debug.Log("IsGrounded = True");
                 }
                 // ATTAQUE GAUCHE
                 else
@@ -182,6 +213,11 @@ namespace Julien.Scripts
                 
                     _canAttaque = false;
                     StartCoroutine("RealoadAttaque");
+                    
+                    
+                    // ANIMATION 
+                    _animator.ResetTrigger("IsAttack");
+                    Debug.Log("IsGrounded = True");
                 }
         
                 // JOUER AVEC CE QUE LE RAYCAST A TOUCHER
@@ -216,15 +252,27 @@ namespace Julien.Scripts
         {
             IsDashing = true;
         
-            if (_playerInputHandler.Move.x >= 0 && CanDash)
+            if (_spriteRenderer.flipX)
             {
                 _playerInputHandler.Move.x = _dashPower;
+                
+                // ANIMATION
+                _animator.SetTrigger("IsDashing"); 
+                Debug.Log("IsDashin = True");   
+                _spriteRenderer.color = Color.red;
+
             }
             else
             {
                 _playerInputHandler.Move.x = -_dashPower;
+                
+                // ANIMATION
+                _animator.SetTrigger("IsDashing"); 
+                Debug.Log("IsDashin = True");   
+                _spriteRenderer.color = Color.red;
+
             }
-        
+            
             CanDash = false;
             StartCoroutine(DashDelaying());
         }
@@ -236,6 +284,11 @@ namespace Julien.Scripts
             yield return new WaitForSeconds(_dashReload);
             CanDash = true;
             Debug.Log("reload dash");
+            
+            // ANIMATION
+            _animator.ResetTrigger("IsDashing");
+            Debug.Log("IsDashing = False");
+            _spriteRenderer.color = Color.white;
         }
     }
 }
