@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
@@ -84,7 +81,6 @@ public class Parallax : MonoBehaviour
    
    private void Update()
    {
-      Debug.Log(_rb2dPlayer.velocity.x);
       if (_player1Layer)
       {
          gameObject.layer = LayerMask.NameToLayer("Parallax1");

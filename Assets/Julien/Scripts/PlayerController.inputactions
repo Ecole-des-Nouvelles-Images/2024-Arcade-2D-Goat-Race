@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UseBonus",
+                    "type": "Button",
+                    "id": "6d2d22fa-1e8a-4600-887e-6221db60789f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -141,6 +150,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "24b5c15e-13fc-4820-bd47-cd808d434ea7",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller1;Controller2",
+                    "action": "UseBonus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
