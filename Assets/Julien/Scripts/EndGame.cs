@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
+
+    [SerializeField] private GameObject VictoryPanel;
     private void OnCollisionEnter2D(Collision2D other)
     {
         Goat goat = other.gameObject.GetComponent<Goat>();
@@ -11,10 +13,12 @@ public class EndGame : MonoBehaviour
         if (goat.PlayerOne)
         {
             Debug.Log("player 1 won");
+            VictoryPanel.SetActive(true);
         }
         else
         {
-            Debug.Log("player 2 won"); 
+            Debug.Log("player 2 won");
+            VictoryPanel.SetActive(true);
         }
     }
 }

@@ -140,9 +140,7 @@ namespace Julien.Scripts
                 _spriteRenderer.color = Color.white;
             }
             OnJumpStay();
-            Debug.Log(_isJumping);
-
-            Debug.Log(rb2d.velocity.y);
+            
             if (rb2d.velocity.y < -0.5f)
             {
                 rb2d.gravityScale = 6f;
