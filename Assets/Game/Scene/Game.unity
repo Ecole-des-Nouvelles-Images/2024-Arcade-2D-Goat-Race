@@ -35986,7 +35986,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5
@@ -36012,9 +36012,21 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: Goats.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: _ColliderGrounded
       value: 
       objectReference: {fileID: 369490648}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: Goats.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: Goats.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f737e08085e059a41a4083551ac3d0a7, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: _layerMaskGrounded.m_Bits
       value: 8
@@ -36081,7 +36093,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d3ee51f3d2a779a41808be534ee74231, type: 2}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Name
-      value: Player1
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
@@ -36299,7 +36311,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5
@@ -36336,6 +36348,18 @@ PrefabInstance:
       propertyPath: _ColliderGrounded
       value: 
       objectReference: {fileID: 761898410}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: GoatsDatas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: GoatsDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: GoatsDatas.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f737e08085e059a41a4083551ac3d0a7, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: _layerMaskGrounded.m_Bits
       value: 8
@@ -36402,7 +36426,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d3ee51f3d2a779a41808be534ee74231, type: 2}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Name
-      value: Player2
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
@@ -36576,8 +36600,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1729495447501970116}
   - {fileID: 514220043}
-  - {fileID: 2973207516690139247}
   - {fileID: 2973207516979615235}
+  - {fileID: 2973207516690139247}
   - {fileID: 7325423849859507875}
   - {fileID: 622175390}
   - {fileID: 2068580938}

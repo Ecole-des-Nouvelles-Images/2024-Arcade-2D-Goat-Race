@@ -12,4 +12,9 @@ public class UI_FirstSelected : MonoBehaviour
     {
         eventSystem.SetSelectedGameObject(Button.gameObject);
     }
+
+    private void Start()
+    {
+        eventSystem.SetSelectedGameObject(Button.gameObject);
+    }
 }

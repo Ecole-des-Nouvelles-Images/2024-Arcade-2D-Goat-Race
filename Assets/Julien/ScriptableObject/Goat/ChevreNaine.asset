@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35834947f3339fd4eb0f8b1411ebd38f, type: 3}
-  m_Name: "Ch\xE8vreNaine"
+  m_Name: ChevreNaine
   m_EditorClassIdentifier: 
   Name: "Ch\xE8vreNaine"
   Sprite: {fileID: 21300000, guid: 458a193254e77f54db8adc844b23d213, type: 3}

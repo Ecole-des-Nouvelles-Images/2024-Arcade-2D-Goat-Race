@@ -1,10 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
+        [FormerlySerializedAs("Goats")] [SerializeField] private List<GoatData> GoatsDatas;
+        
         [SerializeField] private Animator _animator;
         [SerializeField] private RuntimeAnimatorController _animatorController;
         
@@ -63,6 +68,23 @@ namespace Julien.Scripts
 
         private void Start()
         {
+            // Debug.Log("Player 1 IN GAME " + GlobalVariable.GoatNamePlayer1);
+            // Debug.Log("Player 2 IN GAME " + GlobalVariable.GoatNamePlayer2);
+
+            foreach (GoatData goatData in GoatsDatas)
+            {
+                if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
+                {
+                    GoatData = goatData;
+                    Debug.Log("Player 1 IN GAME " + goatData.name);
+                }
+                if (PlayerOne == false && GlobalVariable.GoatNamePlayer2 == goatData.name)
+                {
+                    GoatData = goatData;
+                    Debug.Log("Player 2 IN GAME " + goatData.name);
+                }
+            }
+            
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();

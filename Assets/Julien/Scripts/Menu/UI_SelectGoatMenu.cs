@@ -1,28 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class UI_SelectGoatMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject _selectGoatPlayer1;
+    [SerializeField] private GameObject _selectGoat;
     [SerializeField] private GameObject SelectMapMenu;
-    [SerializeField] private GameObject _selectGoatPlayer2;
+
+    [SerializeField] private TextMeshProUGUI _text;
+    
+    [SerializeField] private bool _playerOneSelected;
     
     public void Return()
     {
         SelectMapMenu.gameObject.SetActive(true);
-        _selectGoatPlayer1.SetActive(false);
+        _selectGoat.SetActive(false);
+        
+        _text.text = "Selection de chèvre joueur 1";
+        _playerOneSelected = false;
     }
-
+    
     public void ChevreNaine()
     {
-        GlobalVariable.GoatNamePlayer1 = new string("ChevreNaine");
-        
+        if (_playerOneSelected == false)
+        {
+            GlobalVariable.GoatNamePlayer1 = new string("ChevreNaine");
+            _playerOneSelected = true;
+            Debug.Log(" Player 1 " + GlobalVariable.GoatNamePlayer1);
+            
+            _text.text = "Selection de chèvre joueur 2";
+            
+        }
+        else
+        {
+            GlobalVariable.GoatNamePlayer2 = new string("ChevreNaine");
+            _playerOneSelected = true;
+            Debug.Log(" Player 2 " + GlobalVariable.GoatNamePlayer2);
+
+            SceneManager.LoadScene("Game");
+        }
     }
 
-    public void GrosseChevre()
+    public void GrandeChevre()
     {
-        GlobalVariable.GoatNamePlayer1 = new string("GrosseChevre");
+        if (_playerOneSelected == false)
+        {
+            GlobalVariable.GoatNamePlayer1 = new string("GrandeChevre");
+            _playerOneSelected = true;
+            Debug.Log(" Player 1 " + GlobalVariable.GoatNamePlayer1);
+            
+            _text.text = "Selection de chèvre joueur 2";
+        }
+        else
+        {
+            GlobalVariable.GoatNamePlayer2 = new string("GrandeChevre");
+            _playerOneSelected = true;
+            Debug.Log(" Player 2 " + GlobalVariable.GoatNamePlayer2);
+            
+            SceneManager.LoadScene("Game");
+        }
     }
 }
