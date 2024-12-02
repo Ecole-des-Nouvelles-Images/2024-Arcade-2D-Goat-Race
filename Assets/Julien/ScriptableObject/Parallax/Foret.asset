@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796cd6357b080a14bb6a180b9464966d, type: 3}
   m_Name: Foret
   m_EditorClassIdentifier: 
-  Sprite1: {fileID: 21300000, guid: f136497ebe0142547bd5d9d5ec6528a1, type: 3}
-  Sprite2: {fileID: 21300000, guid: 801ed7a480faebc4db716d3950d2e7af, type: 3}
-  Sprite3: {fileID: 21300000, guid: 4f5dd1079a7f04540b3231c19a765e45, type: 3}
-  Sprite4: {fileID: 21300000, guid: 9fd76b20864c260408468e3e1a1e77a7, type: 3}
+  Sprite1: {fileID: 21300000, guid: a28af12e7a5a27a4b9f67fe29b98bc84, type: 3}
+  Sprite2: {fileID: 21300000, guid: cb9341d5881b1c94c9f33127c4935aa9, type: 3}
+  Sprite3: {fileID: 21300000, guid: c736d85330a595f429a5bf39a30099aa, type: 3}
+  Sprite4: {fileID: 21300000, guid: 9e2d319fe8900154db96e49cc498b643, type: 3}
