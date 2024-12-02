@@ -151,13 +151,13 @@ namespace Julien.Scripts
             
             if (_playerInputHandler.Move.x < 0 || _playerInputHandler.Move.x > 0)
             {
-                _animator.SetTrigger("IsMoving");
+                _animator.SetBool("IsMoving", true);
                 //Debug.Log("IsMoving = True");
                 _spriteRenderer.color = Color.yellow;
             }
             else
             {
-                _animator.ResetTrigger("IsMoving");
+                _animator.SetBool("IsMoving", false);
                 //Debug.Log("IsMoving = False");
                 _spriteRenderer.color = Color.white;
             }
@@ -185,13 +185,13 @@ namespace Julien.Scripts
 
             if (CanJump == false)
             {
-                _animator.SetTrigger("IsGrounded");
+                _animator.SetBool("IsGrounded", true);
                 // Debug.Log("IsGrounded = True");
                 //_spriteRenderer.color = Color.blue;
             }
             else
             {
-                _animator.ResetTrigger("IsGrounded");
+                _animator.SetBool("IsGrounded", false);
             }
         }
 
@@ -350,7 +350,7 @@ namespace Julien.Scripts
                 _playerInputHandler.Move.x = _dashPower;
                 
                 // ANIMATION
-                _animator.SetTrigger("IsDashing"); 
+                _animator.SetBool("IsDashing", true); 
                 Debug.Log("IsDashin = True");   
                 _spriteRenderer.color = Color.red;
 
@@ -360,7 +360,7 @@ namespace Julien.Scripts
                 _playerInputHandler.Move.x = -_dashPower;
                 
                 // ANIMATION
-                _animator.SetTrigger("IsDashing"); 
+                _animator.SetBool("IsDashing", false); 
                 Debug.Log("IsDashin = True");   
                 _spriteRenderer.color = Color.red;
 

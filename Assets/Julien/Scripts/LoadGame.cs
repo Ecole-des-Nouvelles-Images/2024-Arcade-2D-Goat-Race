@@ -13,12 +13,10 @@ public class LoadGame : MonoBehaviour
         if (GlobalVariable.GlobalNameMap == "ForêtMap")
         {
             _foretMap.SetActive(true);
-            Debug.Log("Map Foret");
         }
         if (GlobalVariable.GlobalNameMap == "DesertMap")
         {
             _desetMap.SetActive(true);
-            Debug.Log("Map Foret");
         }
     }
 }
