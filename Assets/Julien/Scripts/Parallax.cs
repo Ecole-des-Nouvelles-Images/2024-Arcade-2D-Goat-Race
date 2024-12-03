@@ -19,7 +19,7 @@ public class Parallax : MonoBehaviour
 
     private void Start()
     {
-        _sprite1 = parallaxData.Sprite1;
+        //_sprite1 = parallaxData.Sprite1;
         _sprite2 = parallaxData.Sprite2;
         _sprite3 = parallaxData.Sprite3;
         _sprite4 = parallaxData.Sprite4;
@@ -29,4 +29,5 @@ public class Parallax : MonoBehaviour
         Plan3.GetComponent<SpriteRenderer>().sprite = _sprite3;
         Plan4.GetComponent<SpriteRenderer>().sprite = _sprite4;
     }
+    
 }

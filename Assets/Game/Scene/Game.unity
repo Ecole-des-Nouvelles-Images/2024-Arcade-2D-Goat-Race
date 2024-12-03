@@ -18670,6 +18670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Final
       objectReference: {fileID: 0}
+    - target: {fileID: 4065952834453678637, guid: deb9b74c48b428e45a4af6b9e74ccc59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4310638653268979329, guid: deb9b74c48b428e45a4af6b9e74ccc59, type: 3}
       propertyPath: VictoryPanel
       value: 
@@ -36081,6 +36085,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1428881833954238923, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465916971946738987, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1530004125963205248, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -36357,6 +36369,10 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7999553210801000634, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: Spike
       value: 
@@ -36392,6 +36408,14 @@ PrefabInstance:
     - target: {fileID: 8203757716025652198, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367829791193050753, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661456531176311152, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36429,6 +36453,14 @@ PrefabInstance:
     - target: {fileID: 952244095463115976, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428881833954238923, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465916971946738987, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530004125963205248, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
@@ -36690,6 +36722,10 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7999553210801000634, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8115081932819604171, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: Spike
       value: 
@@ -36729,6 +36765,14 @@ PrefabInstance:
     - target: {fileID: 8203757716025652198, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367829791193050753, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661456531176311152, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
