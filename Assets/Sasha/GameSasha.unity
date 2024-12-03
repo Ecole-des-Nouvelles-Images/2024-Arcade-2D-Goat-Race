@@ -36246,6 +36246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1639463013}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0f8fe9eb1c45484e973410ef0762dbd, type: 3}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: _speed
       value: 0
       objectReference: {fileID: 0}
