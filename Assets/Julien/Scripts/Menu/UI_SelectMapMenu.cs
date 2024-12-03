@@ -16,7 +16,7 @@ public class UI_SelectMapMenu : MonoBehaviour
 
     public void LoadForetMap()
     {
-        GlobalVariable.GlobalNameMap = new string("ForêtMap");
+        GlobalVariable.GlobalNameMap = new string("ForetMap");
         Debug.Log(GlobalVariable.GlobalNameMap);
         
         _selectGoatMenu.SetActive(true);

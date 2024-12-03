@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Scripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Obstacle : MonoBehaviour
 {

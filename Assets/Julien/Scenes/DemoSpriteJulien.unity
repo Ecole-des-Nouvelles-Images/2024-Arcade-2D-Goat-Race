@@ -340,6 +340,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57815246}
   m_CullTransparentMesh: 1
+--- !u!20 &104659088 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 1282809033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &116944355
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +976,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: f6d18fadb44dd0b42afa9faa598524d1, type: 2}
+      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
     - target: {fileID: 6603168753386303278, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2138,6 +2143,11 @@ Transform:
   - {fileID: 1950373844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1099107381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 1282809033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134372966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,19 +2324,19 @@ PrefabInstance:
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: Players.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1757707902}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: Players.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1099107381}
     - target: {fileID: 4057358115543161523, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: Player1Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1436884083}
     - target: {fileID: 4057358115543161523, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: Player2Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 104659088}
     - target: {fileID: 5128382833284155511, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2510,7 +2520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3250535698802893667, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19892208
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 3250535698802893667, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2564,6 +2574,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: GoatData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b0bc32363c510d49ad4de62377a57c5, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: PlayerOne
       value: 1
@@ -2671,6 +2685,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362834163}
   m_CullTransparentMesh: 1
+--- !u!20 &1436884083 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7426522502232688518, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 433308895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1539368627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3053,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702296173}
   m_CullTransparentMesh: 1
+--- !u!1 &1757707902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+  m_PrefabInstance: {fileID: 433308895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1830087273
 GameObject:
   m_ObjectHideFlags: 0
