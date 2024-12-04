@@ -37,9 +37,12 @@ namespace Julien.Scripts
         // Dash
         public bool CanDash = true;
         public bool IsDashing;
-        private float _dashDelay = 2f;
+        private float _dashDelay = 1.2f;
         private float _dashPower = 1.5f;
         private float _dashReload = 5f;
+        [SerializeField] private float _rangeDashAttaque = 1f;
+        [SerializeField] private GameObject _dashAttackColliderLeft;
+        [SerializeField] private GameObject _dashAttackColliderRight;
    
         // Is Jump
         private float _jumpTimeCounter;
@@ -138,10 +141,6 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A) && _isStun == false)
-            {
-                OnStun();
-            }
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -174,7 +173,25 @@ namespace Julien.Scripts
             {
                 OnJumpStay();
             }
+            
+            // DASH STUN
+            if (IsDashing && _spriteRenderer.flipX)
+            {
+                _dashAttackColliderRight.SetActive(true);
+            }
+            else
+            {
+                _dashAttackColliderRight.SetActive(false);
+            }
 
+            if (IsDashing && _spriteRenderer.flipX == false)
+            {
+                _dashAttackColliderLeft.SetActive(true);
+            }
+            else
+            {
+                _dashAttackColliderLeft.SetActive(false);
+            }
             
             // ANIMATION 
             if (IsDashing)
@@ -397,6 +414,13 @@ namespace Julien.Scripts
         {
             yield return new WaitForSeconds(_stunTimer);
             _isStun = false;
+        }
+
+        public void Respawn()
+        {
+            _playerInputHandler.Move.x = 0;
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            IsDashing = false;
         }
     }
 }

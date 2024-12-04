@@ -15,6 +15,9 @@ public class IsGrounded : MonoBehaviour
 
    private void OnTriggerExit2D(Collider2D other)
    {
-      _goat.CanJump = false;
+      if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+      {
+         _goat.CanJump = false;
+      }
    }
 }
