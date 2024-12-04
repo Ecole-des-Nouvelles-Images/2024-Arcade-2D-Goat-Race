@@ -81,12 +81,12 @@ namespace Julien.Scripts
                 if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
                 {
                     GoatData = goatData;
-                    Debug.Log("Player 1 IN GAME " + goatData.name);
+                    //Debug.Log("Player 1 IN GAME " + goatData.name);
                 }
                 if (PlayerOne == false && GlobalVariable.GoatNamePlayer2 == goatData.name)
                 {
                     GoatData = goatData;
-                    Debug.Log("Player 2 IN GAME " + goatData.name);
+                    //Debug.Log("Player 2 IN GAME " + goatData.name);
                 }
             }
             
@@ -141,6 +141,7 @@ namespace Julien.Scripts
     
         private void Update()
         {
+            Debug.Log("<color=purple> la vélocity est </color>" + rb2d.velocity.x);
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -197,33 +198,33 @@ namespace Julien.Scripts
             if (IsDashing)
             {
                 _animator.SetBool("IsDashing", true);
-                Debug.Log("<color=yellow> animator is Dashing True </color>");
+                //Debug.Log("<color=yellow> animator is Dashing True </color>");
             }
             else
             {
                 _animator.SetBool("IsDashing", false);
-                Debug.Log("<color=yellow> animator is Dashing False </color>");
+                //Debug.Log("<color=yellow> animator is Dashing False </color>");
             }
             
             if (CanJump == false)
             {
                 _animator.SetBool("IsFalling", true);
-                Debug.Log("<color=orange> Animator Falling True </color>");
+                //Debug.Log("<color=orange> Animator Falling True </color>");
             }
             else
             {
                 _animator.SetBool("IsFalling", false);
-                Debug.Log("<color=orange> Animator Falling False </color>");
+                //Debug.Log("<color=orange> Animator Falling False </color>");
             }
 
             if (_isStun)
             {
-                Debug.Log("<color=black> animator Stun True </color>");
+                //Debug.Log("<color=black> animator Stun True </color>");
                 _animator.SetBool("IsStun", true);
             }
             else
             {
-                Debug.Log("<color=black> animator Stun False </color>");
+                //Debug.Log("<color=black> animator Stun False </color>");
                 _animator.SetBool("IsStun", false);
             }
         }
@@ -241,7 +242,7 @@ namespace Julien.Scripts
                 rb2d.velocity = vector2;
             }
             _animator.SetFloat("Horizontal", Mathf.Abs(rb2d.velocity.x));
-            Debug.Log("<color=cyan> Animator Horizontal </color>" + Mathf.Abs(rb2d.velocity.x));
+            //Debug.Log("<color=cyan> Animator Horizontal </color>" + Mathf.Abs(rb2d.velocity.x));
         }
     
         // SAUT
@@ -312,7 +313,7 @@ namespace Julien.Scripts
         // ATTAQUE
         public void OnAttaque(float buttonValue)
         {
-            if (_canAttaque && _playerInputHandler.Move.x == 0 && _isStun == false)
+            if (_canAttaque && rb2d.velocity.x is <= 0.1f and >= -0.1f && _isStun == false)
             {
                 // ATTAQUE DROITE
                 if (_spriteRenderer.flipX)
@@ -345,20 +346,12 @@ namespace Julien.Scripts
                 // JOUER AVEC CE QUE LE RAYCAST A TOUCHER
                 if (_hitResult.collider != null)
                 {
-                    Debug.Log(" à toucher "  +  _hitResult.collider.name);
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
                     if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
                     {
                         Destroy(_hitResult.collider.gameObject);
                     }
                 }
-                else
-                {
-                    Debug.Log(" touche pas ");
-                }
-        
-        
-                Debug.Log("Attaque");
             }
         }
 
@@ -390,7 +383,6 @@ namespace Julien.Scripts
                 
                 CanDash = false;
                 StartCoroutine(DashDelaying());
-                Debug.Log("start la couroutine");
             }
         }
         public IEnumerator DashDelaying()
@@ -400,7 +392,6 @@ namespace Julien.Scripts
             _playerInputHandler.Move.x = 0;
             yield return new WaitForSeconds(_dashReload);
             CanDash = true;
-            Debug.Log("reload dash");
         }
 
         public void OnStun()
@@ -416,11 +407,16 @@ namespace Julien.Scripts
             _isStun = false;
         }
 
-        public void Respawn()
+        public void Kill()
         {
             _playerInputHandler.Move.x = 0;
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             IsDashing = false;
+        }
+
+        public void Respawn()
+        {
+            rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

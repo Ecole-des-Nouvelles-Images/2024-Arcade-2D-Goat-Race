@@ -799,7 +799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPosition: {x: 0, y: 0, z: 0}
-  SpeedTeleportation: 100
+  TimeToRespawn: 2
+  SpeedTeleportation: 3
 --- !u!114 &4195534481989851636
 MonoBehaviour:
   m_ObjectHideFlags: 0
