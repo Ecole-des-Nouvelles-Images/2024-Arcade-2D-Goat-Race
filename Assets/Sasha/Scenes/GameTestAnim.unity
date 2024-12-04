@@ -25408,6 +25408,9 @@ MonoBehaviour:
   Speed: 0
   CanDash: 1
   IsDashing: 0
+  _rangeDashAttaque: 1
+  _dashAttackColliderLeft: {fileID: 0}
+  _dashAttackColliderRight: {fileID: 0}
   _ColliderGrounded: {fileID: 0}
   _colliderIsGroundedPositionY: 0
   _colliderIsGroundedScaleX: 0
@@ -43176,7 +43179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3250535698802893667, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.43
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 3250535698802893667, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_LocalPosition.y
