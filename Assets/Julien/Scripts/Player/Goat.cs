@@ -138,7 +138,7 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) && _isStun == false)
             {
                 OnStun();
             }
@@ -165,7 +165,6 @@ namespace Julien.Scripts
                 rb2d.gravityScale = 3.5f;
             }
             
-            // ANIMATION
             if (_isJumping == false)
             {
                 OnJumpStop();
@@ -198,6 +197,17 @@ namespace Julien.Scripts
             {
                 _animator.SetBool("IsFalling", false);
                 Debug.Log("<color=orange> Animator Falling False </color>");
+            }
+
+            if (_isStun)
+            {
+                Debug.Log("<color=black> animator Stun True </color>");
+                _animator.SetBool("IsStun", true);
+            }
+            else
+            {
+                Debug.Log("<color=black> animator Stun False </color>");
+                _animator.SetBool("IsStun", false);
             }
         }
 
@@ -379,7 +389,6 @@ namespace Julien.Scripts
         public void OnStun()
         {
             _isStun = true;
-            Debug.Log(_isStun);
             StartCoroutine("DelayStun");
             rb2d.AddForce(Vector2.up * _stunForce);
         }

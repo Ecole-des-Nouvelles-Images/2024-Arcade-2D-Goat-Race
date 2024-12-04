@@ -43097,7 +43097,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: dda5f11150832f8489e8226b2cafe1b0, type: 2}
+      objectReference: {fileID: 11400000, guid: f737e08085e059a41a4083551ac3d0a7, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5

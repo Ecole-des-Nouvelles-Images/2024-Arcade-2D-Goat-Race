@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "Ch\xE8vreNaine"
   Sprite: {fileID: 21300000, guid: 458a193254e77f54db8adc844b23d213, type: 3}
-  AnimatorController: {fileID: 9100000, guid: c981bf45982ff97449b3c5df0f667dc3, type: 2}
+  AnimatorController: {fileID: 9100000, guid: 054148187a5037a47b83afbd118505f3, type: 2}
   Damage: 10
   RangeAttaque: 5
   Speed: 18
