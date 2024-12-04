@@ -8,7 +8,7 @@ namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
-        [FormerlySerializedAs("Goats")] [SerializeField] private List<GoatData> GoatsDatas;
+        [SerializeField] private List<GoatData> GoatsDatas;
         
         [SerializeField] private Animator _animator;
         [SerializeField] private RuntimeAnimatorController _animatorController;
@@ -37,7 +37,7 @@ namespace Julien.Scripts
         // Dash
         public bool CanDash = true;
         public bool IsDashing;
-        private float _dashDelay = 1.5f;
+        private float _dashDelay = 2f;
         private float _dashPower = 1.5f;
         private float _dashReload = 5f;
    
@@ -51,6 +51,11 @@ namespace Julien.Scripts
         [SerializeField] private GameObject _ColliderGrounded;
         [SerializeField] private float _colliderIsGroundedPositionY;
         [SerializeField] private float _colliderIsGroundedScaleX;
+
+        // STUN
+        [SerializeField] private bool _isStun;
+        private float _stunTimer = 2f;
+        private float _stunForce = 500f;
     
         [SerializeField] private LayerMask _layerMaskGrounded;
         private float _rayDistance = 0.55f;
@@ -68,9 +73,6 @@ namespace Julien.Scripts
 
         private void Start()
         {
-            // Debug.Log("Player 1 IN GAME " + GlobalVariable.GoatNamePlayer1);
-            // Debug.Log("Player 2 IN GAME " + GlobalVariable.GoatNamePlayer2);
-
             foreach (GoatData goatData in GoatsDatas)
             {
                 if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
@@ -136,6 +138,10 @@ namespace Julien.Scripts
     
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                OnStun();
+            }
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -147,19 +153,6 @@ namespace Julien.Scripts
                 {
                     _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
                 }  
-            }
-            
-            if (_playerInputHandler.Move.x < 0 || _playerInputHandler.Move.x > 0)
-            {
-                _animator.SetBool("IsMoving", true);
-                //Debug.Log("IsMoving = True");
-                _spriteRenderer.color = Color.yellow;
-            }
-            else
-            {
-                _animator.SetBool("IsMoving", false);
-                //Debug.Log("IsMoving = False");
-                _spriteRenderer.color = Color.white;
             }
             OnJumpStay();
             
@@ -183,21 +176,45 @@ namespace Julien.Scripts
                 OnJumpStay();
             }
 
-            if (CanJump == false)
+            
+            // ANIMATION 
+            if (IsDashing)
             {
-                _animator.SetBool("IsGrounded", true);
-                // Debug.Log("IsGrounded = True");
-                //_spriteRenderer.color = Color.blue;
+                _animator.SetBool("IsDashing", true);
+                Debug.Log("<color=yellow> animator is Dashing True </color>");
             }
             else
             {
-                _animator.SetBool("IsGrounded", false);
+                _animator.SetBool("IsDashing", false);
+                Debug.Log("<color=yellow> animator is Dashing False </color>");
+            }
+            
+            if (CanJump == false)
+            {
+                _animator.SetBool("IsFalling", true);
+                Debug.Log("<color=orange> Animator Falling True </color>");
+            }
+            else
+            {
+                _animator.SetBool("IsFalling", false);
+                Debug.Log("<color=orange> Animator Falling False </color>");
             }
         }
 
         private void FixedUpdate()
         {
-            OnMove();
+            if (_isStun == false)
+            {
+                OnMove();
+            }
+            else
+            {
+                var vector2 = rb2d.velocity;
+                vector2.x = 0f;
+                rb2d.velocity = vector2;
+            }
+            _animator.SetFloat("Horizontal", Mathf.Abs(rb2d.velocity.x));
+            Debug.Log("<color=cyan> Animator Horizontal </color>" + Mathf.Abs(rb2d.velocity.x));
         }
     
         // SAUT
@@ -205,26 +222,14 @@ namespace Julien.Scripts
         {
             bool Release;
             
-            if (CanJump && _isJumping == false)
+            if (CanJump && _isJumping == false && IsDashing == false && _isStun == false)
             {
                 rb2d.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
                 _isJumping = true;
                 _jumpTimeCounter = 0f;
-                Debug.Log("1");
-            }
-            // else
-            // {
-            //     Debug.Log("2");
-            //     _isJumping = false;
-            //     //Debug.Log("IsGrounded = False");
-            // }
-        }
-
-        public void OnJumpCancel()
-        {
-            if (CanJump == false && _isJumping)
-            {
-                _isJumping = false;  
+                
+                _animator.SetTrigger("IsJumping");
+                Debug.Log("<color=magenta> animator IsJumping </color>");
             }
         }
         private void OnJumpStay()
@@ -278,9 +283,9 @@ namespace Julien.Scripts
         }
     
         // ATTAQUE
-        public void OnAttaque()
+        public void OnAttaque(float buttonValue)
         {
-            if (_canAttaque)
+            if (_canAttaque && _playerInputHandler.Move.x == 0 && _isStun == false)
             {
                 // ATTAQUE DROITE
                 if (_spriteRenderer.flipX)
@@ -292,10 +297,8 @@ namespace Julien.Scripts
                     _canAttaque = false;
                     StartCoroutine("RealoadAttaque");
                     
-                    
-                    // ANIMATION 
-                    _animator.ResetTrigger("IsAttack");
-                    Debug.Log("IsGrounded = True");
+                    _animator.SetTrigger("IsAttack");
+                    Debug.Log("<color=lime> animator Attaque </color>");
                 }
                 // ATTAQUE GAUCHE
                 else
@@ -307,12 +310,11 @@ namespace Julien.Scripts
                     _canAttaque = false;
                     StartCoroutine("RealoadAttaque");
                     
-                    
-                    // ANIMATION 
-                    _animator.ResetTrigger("IsAttack");
-                    Debug.Log("IsGrounded = True");
+                    _animator.SetTrigger("IsAttack");
+                    Debug.Log("<color=lime> animator Attaque </color>");
                 }
         
+                
                 // JOUER AVEC CE QUE LE RAYCAST A TOUCHER
                 if (_hitResult.collider != null)
                 {
@@ -337,37 +339,32 @@ namespace Julien.Scripts
         {
             yield return new WaitForSeconds(1f);
             _canAttaque = true;
-            Debug.Log("à re son attaque");
         }
 
         // DASH
         public void OnDash()
         {
-            IsDashing = true;
-        
-            if (_spriteRenderer.flipX)
+            if (IsDashing == false && CanDash && CanJump && IsDashing == false && _isStun == false)
             {
-                _playerInputHandler.Move.x = _dashPower;
+                if (_spriteRenderer.flipX)
+                {
+                    _playerInputHandler.Move.x = _dashPower;
                 
-                // ANIMATION
-                _animator.SetBool("IsDashing", true); 
-                Debug.Log("IsDashin = True");   
-                _spriteRenderer.color = Color.red;
+                    _animator.SetBool("IsDashing", true);
 
-            }
-            else
-            {
-                _playerInputHandler.Move.x = -_dashPower;
+                }
+                else
+                {
+                    _playerInputHandler.Move.x = -_dashPower;
                 
-                // ANIMATION
-                _animator.SetBool("IsDashing", false); 
-                Debug.Log("IsDashin = True");   
-                _spriteRenderer.color = Color.red;
-
+                    _animator.SetBool("IsDashing", false); 
+                }
+                IsDashing = true;
+                
+                CanDash = false;
+                StartCoroutine(DashDelaying());
+                Debug.Log("start la couroutine");
             }
-            
-            CanDash = false;
-            StartCoroutine(DashDelaying());
         }
         public IEnumerator DashDelaying()
         {
@@ -377,11 +374,20 @@ namespace Julien.Scripts
             yield return new WaitForSeconds(_dashReload);
             CanDash = true;
             Debug.Log("reload dash");
-            
-            // ANIMATION
-            _animator.ResetTrigger("IsDashing");
-            Debug.Log("IsDashing = False");
-            _spriteRenderer.color = Color.white;
+        }
+
+        public void OnStun()
+        {
+            _isStun = true;
+            Debug.Log(_isStun);
+            StartCoroutine("DelayStun");
+            rb2d.AddForce(Vector2.up * _stunForce);
+        }
+
+        private IEnumerator DelayStun()
+        {
+            yield return new WaitForSeconds(_stunTimer);
+            _isStun = false;
         }
     }
 }
