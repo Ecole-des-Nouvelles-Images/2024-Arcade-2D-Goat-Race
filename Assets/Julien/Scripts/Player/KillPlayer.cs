@@ -1,11 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Julien.Scripts;
 using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
     public Vector3 SpawnPosition;
+    private Goat _goat;
+    [SerializeField] private float SpeedTeleportation = 5f;
+
+    private void Awake()
+    {
+        _goat = GetComponent<Goat>();
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -17,6 +25,7 @@ public class KillPlayer : MonoBehaviour
 
     public void Kill()
     {
-        gameObject.transform.position = SpawnPosition;
+        _goat.Respawn();
+        transform.position = Vector3.Lerp(gameObject.transform.position, SpawnPosition, SpeedTeleportation * Time.deltaTime);
     }
 }
