@@ -10,15 +10,13 @@ public class LoadGame : MonoBehaviour
     [SerializeField] private GameObject _desetMap;
     private void Start()
     {
-        if (GlobalVariable.GlobalNameMap == "ForêtMap")
+        if (GlobalVariable.GlobalNameMap == "ForetMap")
         {
             _foretMap.SetActive(true);
-            Debug.Log("Map Foret");
         }
         if (GlobalVariable.GlobalNameMap == "DesertMap")
         {
             _desetMap.SetActive(true);
-            Debug.Log("Map Foret");
         }
     }
 }

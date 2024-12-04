@@ -6,6 +6,7 @@ namespace Julien.Scripts
 {
     public class PlayerInputHandler : MonoBehaviour
     {
+        [SerializeField] private Animator _animator;
         public static event Action<bool> OnInputDeviceChanged;
         [SerializeField] private GameManager GameManager;
         [SerializeField] private PlayerInputManager PlayerInputManager;
@@ -20,6 +21,7 @@ namespace Julien.Scripts
 
         private void Awake()
         {
+            _animator = GetComponent<Animator>();
             rb2d = GetComponent<Rigidbody2D>();
             _goat = GetComponent<Goat>();
             _inventaryBonus = GetComponent<InventaryBonus>();
@@ -38,6 +40,7 @@ namespace Julien.Scripts
             _playerInput.actions["Dash"].performed += OnDash;
         
             _playerInput.actions["Attaque"].performed += OnAttaque;
+            _playerInput.actions["Attaque"].canceled += OnAttaque;
         
             _playerInput.actions["Jump"].started += OnJump;
             _playerInput.actions["Jump"].canceled += OnJumpCancel;
@@ -104,11 +107,7 @@ namespace Julien.Scripts
         
         private void OnJump(InputAction.CallbackContext context)
         {
-            if (_goat.IsDashing == false)
-            {
-                _goat.OnJump();
-                Debug.Log("Jumped");
-            }
+            _goat.OnJump();
         }
 
         public void OnJumpCancel(InputAction.CallbackContext context)
@@ -119,15 +118,12 @@ namespace Julien.Scripts
         
         private void OnDash(InputAction.CallbackContext context)
         {
-            if (_goat.IsDashing == false && _goat.CanDash && _goat.CanJump)
-            {
-                _goat.OnDash(); 
-            }
+            _goat.OnDash(); 
         }
 
         private void OnAttaque(InputAction.CallbackContext context)
         {
-            _goat.OnAttaque();
+            _goat.OnAttaque(context.ReadValue<float>());
         }
 
         private void OnUseBonus(InputAction.CallbackContext context)

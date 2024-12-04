@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "GrandCh\xE8vre"
   Sprite: {fileID: 21300000, guid: 1746fc6e78a34eb4485b75332b37bf5b, type: 3}
+  AnimatorController: {fileID: 0}
   Damage: 20
   RangeAttaque: 5
-  Speed: 9
+  Speed: 13
   JumpForce: 13
   RayDistance: 3.2
   Collider2DAxeX: 5
