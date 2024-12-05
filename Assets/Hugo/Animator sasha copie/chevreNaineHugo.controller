@@ -78,7 +78,7 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8052466100161469826}
-    m_Position: {x: -260, y: 10, z: 0}
+    m_Position: {x: -370, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -9064300060204205988}
@@ -246,7 +246,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: chevreNaine
+  m_Name: chevreNaineHugo
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsJumping
@@ -273,12 +273,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsDashing
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: IsStun
     m_Type: 4
     m_DefaultFloat: 0
@@ -291,7 +285,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: IsCharging
+  - m_Name: IsDashing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

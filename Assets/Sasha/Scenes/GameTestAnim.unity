@@ -25385,7 +25385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1564559116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25664,7 +25664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1757352722
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43312,7 +43312,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: 67c76cc74ab0b484aaeb6f2010867705, type: 2}
+      objectReference: {fileID: 11400000, guid: d2548da547ce6314e8d30942e84655df, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5
@@ -43677,7 +43677,7 @@ PrefabInstance:
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: GoatData
       value: 
-      objectReference: {fileID: 11400000, guid: d2c8851f71476094c8e82d155dfd5ae9, type: 2}
+      objectReference: {fileID: 11400000, guid: e9417b924d61272499bc5f0f04a2d3a9, type: 2}
     - target: {fileID: 6118669829489119256, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: DashPower
       value: 1.5
