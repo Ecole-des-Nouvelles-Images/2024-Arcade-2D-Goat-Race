@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ParallaxSpeed : MonoBehaviour
+public class Parallax : MonoBehaviour
 {
     private Material _material;
     private float _distance;

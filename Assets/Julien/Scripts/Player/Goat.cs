@@ -33,6 +33,8 @@ namespace Julien.Scripts
         private float _jumpForce = 3f;
         private Vector2 _movementInput;
         private PlayerInputHandler _playerInputHandler;
+        private bool _isFalling;
+        private bool _isGrounded;
    
         // Dash
         public bool CanDash = true;
@@ -141,7 +143,6 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            Debug.Log("<color=purple> la vélocity est </color>" + rb2d.velocity.x);
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -156,13 +157,24 @@ namespace Julien.Scripts
             }
             OnJumpStay();
             
-            if (rb2d.velocity.y < -0.5f)
+            if (rb2d.velocity.y < -0.2f)
             {
+                _isFalling = true;
                 rb2d.gravityScale = 6f;
             }
             else
             {
+                _isFalling = false;
                 rb2d.gravityScale = 3.5f;
+            }
+
+            if (CanJump)
+            {
+                _isGrounded = true;
+            }
+            else
+            {
+                _isGrounded = false;
             }
             
             if (_isJumping == false)
@@ -193,40 +205,19 @@ namespace Julien.Scripts
             {
                 _dashAttackColliderLeft.SetActive(false);
             }
-            
             // ANIMATION 
-            if (IsDashing)
-            {
-                _animator.SetBool("IsDashing", true);
-                //Debug.Log("<color=yellow> animator is Dashing True </color>");
-            }
-            else
-            {
-                _animator.SetBool("IsDashing", false);
-                //Debug.Log("<color=yellow> animator is Dashing False </color>");
-            }
+            _animator.SetBool("IsFalling", _isFalling);
+            //Debug.Log("<color=orange> animator IsFalling </color>" + _isFalling);
             
-            if (CanJump == false)
-            {
-                _animator.SetBool("IsFalling", true);
-                //Debug.Log("<color=orange> Animator Falling True </color>");
-            }
-            else
-            {
-                _animator.SetBool("IsFalling", false);
-                //Debug.Log("<color=orange> Animator Falling False </color>");
-            }
+            _animator.SetBool("IsDashing", IsDashing);
+            //Debug.Log("<color=yellow> animator Dashing </color>" + IsDashing);
+            
+            _animator.SetBool("IsStun", _isStun);
+            //Debug.Log("<color=blue> animator IsStun </color>" + _isStun);
+            
+            _animator.SetBool("IsGrounded", _isGrounded);
+            //Debug.Log("<color=white> animator IsGrounded </color>" + _isGrounded);
 
-            if (_isStun)
-            {
-                //Debug.Log("<color=black> animator Stun True </color>");
-                _animator.SetBool("IsStun", true);
-            }
-            else
-            {
-                //Debug.Log("<color=black> animator Stun False </color>");
-                _animator.SetBool("IsStun", false);
-            }
         }
 
         private void FixedUpdate()
@@ -257,7 +248,7 @@ namespace Julien.Scripts
                 _jumpTimeCounter = 0f;
                 
                 _animator.SetTrigger("IsJumping");
-                Debug.Log("<color=magenta> animator IsJumping </color>");
+                //Debug.Log("<color=magenta> animator IsJumping </color>");
             }
         }
         private void OnJumpStay()
@@ -326,7 +317,7 @@ namespace Julien.Scripts
                     StartCoroutine("RealoadAttaque");
                     
                     _animator.SetTrigger("IsAttack");
-                    Debug.Log("<color=lime> animator Attaque </color>");
+                    //Debug.Log("<color=lime> animator Attaque </color>");
                 }
                 // ATTAQUE GAUCHE
                 else
@@ -339,7 +330,7 @@ namespace Julien.Scripts
                     StartCoroutine("RealoadAttaque");
                     
                     _animator.SetTrigger("IsAttack");
-                    Debug.Log("<color=lime> animator Attaque </color>");
+                    //Debug.Log("<color=lime> animator Attaque </color>");
                 }
         
                 
@@ -370,14 +361,11 @@ namespace Julien.Scripts
                 {
                     _playerInputHandler.Move.x = _dashPower;
                 
-                    _animator.SetBool("IsDashing", true);
-
                 }
                 else
                 {
                     _playerInputHandler.Move.x = -_dashPower;
                 
-                    _animator.SetBool("IsDashing", false); 
                 }
                 IsDashing = true;
                 

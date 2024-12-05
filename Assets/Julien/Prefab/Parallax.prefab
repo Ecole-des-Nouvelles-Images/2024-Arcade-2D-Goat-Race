@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3639689098171242996}
   - component: {fileID: 4792854288527968682}
-  - component: {fileID: 8120846727407649595}
+  - component: {fileID: 4854231367052647783}
   m_Layer: 0
   m_Name: Plan1
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 95c95a7a31b27374c99820d0c39c73ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,10 +82,10 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8120846727407649595
+--- !u!114 &4854231367052647783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2750393584160626470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b84ec8bad33f34ca3c5c75c0ba4ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b3471250475e94c86840ebc4e002db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3475227892590485184}
   - component: {fileID: 4499252447527714077}
-  - component: {fileID: 2568363337948853907}
+  - component: {fileID: 514638574269524200}
   m_Layer: 0
   m_Name: Plan3
   m_TagString: Untagged
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 53f2c3776a268834ab6e55e45734124e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,10 +180,10 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2568363337948853907
+--- !u!114 &514638574269524200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3042305157025378519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b84ec8bad33f34ca3c5c75c0ba4ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b3471250475e94c86840ebc4e002db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3381934744509731453}
   - component: {fileID: 772637023057966226}
-  - component: {fileID: 7857908474587212441}
+  - component: {fileID: 3251976784208092611}
   m_Layer: 0
   m_Name: Plan4
   m_TagString: Untagged
@@ -270,18 +270,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -4
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ed84d290613c894499ccff386d9b993d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7857908474587212441
+--- !u!114 &3251976784208092611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3538967241167539948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b84ec8bad33f34ca3c5c75c0ba4ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b3471250475e94c86840ebc4e002db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
@@ -303,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617595039517573217}
-  - component: {fileID: 5778166899737908786}
+  - component: {fileID: 5744261982502602575}
   m_Layer: 0
   m_Name: Parallax
   m_TagString: Untagged
@@ -330,7 +330,7 @@ Transform:
   - {fileID: 3381934744509731453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5778166899737908786
+--- !u!114 &5744261982502602575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,18 +339,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5354510644193401725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41b3471250475e94c86840ebc4e002db, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f29e34dd72c9047a346b2e9c524514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxData: {fileID: 11400000, guid: db10aa2aab9fad543a4f42b394f3586e, type: 2}
-  Plan1: {fileID: 2750393584160626470}
-  Plan2: {fileID: 5606023598263369629}
-  Plan3: {fileID: 3042305157025378519}
-  Plan4: {fileID: 3538967241167539948}
-  _sprite1: {fileID: 0}
-  _sprite2: {fileID: 0}
-  _sprite3: {fileID: 0}
-  _sprite4: {fileID: 0}
+  ParallaxSpeed: 0.01
 --- !u!1 &5606023598263369629
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6313364337547923664}
   - component: {fileID: 7891929783833629935}
-  - component: {fileID: 6467617673564898237}
+  - component: {fileID: 5782700953939120537}
   m_Layer: 0
   m_Name: Plan2
   m_TagString: Untagged
@@ -425,7 +417,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 16885b24ede87324cbb0a2396311aea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -433,10 +425,10 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6467617673564898237
+--- !u!114 &5782700953939120537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,7 +437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5606023598263369629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b84ec8bad33f34ca3c5c75c0ba4ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 41b3471250475e94c86840ebc4e002db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
