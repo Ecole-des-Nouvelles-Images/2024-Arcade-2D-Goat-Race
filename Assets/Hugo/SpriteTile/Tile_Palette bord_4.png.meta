@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a4acd77fbff7be9418e7638a2d918237
+guid: 4548cabeb66627f49a3f321dfbd83e6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_0
+      name: Tile_Palette bord_4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0eec4c7c3dd9c5488df1efb51cd9077
-      internalID: -130795753
+      spriteID: 6b7d2998ef78cde4e94d3f43d207ef17
+      internalID: 1739050219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_1
+      name: Tile_Palette bord_4_1
       rect:
         serializedVersion: 2
         x: 128
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 287c389b5514da447a470c354e533f53
-      internalID: -1302009424
+      spriteID: 8538cea97a1955b4eb1941fc4b2a37e2
+      internalID: -1355342403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_2
+      name: Tile_Palette bord_4_2
       rect:
         serializedVersion: 2
         x: 256
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f558f0e11bcfdca478d7c9030df52c5e
-      internalID: -235652983
+      spriteID: da29714099bd02f4680722820c863271
+      internalID: 519113182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_3
+      name: Tile_Palette bord_4_3
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07e99059ede43c245be08495d27f69d6
-      internalID: -1578850198
+      spriteID: 4e93620e895556a4ca26d352442d3251
+      internalID: -1655772364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_4
+      name: Tile_Palette bord_4_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8196f791f524b4a9d3812e20a02421
-      internalID: 615498867
+      spriteID: 1340a7922979f1e4ab7de7bd17e9fbca
+      internalID: 315173428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_5
+      name: Tile_Palette bord_4_5
       rect:
         serializedVersion: 2
         x: 256
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4763e776aa8274891ec749e075dc01
-      internalID: -2009971975
+      spriteID: f02aeb2034fb69d49aa6e72e85d524d2
+      internalID: -791081139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_6
+      name: Tile_Palette bord_4_6
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb84efcdc3ba6244592e1da7ba3c4414
-      internalID: -944342303
+      spriteID: 52b0a0e19dd18a24ab3d5365e9708de0
+      internalID: 1069936868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_7
+      name: Tile_Palette bord_4_7
       rect:
         serializedVersion: 2
         x: 128
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a67c71b26837894abad6312ce957814
-      internalID: -1442920299
+      spriteID: 8470caa639aad2048929e25ca9a3ab0f
+      internalID: -703741535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile_Palette_Bord_3_8
+      name: Tile_Palette bord_4_8
       rect:
         serializedVersion: 2
         x: 256
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a7cb6e45eaccc43806597ff6a55bc2
-      internalID: -134315364
+      spriteID: cff4e084e9af9434b94f8b533b1c3b06
+      internalID: 1674546638
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tile_Palette_Bord_3_0: -130795753
-      Tile_Palette_Bord_3_1: -1302009424
-      Tile_Palette_Bord_3_2: -235652983
-      Tile_Palette_Bord_3_3: -1578850198
-      Tile_Palette_Bord_3_4: 615498867
-      Tile_Palette_Bord_3_5: -2009971975
-      Tile_Palette_Bord_3_6: -944342303
-      Tile_Palette_Bord_3_7: -1442920299
-      Tile_Palette_Bord_3_8: -134315364
+      Tile_Palette bord_4_0: 1739050219
+      Tile_Palette bord_4_1: -1355342403
+      Tile_Palette bord_4_2: 519113182
+      Tile_Palette bord_4_3: -1655772364
+      Tile_Palette bord_4_4: 315173428
+      Tile_Palette bord_4_5: -791081139
+      Tile_Palette bord_4_6: 1069936868
+      Tile_Palette bord_4_7: -703741535
+      Tile_Palette bord_4_8: 1674546638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
