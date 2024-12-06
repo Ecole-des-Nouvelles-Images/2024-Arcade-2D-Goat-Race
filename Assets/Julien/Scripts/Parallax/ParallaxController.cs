@@ -9,7 +9,8 @@ public class ParallaxController : MonoBehaviour
     private Transform _cameraTransform;
     private Vector3 _cameraStartPosition;
     private float _distance;
-    [Space(10),Header("Les Degats")]
+    [Space(10)]
+        
     [SerializeField] private GameObject _camera;
     
     private GameObject[] _backgrounds;

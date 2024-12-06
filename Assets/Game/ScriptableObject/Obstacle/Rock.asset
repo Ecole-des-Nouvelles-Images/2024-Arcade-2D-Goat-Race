@@ -9,18 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35834947f3339fd4eb0f8b1411ebd38f, type: 3}
-  m_Name: SniperSniper
+  m_Script: {fileID: 11500000, guid: 13fe60ac063abb44db133592dc2c7c3b, type: 3}
+  m_Name: Rock
   m_EditorClassIdentifier: 
-  Name: 
-  Sprite: {fileID: 0}
-  Damage: 0
-  RangeAttaque: 0
-  Speed: 0
-  JumpForce: 0
-  RayDistance: 0
+  ObstableName: 
+  Sprite: {fileID: 21300000, guid: 38eb25db46c5fe94f8370de546dd8f55, type: 3}
+  Health: 20
   Collider2DAxeX: 0
   Collider2DAxeY: 0
-  CameraZ: 0
-  CameraY: 0
-  CameraX: 0
