@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f356055304f8ed04a8f7300d011c0ed2
+guid: 11660ab8cc6b1e54fb185fbc25ad9708
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grp_tile_squelette_2_0
+      name: Tile_Palette bord_8_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b52ecd68708f8674abb523b669cc7e7e
-      internalID: -945226740
+      spriteID: c67e849b8dffe724982c15890f7f9656
+      internalID: 184971337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_1
+      name: Tile_Palette bord_8_1
       rect:
         serializedVersion: 2
         x: 128
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b563ecc4ad79136438082ef8dbd3b696
-      internalID: 1082818983
+      spriteID: 5316f9a81e62eac40823357732c9ef58
+      internalID: 143939059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_2
+      name: Tile_Palette bord_8_2
       rect:
         serializedVersion: 2
         x: 256
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c6785a4caba31448d2939249ac02ab
-      internalID: -598497232
+      spriteID: 78617c9e650a3304f8b481c326550414
+      internalID: 262043660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_3
+      name: Tile_Palette bord_8_3
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52102e737584d6041a3d8e0a77cef1a2
-      internalID: -1385550236
+      spriteID: 2d5392ec1b3e0f943ae323281c53b89b
+      internalID: 1279574413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_4
+      name: Tile_Palette bord_8_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0979f87ce31f51c449e9b770273233ba
-      internalID: -401035928
+      spriteID: 7054621b4d96ac24db220e6ab18df234
+      internalID: 1599895805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_5
+      name: Tile_Palette bord_8_5
       rect:
         serializedVersion: 2
         x: 256
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0f42ee9bdf9904889ee49edf5f8d00
-      internalID: 868295199
+      spriteID: fbb6e4cadb438c045bbebbb742ce5be6
+      internalID: 578297603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_6
+      name: Tile_Palette bord_8_6
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15a4425997066704d9e283a9f229d069
-      internalID: 806243802
+      spriteID: a7dd91f594981c948b7fdc23ddc7b8b0
+      internalID: 1871733766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_7
+      name: Tile_Palette bord_8_7
       rect:
         serializedVersion: 2
         x: 128
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbdf958288d9a6d4f9022ed90569b315
-      internalID: 90740490
+      spriteID: 2eba0398817ff98409617c5c7a9a76b6
+      internalID: 897113797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grp_tile_squelette_2_8
+      name: Tile_Palette bord_8_8
       rect:
         serializedVersion: 2
         x: 256
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1628765492e6d89498a51097f42e73d8
-      internalID: 1136794390
+      spriteID: 57fdd97b44e9ede47a7684d153e9ed20
+      internalID: 1645546923
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      grp_tile_squelette_2_0: -945226740
-      grp_tile_squelette_2_1: 1082818983
-      grp_tile_squelette_2_2: -598497232
-      grp_tile_squelette_2_3: -1385550236
-      grp_tile_squelette_2_4: -401035928
-      grp_tile_squelette_2_5: 868295199
-      grp_tile_squelette_2_6: 806243802
-      grp_tile_squelette_2_7: 90740490
-      grp_tile_squelette_2_8: 1136794390
+      Tile_Palette bord_8_0: 184971337
+      Tile_Palette bord_8_1: 143939059
+      Tile_Palette bord_8_2: 262043660
+      Tile_Palette bord_8_3: 1279574413
+      Tile_Palette bord_8_4: 1599895805
+      Tile_Palette bord_8_5: 578297603
+      Tile_Palette bord_8_6: 1871733766
+      Tile_Palette bord_8_7: 897113797
+      Tile_Palette bord_8_8: 1645546923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
