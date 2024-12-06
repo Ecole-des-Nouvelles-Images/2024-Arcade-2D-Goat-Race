@@ -43382,6 +43382,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1274315701807569177, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: _speedDivider
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1428881833954238923, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -43392,7 +43396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1465916971946738987, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1530004125963205248, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Layer
