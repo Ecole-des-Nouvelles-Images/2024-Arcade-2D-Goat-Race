@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ParallaxController : MonoBehaviour
 {
+    [Range(0.01f, 1f),SerializeField] private float _speedDivider =0.2f;
+    
     private Transform _cameraTransform;
     private Vector3 _cameraStartPosition;
     private float _distance;
+    [Space(10),Header("Les Degats")]
     [SerializeField] private GameObject _camera;
     
     private GameObject[] _backgrounds;
@@ -20,7 +23,7 @@ public class ParallaxController : MonoBehaviour
 
     void Start()
     {
-        _cameraTransform = Camera.main.transform;
+        _cameraTransform = _camera.transform;
         _cameraStartPosition = _cameraTransform.position;
         
         int backCount = transform.childCount;
@@ -49,7 +52,8 @@ public class ParallaxController : MonoBehaviour
 
         for (int i = 0; i < backCount; i++)
         {
-            _backgroundSpeeds[i] = 1 - (_backgrounds[i].transform.position.z - _cameraTransform.position.z) / _farthestBackground;
+            _backgroundSpeeds[i] = (i+1) * _speedDivider;
+            //_backgroundSpeeds[i] = 1 - (_backgrounds[i].transform.position.z - _cameraTransform.position.z) / _farthestBackground;
         }
     }
 
@@ -57,10 +61,11 @@ public class ParallaxController : MonoBehaviour
     {
         _distance = _cameraTransform.position.x - _cameraStartPosition.x;
         transform.position = new Vector3(_cameraTransform.position.x, 0, 0);
-
         for (int i = 0; i < _backgrounds.Length; i++)
         {
             float speed = ParallaxSpeed * _backgroundSpeeds[i];
+            Debug.Log( " ParallaxSpeed  = "+ ParallaxSpeed);
+            Debug.Log( " _backgroundSpeeds  = "+ _backgroundSpeeds[i]);
             _materials[i].SetTextureOffset("_MainTex", new Vector2(_distance,0)*speed);
         }
     }

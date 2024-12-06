@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Julien.Scripts
 {
@@ -75,6 +73,8 @@ namespace Julien.Scripts
         private RaycastHit2D _hitResult;
     
         private Rigidbody2D rb2d;
+        
+        [SerializeField] private AudioSource _jumpSound;
 
         private void Start()
         {
@@ -249,6 +249,8 @@ namespace Julien.Scripts
                 
                 _animator.SetTrigger("IsJumping");
                 //Debug.Log("<color=magenta> animator IsJumping </color>");
+                _jumpSound.Play();
+                
             }
         }
         private void OnJumpStay()
