@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
+        [FormerlySerializedAs("_song")] [SerializeField] private SongSFX songSfx;
+        
         [SerializeField] private List<GoatData> GoatsDatas;
         
         [SerializeField] private Animator _animator;
@@ -15,7 +18,8 @@ namespace Julien.Scripts
         public GoatData GoatData;
         public Sprite Sprite;
         private SpriteRenderer _spriteRenderer;
-    
+
+        private float _sizeXOffset;
         private float _sizeX;
         private float _sizeY;
         private BoxCollider2D _boxCollider2D;
@@ -112,7 +116,8 @@ namespace Julien.Scripts
             _jumpForce = GoatData.JumpForce;
             _rayDistance = GoatData.RayDistance;
             _cameraDistance = GoatData.CameraZ;
-        
+
+            _sizeXOffset = GoatData.ColliderOfsetX;
             _sizeX = GoatData.Collider2DAxeX;
             _sizeY = GoatData.Collider2DAxeY;
 
@@ -124,6 +129,7 @@ namespace Julien.Scripts
             _camera.transform.localPosition = new Vector3(CameraX, CameraY, CameraZ);
 
             _boxCollider2D.size = new Vector2(_sizeX,_sizeY);
+            _boxCollider2D.offset = new Vector2(0, _sizeXOffset);
 
             
             // ANIMATOR
@@ -249,8 +255,8 @@ namespace Julien.Scripts
                 
                 _animator.SetTrigger("IsJumping");
                 //Debug.Log("<color=magenta> animator IsJumping </color>");
-                _jumpSound.Play();
-                
+                songSfx.JumpSong.Play();
+
             }
         }
         private void OnJumpStay()
@@ -340,9 +346,12 @@ namespace Julien.Scripts
                 if (_hitResult.collider != null)
                 {
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
+                    songSfx.DamageOpstacle.Play();
+                    
                     if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
                     {
                         Destroy(_hitResult.collider.gameObject);
+                        songSfx.DestroyObject.Play();
                     }
                 }
             }

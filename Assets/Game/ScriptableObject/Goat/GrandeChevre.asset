@@ -20,10 +20,11 @@ MonoBehaviour:
   Speed: 13
   JumpForce: 13
   RayDistance: 3.2
-  Collider2DAxeX: 5
-  Collider2DAxeY: 6.3
-  ColliderIsGroundedPositionY: 3.2
-  ColliderIsGroundedScaleX: 6
+  Collider2DAxeX: 3.12
+  ColliderOfsetX: -1.2
+  Collider2DAxeY: 2.67
+  ColliderIsGroundedPositionY: 2.5
+  ColliderIsGroundedScaleX: -3
   CameraZ: -38.5
   CameraY: 0.55
   CameraX: 10

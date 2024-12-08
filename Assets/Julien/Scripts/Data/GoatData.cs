@@ -16,6 +16,7 @@ public class GoatData : ScriptableObject
     public float RayDistance;
     
     public float Collider2DAxeX;
+    public float ColliderOfsetX;
     public float Collider2DAxeY;
 
     public float ColliderIsGroundedPositionY;

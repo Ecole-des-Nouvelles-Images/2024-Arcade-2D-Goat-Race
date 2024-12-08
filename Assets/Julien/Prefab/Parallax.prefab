@@ -282,11 +282,11 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3639689098171242996}
-  - {fileID: 6313364337547923664}
-  - {fileID: 3475227892590485184}
-  - {fileID: 3381934744509731453}
   - {fileID: 4228480731487054889}
+  - {fileID: 3381934744509731453}
+  - {fileID: 3475227892590485184}
+  - {fileID: 6313364337547923664}
+  - {fileID: 3639689098171242996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5744261982502602575
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f29e34dd72c9047a346b2e9c524514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedDivider: 0.2
+  _speedDivider: 0.033
   _camera: {fileID: 0}
   ParallaxSpeed: 0.01
 --- !u!1 &5606023598263369629

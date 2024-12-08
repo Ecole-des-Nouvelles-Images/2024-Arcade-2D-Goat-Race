@@ -1,7 +1,14 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    [SerializeField] private bool DecresseColor = true;
+    [SerializeField] private float _currentColor = 1;
+    [SerializeField] private float _colorSpeed;
+    [SerializeField] private float MaxBlueValue = 0.6f;
+    
     public ObstacleData ObstacleData;
 
     public SpriteRenderer SpriteRenderer;
@@ -20,6 +27,28 @@ public class Obstacle : MonoBehaviour
     private void Update()
     {
         
+        
+        var spriteRendererColor = SpriteRenderer.color;
+        
+        if (DecresseColor)
+        {
+            SpriteRenderer.color = new Color(1,1,spriteRendererColor.b -= _colorSpeed * Time.deltaTime);
+        }
+        else
+        {
+            SpriteRenderer.color = new Color(1,1,spriteRendererColor.b += _colorSpeed * Time.deltaTime);
+        }
+        
+        if (spriteRendererColor.b >= 1)
+        {
+            DecresseColor = true;
+        }
+
+        if (spriteRendererColor.b <= 0.6f)
+        {
+            DecresseColor = false;
+        }
+        Debug.Log(spriteRendererColor.b);
     }
 
     public void LoadObstacle()

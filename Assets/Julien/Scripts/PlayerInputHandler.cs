@@ -19,6 +19,7 @@ namespace Julien.Scripts
         private PlayerInput _playerInput;
         private bool _isControllerConnected;
 
+        [SerializeField] private UI_MenuManager _uiMenuManager;
         private void Awake()
         {
             _animator = GetComponent<Animator>();
@@ -36,6 +37,9 @@ namespace Julien.Scripts
             // Bind input actions
             _playerInput.actions["Movement"].performed += OnMove;
             _playerInput.actions["Movement"].canceled += OnMove;
+            
+            _playerInput.actions["Pause"].performed += Pause;
+            _playerInput.actions["Pause"].canceled += Pause;
         
             _playerInput.actions["Dash"].performed += OnDash;
         
@@ -63,6 +67,9 @@ namespace Julien.Scripts
             // Unbind input actions
             _playerInput.actions["Movement"].performed -= OnMove;
             _playerInput.actions["Movement"].canceled -= OnMove;
+            
+            _playerInput.actions["Pause"].performed -= Pause;
+            _playerInput.actions["Pause"].canceled -= Pause;
         
             _playerInput.actions["Dash"].performed -= OnDash;
             _playerInput.actions["Dash"].canceled -= OnDash;
@@ -137,6 +144,11 @@ namespace Julien.Scripts
             {
                 
             }
+        }
+
+        private void Pause(InputAction.CallbackContext context)
+        {
+            _uiMenuManager.OpenPauseMenu();
         }
     }
 }

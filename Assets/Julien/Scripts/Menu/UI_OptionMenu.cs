@@ -20,6 +20,15 @@ public class UI_OptionMenu : MonoBehaviour
         MainMenu.SetActive(true);
     }
     
+    public void MainVolumeChange()
+    {
+        _audioMixer.SetFloat("MasterVol", Mathf.Log10(_mainSoundSlider.value) * 20);
+        if (_mainSoundSlider.value == 0)
+        {
+            _audioMixer.SetFloat("MasterVol", -80f);
+        }
+    }
+    
     public void MusicVolumeChange()
     {
         _audioMixer.SetFloat("MusicVol", Mathf.Log10(_musicSlider.value) * 20);

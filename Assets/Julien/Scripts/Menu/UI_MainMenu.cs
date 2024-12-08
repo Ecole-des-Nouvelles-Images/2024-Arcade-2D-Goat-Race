@@ -4,20 +4,21 @@ using UnityEngine.Serialization;
 
 public class UI_MainMenu : MonoBehaviour
 {
-   [SerializeField] private GameObject MainMenu;
-   [SerializeField] private GameObject SelectedMap;
-   [FormerlySerializedAs("OprtionPanel")] [SerializeField] private GameObject OptionPanel;
+   [SerializeField] private GameObject _mainMenu;
+   [SerializeField] private GameObject _selectedMap;
+   [SerializeField] private GameObject _credi;
+   [SerializeField] private GameObject _optionPanel;
    public void Play()
    {
       Debug.Log("Play");
-      MainMenu.SetActive(false);
-      SelectedMap.SetActive(true);
+      _mainMenu.SetActive(false);
+      _selectedMap.SetActive(true);
       
    }
    public void Options()
    {
-      MainMenu.SetActive(false);
-      OptionPanel.SetActive(true);
+      _mainMenu.SetActive(false);
+      _optionPanel.SetActive(true);
       Debug.Log("Options");
    }
    public void Quit()
@@ -26,6 +27,7 @@ public class UI_MainMenu : MonoBehaviour
    }
    public void Credit()
    {
-      Debug.Log("Credit");
+      _mainMenu.SetActive(false);
+      _credi.SetActive(true);
    }
 }

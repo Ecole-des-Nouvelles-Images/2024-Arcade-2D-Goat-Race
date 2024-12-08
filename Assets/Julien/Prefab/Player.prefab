@@ -947,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635504da44f1cc44eb09181fdb1416a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _song: {fileID: 7638202039884362325, guid: 96d7f801351ccf247b331bcd55ca1009, type: 3}
   GoatsDatas:
   - {fileID: 11400000, guid: c4676ae2a450813488cb734a1ae182f1, type: 2}
   - {fileID: 11400000, guid: 34f0f006b3ecfba4aab180369873c85a, type: 2}
@@ -1031,6 +1032,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   PlayerInputManager: {fileID: 0}
   Move: {x: 0, y: 0}
+  _uiMenuManager: {fileID: 0}
 --- !u!95 &7613173292054974556
 Animator:
   serializedVersion: 5

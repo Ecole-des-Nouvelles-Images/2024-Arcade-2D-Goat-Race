@@ -65,8 +65,6 @@ public class ParallaxController : MonoBehaviour
         for (int i = 0; i < _backgrounds.Length; i++)
         {
             float speed = ParallaxSpeed * _backgroundSpeeds[i];
-            Debug.Log( " ParallaxSpeed  = "+ ParallaxSpeed);
-            Debug.Log( " _backgroundSpeeds  = "+ _backgroundSpeeds[i]);
             _materials[i].SetTextureOffset("_MainTex", new Vector2(_distance,0)*speed);
         }
     }

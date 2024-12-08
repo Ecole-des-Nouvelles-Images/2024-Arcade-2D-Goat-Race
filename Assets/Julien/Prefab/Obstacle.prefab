@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d315dadc4a0804a977fd4684840c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DecresseColor: 1
+  _currentColor: 1
+  _colorSpeed: 0.6
+  MaxBlueValue: 0.6
   ObstacleData: {fileID: 11400000, guid: 2546c7856e0d7db4f8cbaed293d5dfea, type: 2}
   SpriteRenderer: {fileID: 0}
   Name: 
