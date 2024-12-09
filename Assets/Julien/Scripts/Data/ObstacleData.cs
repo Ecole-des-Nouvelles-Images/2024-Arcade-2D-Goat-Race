@@ -12,4 +12,5 @@ public class ObstacleData : ScriptableObject
     public int Health;
     public float Collider2DAxeX;
     public float Collider2DAxeY;
+    public float OffsetColliderY;
 }

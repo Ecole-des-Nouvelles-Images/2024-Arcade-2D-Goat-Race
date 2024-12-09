@@ -7,10 +7,11 @@ namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
-        [FormerlySerializedAs("_song")] [SerializeField] private SongSFX songSfx;
+        [SerializeField] private SongSFX songSfx;
         
+        
+        [Header("<color=green> DataChange </color>")]
         [SerializeField] private List<GoatData> GoatsDatas;
-        
         [SerializeField] private Animator _animator;
         [SerializeField] private RuntimeAnimatorController _animatorController;
         
@@ -18,7 +19,7 @@ namespace Julien.Scripts
         public GoatData GoatData;
         public Sprite Sprite;
         private SpriteRenderer _spriteRenderer;
-
+        
         private float _sizeXOffset;
         private float _sizeX;
         private float _sizeY;
@@ -30,6 +31,8 @@ namespace Julien.Scripts
         private float CameraX;
     
         // Les déplacement
+        [SerializeField] private float _speedStepSound;
+        [SerializeField] private bool _onMove;
         private float _airControl = 0.5f; 
         public float Speed; 
         private float _jumpForce = 3f;
@@ -44,7 +47,9 @@ namespace Julien.Scripts
         private float _dashDelay = 1.2f;
         private float _dashPower = 1.5f;
         private float _dashReload = 5f;
-        [SerializeField] private float _rangeDashAttaque = 1f;
+        private float _rangeDashAttaque = 1f;
+        
+        [Header("<color=purple> DashCollider </color>")]
         [SerializeField] private GameObject _dashAttackColliderLeft;
         [SerializeField] private GameObject _dashAttackColliderRight;
    
@@ -56,30 +61,34 @@ namespace Julien.Scripts
         
         // Is Grounded
         [SerializeField] private GameObject _ColliderGrounded;
-        [SerializeField] private float _colliderIsGroundedPositionY;
-        [SerializeField] private float _colliderIsGroundedScaleX;
+        private float _colliderIsGroundedPositionY;
+        private float _colliderIsGroundedScaleX;
 
         // STUN
-        [SerializeField] private bool _isStun;
+        private bool _isStun;
         private float _stunTimer = 2f;
         private float _stunForce = 500f;
     
-        [SerializeField] private LayerMask _layerMaskGrounded;
+        private LayerMask _layerMaskGrounded;
         private float _rayDistance = 0.55f;
+        
+        [Space(10)]
         public bool CanJump; 
     
         // Atataque
+        [Header("<color=red> Attack </color>")]
         [SerializeField] private bool _canAttaque;
         [SerializeField] private LayerMask _layerMaskObstacle;
         [SerializeField] private float _rangeAttaque;
         [SerializeField] private int _damage;
         [SerializeField] private float _coulDownAttaque;
+        
         private RaycastHit2D _hitResult;
     
         private Rigidbody2D rb2d;
+        private AudioSource _audioSource;
+        private bool _playingStepSound;
         
-        [SerializeField] private AudioSource _jumpSound;
-
         private void Start()
         {
             foreach (GoatData goatData in GoatsDatas)
@@ -106,6 +115,8 @@ namespace Julien.Scripts
 
         public void LoadGoat()
         {
+            _audioSource = GetComponent<AudioSource>();
+            
             Sprite = GoatData.Sprite;
             _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             _spriteRenderer.sprite = Sprite;
@@ -177,6 +188,8 @@ namespace Julien.Scripts
             if (CanJump)
             {
                 _isGrounded = true;
+                //_audioSource.clip = songSfx.AudioLanding[Random.Range(0, songSfx.AudioLanding.Count)];
+                //_audioSource.Play();
             }
             else
             {
@@ -255,8 +268,8 @@ namespace Julien.Scripts
                 
                 _animator.SetTrigger("IsJumping");
                 //Debug.Log("<color=magenta> animator IsJumping </color>");
-                songSfx.JumpSong.Play();
-
+                _audioSource.clip = songSfx.AudioJump[Random.Range(0,songSfx.AudioJump.Count)];
+                _audioSource.Play();
             }
         }
         private void OnJumpStay()
@@ -297,16 +310,33 @@ namespace Julien.Scripts
             Velocity.x = Horizontal * (Speed + GoatData.Speed);
         
             rb2d.velocity = Velocity;
-        
+            
             // FLIP LE SPRITE
             if (_playerInputHandler.Move.x > 0)
             {
                 _spriteRenderer.flipX = true;
+                if (_playingStepSound == false && _isGrounded)
+                {
+                    StartCoroutine("SoundStep");
+                }
             }
             else if (_playerInputHandler.Move.x < 0)
             {
                 _spriteRenderer.flipX = false;
+                if (_playingStepSound == false && _isGrounded)
+                {
+                    StartCoroutine("SoundStep");
+                }
             }
+        }
+
+        private IEnumerator SoundStep()
+        {
+            _playingStepSound = true;
+            yield return new WaitForSeconds(_speedStepSound);
+            _audioSource.clip = songSfx.AudioStep[Random.Range(0,songSfx.AudioStep.Count)];
+            _audioSource.Play();
+            _playingStepSound = false;
         }
     
         // ATTAQUE
@@ -346,12 +376,16 @@ namespace Julien.Scripts
                 if (_hitResult.collider != null)
                 {
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
-                    songSfx.DamageOpstacle.Play();
+                    
+                    _audioSource.clip = songSfx.AudioDamage[Random.Range(0,songSfx.AudioDamage.Count)];
+                    _audioSource.Play();
                     
                     if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
                     {
+                        _audioSource.clip = songSfx.AudioDestroy[Random.Range(0,songSfx.AudioDestroy.Count)];
+                        _audioSource.Play();
+                        
                         Destroy(_hitResult.collider.gameObject);
-                        songSfx.DestroyObject.Play();
                     }
                 }
             }
@@ -398,6 +432,9 @@ namespace Julien.Scripts
             _isStun = true;
             StartCoroutine("DelayStun");
             rb2d.AddForce(Vector2.up * _stunForce);
+            
+            _audioSource.clip = songSfx.AudioStun[Random.Range(0,songSfx.AudioStun.Count)];
+            _audioSource.Play();
         }
 
         private IEnumerator DelayStun()
