@@ -18,8 +18,8 @@ TagManager:
   - Parallax1
   - Parallax2
   - GroundKill
-  - 
-  - 
+  - PlayerOneCamera
+  - PlayerTwoCamera
   - 
   - 
   - 
