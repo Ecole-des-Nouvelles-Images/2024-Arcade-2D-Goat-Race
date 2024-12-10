@@ -18,6 +18,7 @@ public class Obstacle : MonoBehaviour
     
    public float SizeX;
    public float SizeY;
+   public float OffsetY;
     private void Start()
     {
         LoadObstacle();
@@ -26,8 +27,6 @@ public class Obstacle : MonoBehaviour
 
     private void Update()
     {
-        
-        
         var spriteRendererColor = SpriteRenderer.color;
         
         if (DecresseColor)
@@ -48,7 +47,6 @@ public class Obstacle : MonoBehaviour
         {
             DecresseColor = false;
         }
-        Debug.Log(spriteRendererColor.b);
     }
 
     public void LoadObstacle()
@@ -63,7 +61,9 @@ public class Obstacle : MonoBehaviour
         
         SizeX = ObstacleData.Collider2DAxeX;
         SizeY = ObstacleData.Collider2DAxeY;
-
+        OffsetY = ObstacleData.OffsetColliderY;
+        
         BoxCollider2D.size = new Vector2(SizeX,SizeY);
+        BoxCollider2D.offset = new Vector2(0,OffsetY);
     }
 }
