@@ -2250,7 +2250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &877217813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,6 +2318,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &897541044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768872434970892125, guid: 2edb76ff0f2b69f438f6d23c8a06705c, type: 3}
+  m_PrefabInstance: {fileID: 8193571678115136838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &975229910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5511,6 +5516,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 170418409807132268, guid: 2edb76ff0f2b69f438f6d23c8a06705c, type: 3}
+      propertyPath: Button
+      value: 
+      objectReference: {fileID: 897541044}
     - target: {fileID: 170418409807132268, guid: 2edb76ff0f2b69f438f6d23c8a06705c, type: 3}
       propertyPath: eventSystem
       value: 
