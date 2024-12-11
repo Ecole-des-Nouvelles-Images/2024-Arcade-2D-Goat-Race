@@ -20,7 +20,7 @@ TagManager:
   - GroundKill
   - PlayerOneCamera
   - PlayerTwoCamera
-  - 
+  - NoCollide
   - 
   - 
   - 

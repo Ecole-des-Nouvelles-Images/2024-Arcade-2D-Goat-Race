@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814293371739119542}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.93, y: -11.96, z: 0.14773168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,7 +50,7 @@ MonoBehaviour:
   _currentColor: 1
   _colorSpeed: 0.8
   MaxBlueValue: 0.6
-  ObstacleData: {fileID: 11400000, guid: 2546c7856e0d7db4f8cbaed293d5dfea, type: 2}
+  ObstacleData: {fileID: 11400000, guid: bf6e2ef2fe9437d48a8eccc09b1b2254, type: 2}
   SpriteRenderer: {fileID: 0}
   Name: 
   Health: 0

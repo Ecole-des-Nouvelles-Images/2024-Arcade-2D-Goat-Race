@@ -44,7 +44,7 @@ namespace Julien.Scripts
         // Dash
         public bool CanDash = true;
         public bool IsDashing;
-        private float _dashDelay = 1.2f;
+        private float _dashDelay = 0.8f;
         private float _dashPower = 1.5f;
         private float _dashReload = 5f;
         private float _rangeDashAttaque = 1f;
