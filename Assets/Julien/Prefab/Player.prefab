@@ -990,6 +990,7 @@ MonoBehaviour:
   GoatData: {fileID: 0}
   Sprite: {fileID: 0}
   _camera: {fileID: 7426522502232688518}
+  CanMove: 0
   _speedStepSound: 0.2
   _onMove: 0
   Speed: 0
@@ -1221,7 +1222,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d046bede91f6b7d45a1319e4771f0bf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.57, y: 3.81}

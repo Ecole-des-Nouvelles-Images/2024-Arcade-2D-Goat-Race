@@ -24,7 +24,7 @@ MonoBehaviour:
   ColliderOfsetX: 1.37
   Collider2DAxeY: 2.2
   ColliderIsGroundedPositionY: 0
-  ColliderIsGroundedScaleX: -3
+  ColliderIsGroundedScaleX: -2.5
   CameraZ: -38.5
   CameraY: 0.55
   CameraX: 10
