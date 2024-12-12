@@ -160,6 +160,7 @@ namespace Julien.Scripts
     
         private void Update()
         {
+            Debug.Log(_playerInputHandler.Move.x);
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -342,7 +343,7 @@ namespace Julien.Scripts
         // ATTAQUE
         public void OnAttaque(float buttonValue)
         {
-            if (_canAttaque && rb2d.velocity.x is <= 0.1f and >= -0.1f && _isStun == false)
+            if (_canAttaque && rb2d.velocity.x is <= 0.1f and >= -0.1f && _isStun == false && CanJump)
             {
                 // ATTAQUE DROITE
                 if (_spriteRenderer.flipX)

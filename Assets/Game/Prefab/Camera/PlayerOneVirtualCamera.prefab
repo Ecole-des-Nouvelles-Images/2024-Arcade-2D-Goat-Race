@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 0}
-  m_Damping: 0
+  m_Damping: 5
   m_MaxWindowSize: -1
   m_Padding: 0
 --- !u!1 &6052036846140794274
@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6313796362221000435}
   - component: {fileID: 5776564147146171630}
   - component: {fileID: 6031862000618708867}
+  - component: {fileID: 4211627524219614020}
   m_Layer: 12
   m_Name: cm
   m_TagString: Untagged
@@ -154,15 +155,15 @@ MonoBehaviour:
   m_YDamping: 0.5
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.21
-  m_ScreenY: 0.61
+  m_ScreenX: 0.45
+  m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.09
-  m_DeadZoneHeight: 0.4
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.162
-  m_SoftZoneHeight: 0.6
+  m_SoftZoneWidth: 0.052
+  m_SoftZoneHeight: 0
   m_BiasX: 0.03
   m_BiasY: -0.2
   m_CenterOnActivate: 1
@@ -177,3 +178,20 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &4211627524219614020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052036846140794274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 0}
+  m_PivotOffset: {x: 0, y: 0.5, z: 0}
+  m_AmplitudeGain: 5
+  m_FrequencyGain: 0.005
+  mNoiseOffsets: {x: 0, y: 0, z: 0}

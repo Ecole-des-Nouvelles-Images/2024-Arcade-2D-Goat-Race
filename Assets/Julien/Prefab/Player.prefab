@@ -971,7 +971,7 @@ MonoBehaviour:
   _layerMaskObstacle:
     serializedVersion: 2
     m_Bits: 64
-  _rangeAttaque: 0
+  _rangeAttaque: 2
   _damage: 0
   _coulDownAttaque: 0
 --- !u!82 &8196754782514014183
@@ -1268,7 +1268,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.2
 --- !u!114 &3847816425487573734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,11 +1457,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 617595039517573217, guid: 6d7c0313f04812d4d8a179d801d1f427, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 617595039517573217, guid: 6d7c0313f04812d4d8a179d801d1f427, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 617595039517573217, guid: 6d7c0313f04812d4d8a179d801d1f427, type: 3}
       propertyPath: m_LocalPosition.z
