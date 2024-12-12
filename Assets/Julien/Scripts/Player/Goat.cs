@@ -31,6 +31,7 @@ namespace Julien.Scripts
         private float CameraX;
     
         // Les déplacement
+        public bool CanMove;
         [SerializeField] private float _speedStepSound;
         [SerializeField] private bool _onMove;
         private float _airControl = 0.5f; 
@@ -88,6 +89,9 @@ namespace Julien.Scripts
         private Rigidbody2D rb2d;
         private AudioSource _audioSource;
         private bool _playingStepSound;
+
+        [Header("<color=blue> Attack </color>")]
+        [SerializeField] private GameObject _stepParticle;
         
         private void Start()
         {
@@ -160,7 +164,6 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            Debug.Log(_playerInputHandler.Move.x);
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
@@ -225,6 +228,16 @@ namespace Julien.Scripts
             {
                 _dashAttackColliderLeft.SetActive(false);
             }
+
+            if (_playerInputHandler.Move.x > Mathf.Abs(0) || _playerInputHandler.Move.x < Mathf.Abs(0))
+            {
+                _stepParticle.SetActive(true);
+            }
+            else
+            {
+                _stepParticle.SetActive(false);
+            }
+            
             // ANIMATION 
             _animator.SetBool("IsFalling", _isFalling);
             //Debug.Log("<color=orange> animator IsFalling </color>" + _isFalling);
@@ -242,7 +255,7 @@ namespace Julien.Scripts
 
         private void FixedUpdate()
         {
-            if (_isStun == false)
+            if (_isStun == false && CanMove)
             {
                 OnMove();
             }
@@ -377,15 +390,19 @@ namespace Julien.Scripts
                 if (_hitResult.collider != null)
                 {
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
+                    _hitResult.collider.gameObject.GetComponent<Obstacle>().Damaged();
                     
                     _audioSource.clip = songSfx.AudioDamage[Random.Range(0,songSfx.AudioDamage.Count)];
                     _audioSource.Play();
+                    
                     
                     if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
                     {
                         _audioSource.clip = songSfx.AudioDestroy[Random.Range(0,songSfx.AudioDestroy.Count)];
                         _audioSource.Play();
                         
+                        
+                        _hitResult.collider.gameObject.GetComponent<Obstacle>().Destroyed();
                         Destroy(_hitResult.collider.gameObject);
                     }
                 }

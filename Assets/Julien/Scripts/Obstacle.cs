@@ -19,6 +19,12 @@ public class Obstacle : MonoBehaviour
    public float SizeX;
    public float SizeY;
    public float OffsetY;
+
+   [Header("<color=green> Particle </color>")] 
+   
+   [SerializeField] private GameObject _damageParticle;
+   [SerializeField] private GameObject _destroyParticle;
+   
     private void Start()
     {
         LoadObstacle();
@@ -65,5 +71,21 @@ public class Obstacle : MonoBehaviour
         
         BoxCollider2D.size = new Vector2(SizeX,SizeY);
         BoxCollider2D.offset = new Vector2(0,OffsetY);
+    }
+
+    public void Damaged()
+    {
+        _damageParticle.SetActive(true);
+        StartCoroutine("DelayDamage");
+    }
+
+    private IEnumerator DelayDamage()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _damageParticle.SetActive(false);
+    }
+    public void Destroyed()
+    {
+        _destroyParticle.SetActive(true);
     }
 }
