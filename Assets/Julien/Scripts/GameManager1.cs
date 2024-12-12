@@ -18,7 +18,6 @@ public class GameManager1 : MonoBehaviour
     private void Start()
     {
         CallDecompte();   
-        Debug.Log(_chronometer);
 
         foreach (GameObject player in Players)
         {
@@ -36,7 +35,7 @@ public class GameManager1 : MonoBehaviour
         Image image = _decompteHUD.GetComponent<Image>();
         image.sprite = DecompteSprites[_chronometer - 1];
         _chronometer -= 1;
-        Debug.Log(_chronometer);
+        
         if (_chronometer == 0)
         {
             StartCoroutine("Destroy");
