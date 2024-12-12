@@ -39,8 +39,7 @@ public class GameManager1 : MonoBehaviour
         Debug.Log(_chronometer);
         if (_chronometer == 0)
         {
-            Debug.Log("game start");
-            
+            StartCoroutine("Destroy");
             foreach (GameObject player in Players)
             {
                 player.gameObject.GetComponent<Goat>().CanMove =  true;
@@ -50,6 +49,12 @@ public class GameManager1 : MonoBehaviour
         {
             CallDecompte();
         }
+    }
+
+    private IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(_decompteHUD.gameObject);
     }
 
     private void Update()
