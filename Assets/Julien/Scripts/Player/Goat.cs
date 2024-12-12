@@ -231,11 +231,13 @@ namespace Julien.Scripts
 
             if (_playerInputHandler.Move.x > Mathf.Abs(0) || _playerInputHandler.Move.x < Mathf.Abs(0))
             {
-                _stepParticle.SetActive(true);
+                // _stepParticle.SetActive(true);
+                _stepParticle.GetComponent<ParticleSystem>().Play();
             }
             else
             {
-                _stepParticle.SetActive(false);
+                // _stepParticle.SetActive(false);
+                _stepParticle.GetComponent<ParticleSystem>().Stop();
             }
             
             // ANIMATION 
