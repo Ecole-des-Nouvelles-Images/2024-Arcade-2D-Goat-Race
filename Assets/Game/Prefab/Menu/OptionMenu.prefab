@@ -48,9 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd3bc72d00e9664f96e6c4b14fb87a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainSoundSliderValue: 0
-  _musicSliderValue: 0
-  _sfxSliderValue: 0
   _mainSoundSlider: {fileID: 2340551364923782461}
   _musicSlider: {fileID: 5772419959093089068}
   _sfxSlider: {fileID: 558226938907707525}
@@ -584,7 +581,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 25}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558226938907707525
 MonoBehaviour:
@@ -1421,7 +1418,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 25}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2340551364923782461
 MonoBehaviour:
@@ -1988,8 +1985,8 @@ RectTransform:
   - {fileID: 3720152758329170385}
   m_Father: {fileID: 6300430706027766404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0.25}
-  m_AnchorMax: {x: 0.95, y: 0.85}
+  m_AnchorMin: {x: 0.08, y: 0.25}
+  m_AnchorMax: {x: 0.97, y: 0.86}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2095,7 +2092,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 25}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5772419959093089068
 MonoBehaviour:
