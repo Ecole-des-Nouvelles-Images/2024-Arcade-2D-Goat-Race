@@ -31,7 +31,7 @@ public class UI_SelectGoatMenu : MonoBehaviour
             _playerOneSelected = true;
             Debug.Log(" Player 1 " + GlobalVariable.GoatNamePlayer1);
             
-            _text.text = "Selection de chèvre joueur 2";
+            _text.text = "Selection de chevre joueur 2";
             
         }
         else
