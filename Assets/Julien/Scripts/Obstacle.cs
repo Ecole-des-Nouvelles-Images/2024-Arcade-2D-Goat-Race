@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
+    public Slider Slider;
+    
     [SerializeField] private bool DecresseColor = true;
     [SerializeField] private float _currentColor = 1;
     [SerializeField] private float _colorSpeed;
@@ -13,7 +17,8 @@ public class Obstacle : MonoBehaviour
 
     public SpriteRenderer SpriteRenderer;
     public string Name;
-    public int Health;
+    [SerializeField] private float _maxHealth;
+    public float Health;
     public BoxCollider2D BoxCollider2D;
     
    public float SizeX;
@@ -29,10 +34,14 @@ public class Obstacle : MonoBehaviour
     {
         LoadObstacle();
         SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _maxHealth = Health;
+        
     }
 
     private void Update()
     {
+        Slider.value = Health / _maxHealth;
+        
         var spriteRendererColor = SpriteRenderer.color;
         
         if (DecresseColor)
