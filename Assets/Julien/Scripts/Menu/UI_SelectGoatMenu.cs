@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -11,7 +13,7 @@ public class UI_SelectGoatMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     
     [SerializeField] private bool _playerOneSelected;
-    
+
     public void Return()
     {
         SelectMapMenu.gameObject.SetActive(true);

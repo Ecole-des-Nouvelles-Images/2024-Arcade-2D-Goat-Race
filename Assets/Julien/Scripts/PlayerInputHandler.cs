@@ -29,6 +29,7 @@ namespace Julien.Scripts
             _playerInput = GetComponent<PlayerInput>();
             if (_playerInput == null) throw new NullReferenceException("PlayerInputManager is null");
         }
+        
 
         private void OnEnable()
         {

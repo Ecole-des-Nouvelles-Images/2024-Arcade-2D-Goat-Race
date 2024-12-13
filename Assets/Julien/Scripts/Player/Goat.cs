@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 namespace Julien.Scripts
@@ -8,7 +9,6 @@ namespace Julien.Scripts
     public class Goat : MonoBehaviour
     {
         [SerializeField] private SongSFX songSfx;
-        
         
         [Header("<color=green> DataChange </color>")]
         [SerializeField] private List<GoatData> GoatsDatas;
@@ -108,13 +108,13 @@ namespace Julien.Scripts
                     //Debug.Log("Player 2 IN GAME " + goatData.name);
                 }
             }
-            
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
             _animator = gameObject.GetComponent<Animator>();
             _animatorController = _animator.runtimeAnimatorController;
             LoadGoat();
+           
         }
 
         public void LoadGoat()

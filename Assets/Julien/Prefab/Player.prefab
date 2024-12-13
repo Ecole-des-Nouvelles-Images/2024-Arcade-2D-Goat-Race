@@ -1573,6 +1573,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5744261982502602575, guid: 6d7c0313f04812d4d8a179d801d1f427, type: 3}
+      propertyPath: ParallaxSpeed
+      value: 0.43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
