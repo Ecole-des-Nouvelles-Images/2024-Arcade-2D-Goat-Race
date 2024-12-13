@@ -19,7 +19,7 @@ public class UI_SelectGoatMenu : MonoBehaviour
         SelectMapMenu.gameObject.SetActive(true);
         _selectGoat.SetActive(false);
         
-        _text.text = "Selection de chèvre joueur 1";
+        _text.text = "Selection de chevre joueur 1";
         _playerOneSelected = false;
     }
     

@@ -229,7 +229,7 @@ namespace Julien.Scripts
                 _dashAttackColliderLeft.SetActive(false);
             }
 
-            if (_playerInputHandler.Move.x > Mathf.Abs(0) || _playerInputHandler.Move.x < Mathf.Abs(0))
+            if (_playerInputHandler.Move.x > Mathf.Abs(0) || _playerInputHandler.Move.x < Mathf.Abs(0) && CanJump)
             {
                 // _stepParticle.SetActive(true);
                 _stepParticle.GetComponent<ParticleSystem>().Play();
@@ -350,9 +350,17 @@ namespace Julien.Scripts
         {
             _playingStepSound = true;
             yield return new WaitForSeconds(_speedStepSound);
-            _audioSource.clip = songSfx.AudioStep[Random.Range(0,songSfx.AudioStep.Count)];
-            _audioSource.Play();
-            _playingStepSound = false;
+            if (_isGrounded)
+            {
+                _audioSource.clip = songSfx.AudioStep[Random.Range(0,songSfx.AudioStep.Count)];
+                _audioSource.Play();
+                _playingStepSound = false;
+            }
+            else
+            {
+                _audioSource.Stop();
+                _playingStepSound = false;
+            }
         }
     
         // ATTAQUE

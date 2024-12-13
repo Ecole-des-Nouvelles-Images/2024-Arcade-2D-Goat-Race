@@ -54,19 +54,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioJump:
-  - {fileID: 8300000, guid: 3835c657ce50000409f6b4eb6a8fff77, type: 3}
-  - {fileID: 8300000, guid: 769240119f4da0849a763754d7985234, type: 3}
+  - {fileID: 8300000, guid: 96ddb8426bc79cc4fac3e4a29d36ed8a, type: 3}
+  - {fileID: 8300000, guid: a6c6d43d7483fd847964c8ab4cf5033a, type: 3}
+  - {fileID: 8300000, guid: 31357c49c905b3a45ba78e72bffb5e83, type: 3}
   AudioLanding:
   - {fileID: 0}
   - {fileID: 0}
   AudioDamage:
-  - {fileID: 8300000, guid: 769240119f4da0849a763754d7985234, type: 3}
-  - {fileID: 8300000, guid: 3835c657ce50000409f6b4eb6a8fff77, type: 3}
+  - {fileID: 8300000, guid: b07d17deee08abd4f8ab51dec8ba0a02, type: 3}
+  - {fileID: 8300000, guid: 00a31f2a641dbb74990eb7865af9d440, type: 3}
+  - {fileID: 8300000, guid: c1f7c38578ad6b045ac8975ab5f88a7e, type: 3}
   AudioDestroy:
-  - {fileID: 8300000, guid: 9e21df9eed85f0c44a5faed727aeca9e, type: 3}
-  - {fileID: 8300000, guid: 769240119f4da0849a763754d7985234, type: 3}
+  - {fileID: 8300000, guid: ab7090d84732a5c4ab303075cacd1561, type: 3}
+  - {fileID: 8300000, guid: dfba9a402022b0a4fbcb7cd05f271daf, type: 3}
+  - {fileID: 8300000, guid: 809b3f41b509c5a408ad468642be6fa6, type: 3}
   AudioStun:
-  - {fileID: 8300000, guid: 9e21df9eed85f0c44a5faed727aeca9e, type: 3}
-  - {fileID: 8300000, guid: 3835c657ce50000409f6b4eb6a8fff77, type: 3}
+  - {fileID: 8300000, guid: 88a575bccacd6df458a808201b10a4e2, type: 3}
   AudioStep:
-  - {fileID: 8300000, guid: 769240119f4da0849a763754d7985234, type: 3}
+  - {fileID: 8300000, guid: cdffe5a745b680b4b83da5d5662a200c, type: 3}
+  - {fileID: 8300000, guid: 0b86886e13bc82c4788b4eb35ee2894c, type: 3}
