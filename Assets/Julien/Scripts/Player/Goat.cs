@@ -393,6 +393,7 @@ namespace Julien.Scripts
                 {
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
                     _hitResult.collider.gameObject.GetComponent<Obstacle>().Damaged();
+                    _hitResult.collider.gameObject.GetComponent<Obstacle>().Slider.gameObject.SetActive(true);
                     
                     _audioSource.clip = songSfx.AudioDamage[Random.Range(0,songSfx.AudioDamage.Count)];
                     _audioSource.Play();
