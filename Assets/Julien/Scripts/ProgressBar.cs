@@ -23,6 +23,5 @@ public class ProgressBar : MonoBehaviour
         float result = (PlayerPositionX/PositionX) * 100;
         
         _slider.value = result/100f;
-        Debug.Log(result);
     }
 }
