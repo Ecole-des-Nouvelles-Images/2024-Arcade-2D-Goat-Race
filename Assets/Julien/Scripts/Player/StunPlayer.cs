@@ -19,7 +19,7 @@ public class StunPlayer : MonoBehaviour
 
   private void OnEnable()
   {
-    transform.DOScale(3f, 0.2f);
+    transform.DOScale(1.3f, 0.2f);
   }
 
   private void OnDisable()
@@ -27,13 +27,14 @@ public class StunPlayer : MonoBehaviour
     _defaultTransform.localScale = new Vector3(0, 0, 0);
   }
 
-  private void OnTriggerStay2D(Collider2D other)
+  private void OnTriggerEnter2D(Collider2D other)
   {
     if (other.gameObject.CompareTag("Player"))
     {
       Goat goat = other.GetComponent<Goat>();
       Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
       
+      Debug.Log("Joue le stun");
       goat.OnStun();
     }
   }

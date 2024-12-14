@@ -34,10 +34,10 @@ namespace Julien.Scripts
         
             int randomIndex = Random.Range(0, methods.Length);
             methods[randomIndex]();
-        
+            _bonusLogoHUD.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             Debug.Log(BonusName);
         }
-
+        
         public void Bonus1()
         {
             Debug.Log("Speed");
@@ -65,6 +65,7 @@ namespace Julien.Scripts
             Bonus.BonusEffect(gameObject, Spike);
             StartCoroutine("Delay");
             _bonusLogoHUD.GetComponent<Image>().sprite = _noneSprite ;
+            _bonusLogoHUD.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
 
         public IEnumerator Delay()

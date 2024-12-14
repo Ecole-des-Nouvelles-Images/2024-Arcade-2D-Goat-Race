@@ -4097,6 +4097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701136470}
+  - component: {fileID: 1701136474}
   - component: {fileID: 1701136473}
   - component: {fileID: 1701136472}
   - component: {fileID: 1701136471}
@@ -4221,6 +4222,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701136469}
   m_CullTransparentMesh: 1
+--- !u!114 &1701136474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701136469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9371a2ec5b65001449a7a119e289ef2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1726672935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,6 +5680,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.94509804
       objectReference: {fileID: 0}
+    - target: {fileID: 2957420004716900852, guid: 2edb76ff0f2b69f438f6d23c8a06705c, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 466989396}
     - target: {fileID: 2970957426750424205, guid: 2edb76ff0f2b69f438f6d23c8a06705c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

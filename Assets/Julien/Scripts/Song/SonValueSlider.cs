@@ -4,9 +4,9 @@ using Slider = UnityEngine.UI.Slider;
 
 public class SonValueSlider : MonoBehaviour
 {
-     private static float _mainSoundSliderValue = 0.1f;
-     private static float _musicSliderValue = 0.1f;
-     private static float _sfxSliderValue = 0.1f;
+     private static float _mainSoundSliderValue = 1f;
+     private static float _musicSliderValue = 1f;
+     private static float _sfxSliderValue = 1f;
 
     [SerializeField] private Slider _mainSoundSlider;
     [SerializeField] private Slider _musicSlider;

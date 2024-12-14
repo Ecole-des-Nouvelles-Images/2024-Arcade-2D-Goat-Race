@@ -234,7 +234,7 @@ namespace Julien.Scripts
                 _dashAttackColliderLeft.SetActive(false);
             }
 
-            if (_playerInputHandler.Move.x > Mathf.Abs(0) || _playerInputHandler.Move.x < Mathf.Abs(0) && CanJump)
+            if (_playerInputHandler.Move.x > Mathf.Abs(0)  && _isGrounded || _playerInputHandler.Move.x < Mathf.Abs(0) && _isGrounded)
             {
                 // _stepParticle.SetActive(true);
                 _stepParticle.GetComponent<ParticleSystem>().Play();
