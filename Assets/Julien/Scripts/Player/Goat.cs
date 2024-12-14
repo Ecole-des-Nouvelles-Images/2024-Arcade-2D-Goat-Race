@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Julien.Scripts
 {
@@ -92,6 +94,9 @@ namespace Julien.Scripts
 
         [Header("<color=blue> Attack </color>")]
         [SerializeField] private GameObject _stepParticle;
+
+        [Header("<color=pink> HUD </color>")] [SerializeField]
+        private GameObject _canDashHUD;
         
         private void Start()
         {
@@ -444,6 +449,7 @@ namespace Julien.Scripts
                 IsDashing = true;
                 
                 CanDash = false;
+                _canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
                 StartCoroutine(DashDelaying());
             }
         }
@@ -453,17 +459,23 @@ namespace Julien.Scripts
             IsDashing = false;
             _playerInputHandler.Move.x = 0;
             yield return new WaitForSeconds(_dashReload);
+            
             CanDash = true;
+            _canDashHUD.GetComponent<Image>().color = new Color(1, 1, 1);
+            _canDashHUD.transform.DOShakeScale(0.3f, 0.4f, 1, 0);
         }
 
         public void OnStun()
         {
-            _isStun = true;
-            StartCoroutine("DelayStun");
-            rb2d.AddForce(Vector2.up * _stunForce);
+            if (_isStun == false)
+            {
+                _isStun = true;
+                StartCoroutine("DelayStun");
+                rb2d.AddForce(Vector2.up * _stunForce);
             
-            _audioSource.clip = songSfx.AudioStun[Random.Range(0,songSfx.AudioStun.Count)];
-            _audioSource.Play();
+                _audioSource.clip = songSfx.AudioStun[Random.Range(0,songSfx.AudioStun.Count)];
+                _audioSource.Play();
+            }
         }
 
         private IEnumerator DelayStun()

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Julien.Scripts.BonusScripts
 {
-    [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Etoile")]
+    [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Pic")]
     public class Pics : Bonus
     {
         public override void BonusEffect(GameObject PlayerPrefab,
