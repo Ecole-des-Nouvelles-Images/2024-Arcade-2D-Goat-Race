@@ -14,6 +14,7 @@ namespace Julien.Scripts
             {
                inventaryBonus.HaveBonus = true;
                inventaryBonus.RandomBonus();
+               Debug.Log("attrape le bonus");
                Destroy(gameObject);
             }
             else

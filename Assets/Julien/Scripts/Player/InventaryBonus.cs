@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Julien.Scripts.BonusScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Julien.Scripts
 {
@@ -14,8 +18,11 @@ namespace Julien.Scripts
 
         [SerializeField] private GameObject Spike;
         [SerializeField] private List<Bonus> _bonusScripts;
-        [SerializeField] private Bonus _bonus;
-    
+        [SerializeField] private GameObject _bonusLogoHUD;
+        
+        [SerializeField] private Bonus Bonus;
+        [SerializeField] private Sprite _noneSprite;
+        
         public void RandomBonus()
         {
             System.Action[] methods = new System.Action[]
@@ -35,32 +42,36 @@ namespace Julien.Scripts
         {
             Debug.Log("Speed");
             BonusName = "Speed";
-            _bonus = _bonusScripts[0];
+            Bonus = _bonusScripts[0];
+           _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[0]._sprite;
         }
         public void Bonus2()
         {
             Debug.Log("Traverser");
             BonusName = "Traverser";
-            _bonus = _bonusScripts[1];
+            Bonus = _bonusScripts[1];
+            _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[1]._sprite;
         }
         public void Bonus3()
         {
             Debug.Log("Pic");
-            BonusName = "Etoile";
-            _bonus = _bonusScripts[2];
+            BonusName = "Pic";
+            Bonus = _bonusScripts[2];
+            _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[2]._sprite;
         }
 
         public void Use()
         {
-            _bonus.BonusEffect(gameObject, Spike);
+            Bonus.BonusEffect(gameObject, Spike);
             StartCoroutine("Delay");
+            _bonusLogoHUD.GetComponent<Image>().sprite = _noneSprite ;
         }
 
         public IEnumerator Delay()
         {
             IsUsingBonus = true;
             yield return new WaitForSeconds(BonusTime);
-            _bonus.BonusReset(gameObject, Spike);
+            Bonus.BonusReset(gameObject, Spike);
         }
     }
 }
