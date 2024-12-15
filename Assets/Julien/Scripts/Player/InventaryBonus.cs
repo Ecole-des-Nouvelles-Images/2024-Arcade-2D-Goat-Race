@@ -27,9 +27,9 @@ namespace Julien.Scripts
         {
             System.Action[] methods = new System.Action[]
             {
-                //Bonus1,
+                Bonus1,
                 Bonus2,
-                //Bonus3
+                Bonus3
             }; 
         
             int randomIndex = Random.Range(0, methods.Length);
