@@ -27,17 +27,17 @@ namespace Julien.Scripts
         {
             System.Action[] methods = new System.Action[]
             {
-                Bonus1,
-                //Bonus2,
-                Bonus3
+                //Bonus1,
+                Bonus2,
+                //Bonus3
             }; 
         
             int randomIndex = Random.Range(0, methods.Length);
             methods[randomIndex]();
-        
+            _bonusLogoHUD.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             Debug.Log(BonusName);
         }
-
+        
         public void Bonus1()
         {
             Debug.Log("Speed");
@@ -65,6 +65,7 @@ namespace Julien.Scripts
             Bonus.BonusEffect(gameObject, Spike);
             StartCoroutine("Delay");
             _bonusLogoHUD.GetComponent<Image>().sprite = _noneSprite ;
+            _bonusLogoHUD.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
 
         public IEnumerator Delay()
@@ -72,6 +73,7 @@ namespace Julien.Scripts
             IsUsingBonus = true;
             yield return new WaitForSeconds(BonusTime);
             Bonus.BonusReset(gameObject, Spike);
+            IsUsingBonus = false;
         }
     }
 }

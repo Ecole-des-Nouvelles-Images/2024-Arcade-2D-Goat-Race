@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -82,17 +83,15 @@ public class Obstacle : MonoBehaviour
 
     public void Damaged()
     {
-        _damageParticle.SetActive(true);
-        StartCoroutine("DelayDamage");
-    }
-
-    private IEnumerator DelayDamage()
-    {
-        yield return new WaitForSeconds(0.5f);
-        _damageParticle.SetActive(false);
+        _damageParticle.GetComponent<ParticleSystem>().Play();
     }
     public void Destroyed()
     {
-        _destroyParticle.SetActive(true);
+        GameObject NewParticle = _destroyParticle;
+        
+        Instantiate(NewParticle, _destroyParticle.transform.position, Quaternion.identity);
+        NewParticle.GetComponent<DestroyParticle>().Particle();
+        
+        //Destroy(gameObject);
     }
 }

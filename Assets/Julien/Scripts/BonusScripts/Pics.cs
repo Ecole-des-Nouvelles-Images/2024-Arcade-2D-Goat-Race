@@ -6,19 +6,16 @@ namespace Julien.Scripts.BonusScripts
     [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Pic")]
     public class Pics : Bonus
     {
-        public override void BonusEffect(GameObject PlayerPrefab,
-            GameObject SpkiePrefab)
+        public override void BonusEffect(GameObject playerPrefab, GameObject SpikePrefab)
         {
-            Debug.Log(" Pic ! ");
-            SpkiePrefab.SetActive(true);
+            SpikePrefab.SetActive(true);
         }
-
-        public override void BonusReset(GameObject PlayerPrefab,
-            GameObject SpkiePrefab)
+        
+        public override void BonusReset(GameObject PlayerPrefab, GameObject SpikePrefab)
         {
             Goat goat = PlayerPrefab.GetComponent<Goat>();
             goat.GetComponent<InventaryBonus>().IsUsingBonus = false;
-            SpkiePrefab.SetActive(false);
+            SpikePrefab.SetActive(false);
         }
     }
 }

@@ -18,34 +18,6 @@ public class UI_OptionMenu : MonoBehaviour
         OptionsMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
-    
-    // public void MainVolumeChange()
-    // {
-    //     _audioMixer.SetFloat("MasterVol", Mathf.Log10(_mainSoundSlider.value) * 20);
-    //     if (_mainSoundSlider.value == 0)
-    //     {
-    //         _audioMixer.SetFloat("MasterVol", -80f);
-    //     }
-    // }
-    //
-    // public void MusicVolumeChange()
-    // {
-    //     _audioMixer.SetFloat("MusicVol", Mathf.Log10(_musicSlider.value) * 20);
-    //     if (_musicSlider.value == 0)
-    //     {
-    //         _audioMixer.SetFloat("MusicVol", -80f);
-    //     }
-    // }
-    //
-    // public void SfxVolumeChange()
-    // {
-    //     _audioMixer.SetFloat("SfxVol", Mathf.Log10(_sfxSlider.value) * 20);
-    //     if (_sfxSlider.value == 0)
-    //     {
-    //         _audioMixer.SetFloat("SfxVol", -80f);
-    //     }
-    // }
-
     private void Update()
     {
         _audioMixer.SetFloat("MasterVol", Mathf.Log10(_mainSoundSlider.value) * 20);
