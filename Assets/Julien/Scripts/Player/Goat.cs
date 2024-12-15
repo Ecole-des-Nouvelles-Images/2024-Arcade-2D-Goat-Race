@@ -129,6 +129,7 @@ namespace Julien.Scripts
             Sprite = GoatData.Sprite;
             _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             _spriteRenderer.sprite = Sprite;
+            _spriteRenderer.sortingOrder = GoatData.OrderLayer;
         
             _damage = GoatData.Damage;
             _rangeAttaque = GoatData.RangeAttaque;
@@ -363,7 +364,7 @@ namespace Julien.Scripts
             }
             else
             {
-                _audioSource.Stop();
+                //_audioSource.Stop();
                 _playingStepSound = false;
             }
         }
@@ -404,9 +405,12 @@ namespace Julien.Scripts
                 // JOUER AVEC CE QUE LE RAYCAST A TOUCHER
                 if (_hitResult.collider != null)
                 {
-                    _hitResult.collider.gameObject.GetComponent<Obstacle>().Health -= _damage;
-                    _hitResult.collider.gameObject.GetComponent<Obstacle>().Damaged();
-                    _hitResult.collider.gameObject.GetComponent<Obstacle>().Slider.gameObject.SetActive(true);
+                    GameObject ObstacleHit = _hitResult.collider.gameObject;
+                    
+                    ObstacleHit.GetComponent<Obstacle>().Health -= _damage;
+                    ObstacleHit.GetComponent<Obstacle>().Damaged();
+                    ObstacleHit.GetComponent<Obstacle>().Slider.gameObject.SetActive(true);
+                    ObstacleHit.transform.transform.DOShakeScale(0.2f, 0.1f);
                     
                     _audioSource.clip = songSfx.AudioDamage[Random.Range(0,songSfx.AudioDamage.Count)];
                     _audioSource.Play();
@@ -451,6 +455,8 @@ namespace Julien.Scripts
                 CanDash = false;
                 _canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
                 StartCoroutine(DashDelaying());
+
+               
             }
         }
         public IEnumerator DashDelaying()

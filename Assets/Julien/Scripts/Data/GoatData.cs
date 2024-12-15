@@ -14,6 +14,8 @@ public class GoatData : ScriptableObject
     public float Speed;
     public float JumpForce;
     public float RayDistance;
+
+    public int OrderLayer;
     
     public float Collider2DAxeX;
     public float ColliderOfsetX;

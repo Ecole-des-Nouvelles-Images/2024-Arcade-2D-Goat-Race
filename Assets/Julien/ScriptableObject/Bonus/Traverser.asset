@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c462365e3344564b9de1f754918c15e, type: 3}
   m_Name: Traverser
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 21300000, guid: 8011ecc47a382e146961ed97c8519cbf, type: 3}

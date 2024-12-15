@@ -876,7 +876,7 @@ MonoBehaviour:
   _bonusScripts:
   - {fileID: 11400000, guid: a92e44cddde03ac4aa53b94e30b1cc44, type: 2}
   - {fileID: 11400000, guid: 03abf48c4dc7cbd4691982f88be3fef0, type: 2}
-  - {fileID: 11400000, guid: d3ee51f3d2a779a41808be534ee74231, type: 2}
+  - {fileID: 0}
   _bonusLogoHUD: {fileID: 0}
   Bonus: {fileID: 0}
   _noneSprite: {fileID: 0}
@@ -1434,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8228371482094696283, guid: e79f05de3a3f1414a94e35c7516148b8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,26 +8,22 @@ namespace Julien.Scripts.BonusScripts
     public class Speed : Bonus
     {
         
-        public float speed;
         private float BonusTime = 3f;
         
         private  Goat _goat;
         
-        public override void BonusEffect(GameObject PlayerPrefab,
-            GameObject SpkiePrefab)
+        public override void BonusEffect(GameObject PlayerPrefab, GameObject SpikePrefab)
         {
             Goat _goat = PlayerPrefab.GetComponent<Goat>();
            _goat.Speed += 5;
         }
 
         public override void BonusReset(GameObject PlayerPrefab,
-            GameObject SpkiePrefab)
+            GameObject SpikePrefab)
         {
-            
             Goat _goat = PlayerPrefab.GetComponent<Goat>();
             _goat.GetComponent<InventaryBonus>().IsUsingBonus = false;
             _goat.Speed -= 5;
-            
         }
     }
 }

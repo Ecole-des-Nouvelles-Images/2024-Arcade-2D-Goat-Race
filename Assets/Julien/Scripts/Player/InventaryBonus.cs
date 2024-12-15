@@ -27,9 +27,9 @@ namespace Julien.Scripts
         {
             System.Action[] methods = new System.Action[]
             {
-                Bonus1,
-                //Bonus2,
-                Bonus3
+                //Bonus1,
+                Bonus2,
+                //Bonus3
             }; 
         
             int randomIndex = Random.Range(0, methods.Length);
@@ -73,6 +73,7 @@ namespace Julien.Scripts
             IsUsingBonus = true;
             yield return new WaitForSeconds(BonusTime);
             Bonus.BonusReset(gameObject, Spike);
+            IsUsingBonus = false;
         }
     }
 }

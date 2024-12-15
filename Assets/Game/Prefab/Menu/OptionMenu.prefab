@@ -627,7 +627,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 7239091016128902255}
   m_HandleRect: {fileID: 520112002130167410}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
@@ -989,7 +989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fc3558dd5314e44a3e3aa32a1e10f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
   Button: {fileID: 5768872434970892125}
 --- !u!114 &7729289449546671975
 MonoBehaviour:
@@ -1464,7 +1463,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 2033249985896222808}
   m_HandleRect: {fileID: 4775545292610616278}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
@@ -1881,7 +1880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fc3558dd5314e44a3e3aa32a1e10f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
   Button: {fileID: 0}
 --- !u!114 &3275689885905061752
 MonoBehaviour:
@@ -2138,7 +2136,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 7077663400280019318}
   m_HandleRect: {fileID: 7078889925463260079}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
