@@ -27,8 +27,8 @@ namespace Julien.Scripts
         {
             System.Action[] methods = new System.Action[]
             {
-                Bonus1,
-                Bonus2,
+                //Bonus1,
+                //Bonus2,
                 Bonus3
             }; 
         
