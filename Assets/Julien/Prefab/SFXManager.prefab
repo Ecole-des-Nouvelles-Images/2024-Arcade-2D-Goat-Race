@@ -73,3 +73,14 @@ MonoBehaviour:
   AudioStep:
   - {fileID: 8300000, guid: cdffe5a745b680b4b83da5d5662a200c, type: 3}
   - {fileID: 8300000, guid: 0b86886e13bc82c4788b4eb35ee2894c, type: 3}
+  WinAudio: []
+  PicBonus:
+  - {fileID: 8300000, guid: ab7090d84732a5c4ab303075cacd1561, type: 3}
+  - {fileID: 8300000, guid: 3b099620176d9ab47826291ee60bcfde, type: 3}
+  - {fileID: 8300000, guid: 8cbb2b6eb9b239445ad48c9a6c6298f6, type: 3}
+  SpeedBonus: []
+  InvisibleBonus:
+  - {fileID: 8300000, guid: 361edcecd47af5d45a4a17707f0082a9, type: 3}
+  DisableBonus:
+  - {fileID: 8300000, guid: f6c21dc160adb6141b7be7ec32ed3db0, type: 3}
+  Chest: []
