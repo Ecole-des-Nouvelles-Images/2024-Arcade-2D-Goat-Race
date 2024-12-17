@@ -28,7 +28,7 @@ public class StunPlayer : MonoBehaviour
 
   private IEnumerator Retracte()
   {
-    yield return new WaitForSeconds(1.5f);
+    yield return new WaitForSeconds(1.8f);
     transform.DOScale(_endValueEnd, _durationEnd).SetEase(_endAnimationCurve);
   }
   private void OnDisable()

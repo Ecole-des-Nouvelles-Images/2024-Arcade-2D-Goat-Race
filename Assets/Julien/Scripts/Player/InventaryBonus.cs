@@ -16,19 +16,30 @@ namespace Julien.Scripts
         public bool IsUsingBonus;
         public string BonusName;
 
+        [SerializeField] private GameObject _sfxManager;
+        private SongSFX _songSFX;
+        private AudioSource _audioSource;
+        
         [SerializeField] private GameObject Spike;
         [SerializeField] private List<Bonus> _bonusScripts;
         [SerializeField] private GameObject _bonusLogoHUD;
         
         [SerializeField] private Bonus Bonus;
         [SerializeField] private Sprite _noneSprite;
-        
+
+        private void Awake()
+        {
+          _sfxManager = GameObject.Find("SFXManager");
+          _songSFX = _sfxManager.GetComponent<SongSFX>();
+          _audioSource = gameObject.GetComponent<AudioSource>();
+        }
+
         public void RandomBonus()
         {
             System.Action[] methods = new System.Action[]
             {
-                //Bonus1,
-                //Bonus2,
+                Bonus1,
+                Bonus2,
                 Bonus3
             }; 
         
@@ -62,18 +73,25 @@ namespace Julien.Scripts
 
         public void Use()
         {
-            Bonus.BonusEffect(gameObject, Spike);
-            StartCoroutine("Delay");
+            Bonus.BonusEffect(gameObject, Spike, _songSFX);
+            StartCoroutine("DelayBonusRest");
             _bonusLogoHUD.GetComponent<Image>().sprite = _noneSprite ;
             _bonusLogoHUD.GetComponent<Image>().color = new Color(1, 1, 1, 0);
         }
 
-        public IEnumerator Delay()
+        public IEnumerator DelayBonusRest()
         {
             IsUsingBonus = true;
             yield return new WaitForSeconds(BonusTime);
-            Bonus.BonusReset(gameObject, Spike);
+            Bonus.BonusReset(gameObject, Spike, _songSFX);
+            StartCoroutine(DestroySound());
             IsUsingBonus = false;
+        }
+
+        public IEnumerator DestroySound()
+        {
+            yield return new WaitForSeconds(2f);
+            Bonus.DestroySound(gameObject, Spike, _songSFX);
         }
     }
 }

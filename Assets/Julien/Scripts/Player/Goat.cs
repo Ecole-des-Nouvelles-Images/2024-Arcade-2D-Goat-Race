@@ -33,6 +33,7 @@ namespace Julien.Scripts
         private float CameraX;
     
         // Les déplacement
+        private bool _isWalking = false;
         public bool CanMove;
         [SerializeField] private float _speedStepSound;
         [SerializeField] private bool _onMove;
@@ -183,7 +184,15 @@ namespace Julien.Scripts
                 }  
             }
             OnJumpStay();
-            
+            Debug.Log(_isWalking);
+            if (_playerInputHandler.Move.x > 0 || _playerInputHandler.Move.x < 0)
+            {
+                _isWalking = true;
+            }
+            else
+            {
+                _isWalking = false;
+            }
             if (rb2d.velocity.y < -0.2f)
             {
                 _isFalling = true;
@@ -235,7 +244,7 @@ namespace Julien.Scripts
                 _dashAttackColliderLeft.SetActive(false);
             }
 
-            if (_playerInputHandler.Move.x > Mathf.Abs(0)  && _isGrounded || _playerInputHandler.Move.x < Mathf.Abs(0) && _isGrounded)
+            if (_isWalking  && _isGrounded || _isWalking && _isGrounded)
             {
                 // _stepParticle.SetActive(true);
                 _stepParticle.GetComponent<ParticleSystem>().Play();
@@ -355,8 +364,9 @@ namespace Julien.Scripts
         private IEnumerator SoundStep()
         {
             _playingStepSound = true;
+            
             yield return new WaitForSeconds(_speedStepSound);
-            if (_isGrounded)
+            if (_isGrounded && _isWalking)
             {
                 _audioSource.clip = songSfx.AudioStep[Random.Range(0,songSfx.AudioStep.Count)];
                 _audioSource.Play();

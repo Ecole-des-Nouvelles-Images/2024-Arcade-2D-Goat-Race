@@ -21,4 +21,17 @@ public class SongSFX : MonoBehaviour
   
     [Header("<color=green>Audio Step </color>")]
     public List<AudioClip> AudioStep;
+    [Header("--------------------------------------------------")]
+    
+    [Header("<color=black> Diver </color>")]
+    public List<AudioClip> WinAudio;
+    [Header("--------------------------------------------------")]
+    
+    [Header("<color=orange>Audio Bonus </color>")]
+    public List<AudioClip> PicBonus;
+    public List<AudioClip> SpeedBonus;
+    public List<AudioClip> InvisibleBonus;
+    public List<AudioClip> DisableBonus;
+    public List<AudioClip> Chest;
+
 }
