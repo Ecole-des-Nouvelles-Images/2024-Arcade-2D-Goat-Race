@@ -7,27 +7,30 @@ namespace Julien.Scripts.BonusScripts
     [CreateAssetMenu(menuName = "ScriptableObject/BonusScripts/Pic")]
     public class Pics : Bonus
     {
+        [SerializeField] private GameObject _audioSourcePrefab;
+        
         private AudioSource _audioSource;
-        public override void BonusEffect(GameObject playerPrefab, GameObject SpikePrefab, SongSFX songSfx)
+        public override void BonusEffect(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
-            SpikePrefab.SetActive(true);
+            Spike.SetActive(true);
             
-            _audioSource = playerPrefab.AddComponent<AudioSource>();
-            _audioSource.clip = songSfx.PicBonus[Random.Range(0,songSfx.PicBonus.Count)];
-            _audioSource.Play();
+            GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
+            AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
+            audioSourcePlayer.Play(songSfx.PicBonus[Random.Range(0, songSfx.PicBonus.Count)]);
         }
         
-        public override void BonusReset(GameObject PlayerPrefab, GameObject SpikePrefab, SongSFX songSfx)
+        public override void BonusReset(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
-            _audioSource.clip = songSfx.DisableBonus[Random.Range(0,songSfx.DisableBonus.Count)];
-            _audioSource.Play();
+            GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
+            AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
+            audioSourcePlayer.Play(songSfx.DisableBonus[Random.Range(0, songSfx.DisableBonus.Count)]);
             
-            Goat goat = PlayerPrefab.GetComponent<Goat>();
+            Goat goat = Player.GetComponent<Goat>();
             goat.GetComponent<InventaryBonus>().IsUsingBonus = false;
-            SpikePrefab.SetActive(false);
+            Spike.SetActive(false);
         }
 
-        public override void DestroySound(GameObject PlayerPrefab, GameObject SpikePrefab, SongSFX songSfx)
+        public override void DestroySound(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
             Debug.Log("DestroySound");
             Destroy(_audioSource);

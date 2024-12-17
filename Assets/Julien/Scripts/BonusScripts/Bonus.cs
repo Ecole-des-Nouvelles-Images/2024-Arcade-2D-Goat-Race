@@ -7,8 +7,8 @@ namespace Julien.Scripts.BonusScripts
     {
         public Sprite _sprite;
         
-        public abstract void BonusEffect(GameObject PlayerPrefab, GameObject SpikePrefab, SongSFX songSfx);
-        public abstract void BonusReset(GameObject PlayerPrefab, GameObject SpikePrefab, SongSFX songSfx);
-        public abstract void DestroySound(GameObject PlayerPrefab, GameObject SpikePrefab, SongSFX songSfx);
+        public abstract void BonusEffect(GameObject Player, GameObject Spike, SongSFX songSfx);
+        public abstract void BonusReset(GameObject Player, GameObject Spike, SongSFX songSfx);
+        public abstract void DestroySound(GameObject Player, GameObject Spike, SongSFX songSfx);
     }
 }
