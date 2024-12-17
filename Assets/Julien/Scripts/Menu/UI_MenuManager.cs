@@ -10,6 +10,5 @@ public class UI_MenuManager : MonoBehaviour
     {
       _pauseMenu.SetActive(true);
       Time.timeScale = 0f;
-      Debug.Log("OpenMenu");
     }
 }

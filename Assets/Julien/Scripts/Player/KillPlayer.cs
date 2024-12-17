@@ -1,6 +1,7 @@
 using System.Collections;
 using Julien.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -36,12 +37,15 @@ public class KillPlayer : MonoBehaviour
     {
         _goat.Kill();
         _isDead = true;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         StartCoroutine("Revive");
     }
 
     private IEnumerator Revive()
     {
         yield return new WaitForSeconds(TimeToRespawn);
+        
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         _goat.Respawn();
         _isDead = false;
     }

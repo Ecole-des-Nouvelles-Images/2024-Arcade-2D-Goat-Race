@@ -742,7 +742,7 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   _camera: {fileID: 7426522502232688518}
   CanMove: 0
-  _speedStepSound: 0.2
+  _speedStepSound: 0.3
   _onMove: 0
   Speed: 0
   CanDash: 1
