@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Pic
   m_EditorClassIdentifier: 
   _sprite: {fileID: 21300000, guid: 49d0bd4f722c0334b9de0e6e8bdad42e, type: 3}
+  _audioSourcePrefab: {fileID: 3839940812532063408, guid: 8f2ea27f6d5b6474e86ee42782cdf9ea, type: 3}

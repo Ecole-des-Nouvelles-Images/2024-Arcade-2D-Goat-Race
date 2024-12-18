@@ -31,9 +31,9 @@ public class EndGame : MonoBehaviour
 
             if (_onePlayerWOn == false)
             {
-                
                 if (goat.PlayerOne)
                 {
+                    _onePlayerWOn = true;
                     VictoryPanelPlayerOne.SetActive(true);
                     VictoryPanelPlayerOne.transform.DOScale(1, 0.2f);
                     
@@ -42,6 +42,7 @@ public class EndGame : MonoBehaviour
                 }
                 else
                 {
+                    _onePlayerWOn = true;
                     VictoryPanelPlayerTwo.SetActive(true);
                     VictoryPanelPlayerTwo.transform.DOScale(1, 0.2f);
                     

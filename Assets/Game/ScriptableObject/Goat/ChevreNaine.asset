@@ -17,13 +17,13 @@ MonoBehaviour:
   AnimatorController: {fileID: 9100000, guid: 9b4d72085da3ca84ba6222b2079717b6, type: 2}
   Damage: 10
   RangeAttaque: 1.5
-  Speed: 15
+  Speed: 14
   JumpForce: 10
   RayDistance: 1.75
   OrderLayer: 2
   Collider2DAxeX: 2
-  ColliderOfsetX: 1.18
-  Collider2DAxeY: 1.81
+  ColliderOfsetX: 1.06
+  Collider2DAxeY: 1.56
   ColliderIsGroundedPositionY: 0
   ColliderIsGroundedScaleX: 1.75
   CameraZ: -45

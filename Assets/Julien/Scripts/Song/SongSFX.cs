@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SongSFX : MonoBehaviour
 {
-    
    [Header("<color=yellow>Audio Jumping </color>")]
     public List<AudioClip> AudioJump;
     public List<AudioClip> AudioLanding;

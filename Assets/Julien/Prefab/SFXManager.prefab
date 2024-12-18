@@ -75,12 +75,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0b86886e13bc82c4788b4eb35ee2894c, type: 3}
   WinAudio: []
   PicBonus:
-  - {fileID: 8300000, guid: ab7090d84732a5c4ab303075cacd1561, type: 3}
+  - {fileID: 8300000, guid: d8b5952dcc6d5b04da80004c84054356, type: 3}
   - {fileID: 8300000, guid: 3b099620176d9ab47826291ee60bcfde, type: 3}
   - {fileID: 8300000, guid: 8cbb2b6eb9b239445ad48c9a6c6298f6, type: 3}
-  SpeedBonus: []
+  SpeedBonus:
+  - {fileID: 8300000, guid: c619806be26e87842b0f4e6d3fa1f92b, type: 3}
+  - {fileID: 8300000, guid: a89fa407c040c9941bf7556ccdb7b5a3, type: 3}
+  - {fileID: 8300000, guid: 018a1c3fabda5744289bffe8dc757715, type: 3}
   InvisibleBonus:
   - {fileID: 8300000, guid: 361edcecd47af5d45a4a17707f0082a9, type: 3}
   DisableBonus:
   - {fileID: 8300000, guid: f6c21dc160adb6141b7be7ec32ed3db0, type: 3}
-  Chest: []
+  Chest:
+  - {fileID: 0}

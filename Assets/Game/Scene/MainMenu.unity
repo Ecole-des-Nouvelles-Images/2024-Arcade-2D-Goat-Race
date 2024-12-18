@@ -323,23 +323,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'UN JEU DE  :
-
-    SASHA BILORE
-
-    JULiEN DURAND
-
-    HUGO BARON
+  m_text: 'Credit
 
 
-    pRODUIT
-    PAR L''ENSI
+    GAme Art : SAshA Bilore, Hugo BAron
 
-    Nous remerciont l''ENSEMBLE DE L''EQUIPE PEDAGOGIQUE QUI NOUS
-    A ACCOMPAGNEE TOUT AU LONG DU PROJET
+    GAme Dev : Julien
+    DurAnd
 
+    SFX Designer : Hugo BAron
 
-    MERCI D''AVOIR JOUER ! <3'
+    VFX Designer : Hugo BAron
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09247ef858a185d45a773af9ab4fdae5, type: 2}
   m_sharedMaterial: {fileID: -8488213121721410598, guid: 09247ef858a185d45a773af9ab4fdae5, type: 2}
@@ -2461,7 +2457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1038468945
 RectTransform:
   m_ObjectHideFlags: 0
