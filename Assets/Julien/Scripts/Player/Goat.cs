@@ -463,8 +463,8 @@ namespace Julien.Scripts
                 IsDashing = true;
                 
                 CanDash = false;
-                _canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
-                StartCoroutine(DashDelaying());
+                //_canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+                //StartCoroutine(DashDelaying());
 
                
             }
@@ -512,4 +512,5 @@ namespace Julien.Scripts
             rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
+    
 }
