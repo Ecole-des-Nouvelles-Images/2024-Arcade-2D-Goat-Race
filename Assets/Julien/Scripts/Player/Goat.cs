@@ -463,8 +463,9 @@ namespace Julien.Scripts
                 IsDashing = true;
                 
                 CanDash = false;
+                StartCoroutine(DashDelaying());
                 //_canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
-                //StartCoroutine(DashDelaying());
+               
 
                
             }

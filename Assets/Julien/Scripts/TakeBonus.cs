@@ -10,8 +10,8 @@ namespace Julien.Scripts
       private AudioSource _audioSource;
       private void Awake()
       {
-         _songSFX = GameObject.Find("SFXManager").GetComponent<SongSFX>();
-         _audioSource = GetComponent<AudioSource>();
+         //_songSFX = GameObject.Find("SFXManager").GetComponent<SongSFX>();
+         //_audioSource = GetComponent<AudioSource>();
       }
       
       private void OnTriggerStay2D(Collider2D other)
