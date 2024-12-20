@@ -1,3 +1,4 @@
+using System;
 using Julien.Scripts.SelectionPlayer;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,7 +8,8 @@ namespace Julien.Scripts.Player
     public class PlayerSpawnHandler : MonoBehaviour
     {
         private PlayerInputManager _playerInputManager;
-
+        [SerializeField] private int _playerNumber;
+        
         private void Awake()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
@@ -16,9 +18,8 @@ namespace Julien.Scripts.Player
         private void OnEnable()
         {
             _playerInputManager.onPlayerJoined += OnPlayerJoined;
-            Debug.Log("Joined");
+           
         }
-
         private void OnDisable()
         {
             _playerInputManager.onPlayerJoined -= OnPlayerJoined;
@@ -27,28 +28,29 @@ namespace Julien.Scripts.Player
         private void OnPlayerJoined(PlayerInput playerInput)
         {
             int targer = playerInput.devices[0].deviceId;
-            int index = PlayerSelectionController.DevicesID.IndexOf(targer);
+            _playerNumber = PlayerSelectionController.DevicesID.IndexOf(targer);
             
-            if (index == 0)
+            if (_playerNumber == 0)
             {
-                Debug.Log(" Player One ");
-                // ScriptableObjectDansPrefab = PlayerSelectionController.ScriptableobjectPlayerOne;
+                playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerOne;
+                Debug.Log(" Player One " + PlayerSelectionController.ScriptableobjectPlayerOne);
             }
-            if (index == 1)
+            if (_playerNumber == 1)
             {
-                Debug.Log(" Player Two ");
-                // ScriptableObjectDansPrefab = PlayerSelectionController.ScriptableobjectPlayerOne;
+                playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerTwo;
+                Debug.Log(" Player Two " + PlayerSelectionController.ScriptableobjectPlayerTwo);
             }
-            if (index == 2)
+            if (_playerNumber == 2)
             {
                 Debug.Log(" Player Three ");
                 // ScriptableObjectDansPrefab = PlayerSelectionController.ScriptableobjectPlayerOne;
             }
-            if (index == 3)
+            if (_playerNumber == 3)
             {
                 Debug.Log(" Player Four ");
                 // ScriptableObjectDansPrefab = PlayerSelectionController.ScriptableobjectPlayerOne;
             }
+            Debug.Log("Joined");
         }
     }
 }

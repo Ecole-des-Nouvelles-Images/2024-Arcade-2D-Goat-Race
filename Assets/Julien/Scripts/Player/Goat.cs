@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Julien.Scripts
 {
@@ -98,7 +97,7 @@ namespace Julien.Scripts
 
         [Header("<color=pink> HUD </color>")] [SerializeField]
         private GameObject _canDashHUD;
-        
+
         private void Start()
         {
             foreach (GoatData goatData in GoatsDatas)
@@ -272,7 +271,7 @@ namespace Julien.Scripts
 
         private void FixedUpdate()
         {
-            if (_isStun == false && CanMove)
+            if (_isStun == false)
             {
                 OnMove();
             }

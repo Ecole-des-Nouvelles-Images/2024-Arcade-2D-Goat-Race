@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scene/Game.unity
     guid: a43210d46a5b7fc4a92559f89ca56bb2
+  - enabled: 1
+    path: Assets/Julien/MultiplayerScene/MainMenuJulien.unity
+    guid: 30fc397576bcbea4e8417cf32f68b95c
+  - enabled: 1
+    path: Assets/Julien/MultiplayerScene/GameJulien.unity
+    guid: 45a9989bf07d6ce47b4bc34c9a16197e
+  - enabled: 1
+    path: Assets/Julien/MultiplayerScene/GoatSelectedJulien.unity
+    guid: eed285c1229d3ac4fa4a19551546b97c
   m_configObjects: {}

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Julien.Scripts.SelectionPlayer
 {
@@ -14,7 +16,11 @@ namespace Julien.Scripts.SelectionPlayer
         
         public int _playerNumber;
         
+        [SerializeField] private GameObject _curentSelectedButton;
+        
         private PlayerInput _playerInput;
+
+        [SerializeField] private EventSystem _eventSystem;
 
         private void Awake()
         {
@@ -31,11 +37,28 @@ namespace Julien.Scripts.SelectionPlayer
 
         private void Update()
         {
+            _curentSelectedButton = _eventSystem.currentSelectedGameObject;
             if (_playerInput.actions["UI/Submit"].triggered)
             {
                 if (_playerNumber == 1)
                 {
-                    // PlayerOne = 
+                    ScriptableobjectPlayerOne = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
+                    Debug.Log("Change Player 1 Goat" + ScriptableobjectPlayerOne);
+                }
+                if (_playerNumber == 2)
+                {
+                    ScriptableobjectPlayerTwo = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
+                    Debug.Log("Change Player 2 Goat" + ScriptableobjectPlayerTwo);
+                }
+                if (_playerNumber == 3)
+                {
+                    ScriptableobjectPlayerThree = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
+                    Debug.Log("Change Player 3 Goat" + ScriptableobjectPlayerThree);
+                }
+                if (_playerNumber == 4)
+                {
+                    ScriptableobjectPlayerFour = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
+                    Debug.Log("Change Player 4 Goat" + ScriptableobjectPlayerFour);
                 }
             }
         }
