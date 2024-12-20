@@ -16,6 +16,7 @@ namespace Julien.Scripts.Player
         private void OnEnable()
         {
             _playerInputManager.onPlayerJoined += OnPlayerJoined;
+            Debug.Log("Joined");
         }
 
         private void OnDisable()
