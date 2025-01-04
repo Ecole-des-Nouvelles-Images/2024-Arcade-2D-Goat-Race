@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -9,7 +10,7 @@ namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
-        public int PlayerNummber;
+        public int PlayerNumber;
         
         [SerializeField] private SongSFX songSfx;
         
@@ -102,19 +103,19 @@ namespace Julien.Scripts
 
         private void Start()
         {
-            foreach (GoatData goatData in GoatsDatas)
-            {
-                if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
-                {
-                    GoatData = goatData;
-                    //Debug.Log("Player 1 IN GAME " + goatData.name);
-                }
-                if (PlayerOne == false && GlobalVariable.GoatNamePlayer2 == goatData.name)
-                {
-                    GoatData = goatData;
-                    //Debug.Log("Player 2 IN GAME " + goatData.name);
-                }
-            }
+            // foreach (GoatData goatData in GoatsDatas)
+            // {
+            //     if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
+            //     {
+            //         GoatData = goatData;
+            //         //Debug.Log("Player 1 IN GAME " + goatData.name);
+            //     }
+            //     if (PlayerOne == false && GlobalVariable.GoatNamePlayer2 == goatData.name)
+            //     {
+            //         GoatData = goatData;
+            //         //Debug.Log("Player 2 IN GAME " + goatData.name);
+            //     }
+            // }
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
@@ -185,7 +186,6 @@ namespace Julien.Scripts
                 }  
             }
             OnJumpStay();
-            Debug.Log(_isWalking);
             if (_playerInputHandler.Move.x > 0 || _playerInputHandler.Move.x < 0)
             {
                 _isWalking = true;
@@ -273,7 +273,7 @@ namespace Julien.Scripts
 
         private void FixedUpdate()
         {
-            if (_isStun == false)
+            if (_isStun == false && CanMove)
             {
                 OnMove();
             }

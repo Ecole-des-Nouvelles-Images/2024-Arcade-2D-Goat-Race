@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2628662218261348055}
   - component: {fileID: 6101085023069239761}
   - component: {fileID: 5950745803946049362}
+  - component: {fileID: 4761387290239988455}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -47,8 +48,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8f323889afa7542b6a436d49f6f654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1Camera: {fileID: 0}
-  Player2Camera: {fileID: 0}
+  _player1CameraGameObject: {fileID: 0}
+  _player2CameraGameObject: {fileID: 0}
+  _player3CameraGameObject: {fileID: 0}
+  _player4CameraGameObject: {fileID: 0}
+  _cineMachineP1: {fileID: 0}
+  _cineMachineP2: {fileID: 0}
+  _cineMachineP3: {fileID: 0}
+  _cineMachineP4: {fileID: 0}
+  _layoutOnePlayer: {fileID: 0}
+  _layoutTwoPlayer: {fileID: 0}
+  _layoutThreePlayer: {fileID: 0}
+  _layoutFourPlayer: {fileID: 0}
 --- !u!114 &2628662218261348055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce289f5cf93eb6943835013a00c86181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: []
+  _decompteHUD: {fileID: 0}
+  DecompteSprites: []
 --- !u!114 &6101085023069239761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +86,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae0ba5f8a760e54491ce53e63acf005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _foretMap: {fileID: 0}
+  _desetMap: {fileID: 0}
+  Bonus: []
 --- !u!114 &5950745803946049362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +149,16 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &4761387290239988455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128382833284155511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f01adba00b1348bf75d3ed23f551d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerNumber: 0

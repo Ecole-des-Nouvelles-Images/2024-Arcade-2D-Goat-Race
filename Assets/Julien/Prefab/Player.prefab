@@ -720,10 +720,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumberTagImage:
-  - {fileID: 21300000, guid: 244954d3ef223924ea7843079aa65d55, type: 3}
-  - {fileID: 21300000, guid: 29428fb1adb49ff4e988ce7fafb71d54, type: 3}
-  - {fileID: 21300000, guid: 03a7d5a6794ac43479f99648483c8103, type: 3}
-  - {fileID: 21300000, guid: 79210d58e129ca34085627787f6f3d36, type: 3}
+  - {fileID: 21300000, guid: f731259f0c1cfff4b875bcf2dd49c039, type: 3}
+  - {fileID: 21300000, guid: eaf83c45c6bf98d408a38ecc41b3f78e, type: 3}
+  - {fileID: 21300000, guid: d0e718e7505dba0478f9e3c715bf8b9b, type: 3}
+  - {fileID: 21300000, guid: b421f6c95fd0f6549a5fa306ec86fadf, type: 3}
   _parent: {fileID: 8140188591608927331}
 --- !u!222 &4489258571952404409
 CanvasRenderer:
@@ -753,9 +753,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 29428fb1adb49ff4e988ce7fafb71d54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f731259f0c1cfff4b875bcf2dd49c039, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -823,7 +823,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 500
   m_TargetDisplay: 0
 --- !u!114 &976207932629713172
 MonoBehaviour:
@@ -949,7 +949,7 @@ MonoBehaviour:
   _dashAttackColliderRight: {fileID: 6544358628937452278}
   _ColliderGrounded: {fileID: 6899950638076243726}
   CanJump: 0
-  _canAttaque: 0
+  _canAttaque: 1
   _layerMaskObstacle:
     serializedVersion: 2
     m_Bits: 64

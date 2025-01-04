@@ -23,8 +23,8 @@ TagManager:
   - PlayerTwoCamera
   - NoCollide
   - NoCollideBlock
-  - 
-  - 
+  - PlayerThreeCamera
+  - PlayerFourCamera
   - 
   - 
   - 

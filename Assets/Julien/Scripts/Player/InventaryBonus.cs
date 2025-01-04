@@ -40,19 +40,19 @@ namespace Julien.Scripts
 
         private void Update()
         {
-            if (gameObject.GetComponent<Goat>().PlayerNummber == 1 && GameObject.Find("BonusLogo1") != null)
+            if (gameObject.GetComponent<Goat>().PlayerNumber == 1 && GameObject.Find("BonusLogo1") != null)
             {
                 _bonusLogoHUD = GameObject.Find("BonusLogo1");
             }
-            if (gameObject.GetComponent<Goat>().PlayerNummber == 2 && GameObject.Find("BonusLogo2") != null)
+            if (gameObject.GetComponent<Goat>().PlayerNumber == 2 && GameObject.Find("BonusLogo2") != null)
             {
                 _bonusLogoHUD = GameObject.Find("BonusLogo2");
             }
-            if (gameObject.GetComponent<Goat>().PlayerNummber == 3 && GameObject.Find("BonusLogo3") != null)
+            if (gameObject.GetComponent<Goat>().PlayerNumber == 3 && GameObject.Find("BonusLogo3") != null)
             {
                 _bonusLogoHUD = GameObject.Find("BonusLogo3");
             }
-            if (gameObject.GetComponent<Goat>().PlayerNummber == 4 && GameObject.Find("BonusLogo4") != null)
+            if (gameObject.GetComponent<Goat>().PlayerNumber == 4 && GameObject.Find("BonusLogo4") != null)
             {
                 _bonusLogoHUD = GameObject.Find("BonusLogo4");
             }

@@ -46,13 +46,7 @@ public class SetUpCamera : MonoBehaviour
         if (PlayerSpawnHandler.NumberPlayerOnMap == PlayerSelectionController.NumberOfPlayer)
         {
             SetUp();
-            Debug.Log("SetUp");
         }
-        else
-        {
-            Debug.Log("Rien");
-        }
-        
     }
     
     private void SetUp()
@@ -63,6 +57,8 @@ public class SetUpCamera : MonoBehaviour
             
             _player1Camera.rect = new Rect(0, 0, 1, 1);
 
+            _cineMachineP1.SetActive(true);
+            
             _cineMachineP1.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerOne").gameObject.transform;
             
             _layoutOnePlayer.SetActive(true);
@@ -78,6 +74,9 @@ public class SetUpCamera : MonoBehaviour
             _player1Camera.rect = new Rect(0, 0.5f, 1, 0.5f);
             _player2Camera.rect = new Rect(0, 0, 1, 0.5f);
             
+            _cineMachineP1.SetActive(true);
+            _cineMachineP2.SetActive(true);
+            
             _cineMachineP1.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerOne").gameObject.transform;
             _cineMachineP2.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerTwo").gameObject.transform;
             
@@ -86,6 +85,7 @@ public class SetUpCamera : MonoBehaviour
             _layoutThreePlayer.SetActive(false);
             _layoutFourPlayer.SetActive(false);
         }
+        
         if (PlayerSelectionController.NumberOfPlayer == 3)
         {
             _player1CameraGameObject.SetActive(true);
@@ -95,6 +95,10 @@ public class SetUpCamera : MonoBehaviour
             _player1Camera.rect = new Rect(0, 0.5f, 1, 0.5f);
             _player2Camera.rect = new Rect(0, 0, 0.5f, 0.5f);
             _player3Camera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+            
+            _cineMachineP1.SetActive(true);
+            _cineMachineP2.SetActive(true);
+            _cineMachineP3.SetActive(true);
             
             _cineMachineP1.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerOne").gameObject.transform;
             _cineMachineP2.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerTwo").gameObject.transform;
@@ -113,9 +117,14 @@ public class SetUpCamera : MonoBehaviour
             _player4CameraGameObject.SetActive(true);
             
             _player1Camera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
-            _player2Camera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            _player2Camera.rect = new Rect(0.5f, 0.5f, 1, 1);
             _player3Camera.rect = new Rect(0, 0, 0.5f, 0.5f);
             _player4Camera.rect = new Rect(0.5f, 0, 1, 0.5f);
+            
+            _cineMachineP1.SetActive(true);
+            _cineMachineP2.SetActive(true);
+            _cineMachineP3.SetActive(true);
+            _cineMachineP4.SetActive(true);
             
             _cineMachineP1.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerOne").gameObject.transform;
             _cineMachineP2.GetComponent<CinemachineVirtualCamera>().Follow = GameObject.Find("PlayerTwo").gameObject.transform;

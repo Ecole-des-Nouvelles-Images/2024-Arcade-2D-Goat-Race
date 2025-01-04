@@ -1,30 +1,49 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Julien.Scripts;
+using Julien.Scripts.SelectionPlayer;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager1 : MonoBehaviour
 {
+    public static int IndexPlayer;
     [SerializeField] private List<GameObject> Players;
     [SerializeField] private GameObject _decompteHUD;
     public List<Sprite> DecompteSprites;
-    
-    private int _chronometer = 3;
+
+    [SerializeField] private bool _gameStarted = false;
+    [SerializeField] private int _chronometer = 3;
     private void Start()
     {
-        CallDecompte();   
-    
-        foreach (GameObject player in Players)
+        //CallDecompte();
+        Players = new List<GameObject>();
+    }
+
+    private void Update()
+    {
+        if (IndexPlayer == PlayerSelectionController.NumberOfPlayerSelected && !_gameStarted)
         {
-           player.gameObject.GetComponent<Goat>().CanMove =  false;
+            _gameStarted = true;
+            CallDecompte();
         }
     }
-    
+
     public void CallDecompte()
     {
         StartCoroutine("Delay");
+        _decompteHUD.SetActive(true);
+
+        List<GameObject> players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
+        foreach (GameObject player in players)
+        {
+            if (_chronometer == 0)
+            {
+                player.GetComponent<Goat>().CanMove = true;
+            }
+        }
     }
     public IEnumerator Delay()
     {
@@ -32,23 +51,20 @@ public class GameManager1 : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
         
-        _decompteHUD.transform.localScale = new Vector3(1, 1, 1);
-        
-        Image image = _decompteHUD.GetComponent<Image>();
-        image.sprite = DecompteSprites[_chronometer - 1];
-        _chronometer -= 1;
-        
         if (_chronometer == 0)
         {
             StartCoroutine("Destroy");
-            foreach (GameObject player in Players)
-            {
-                player.gameObject.GetComponent<Goat>().CanMove =  true;
-            }
         }
         else
         {
+            _decompteHUD.transform.localScale = new Vector3(1, 1, 1);
+
+            Image image = _decompteHUD.GetComponent<Image>();
+            image.sprite = DecompteSprites[_chronometer - 1];
+            _chronometer--;
+            
             CallDecompte();
+            Debug.Log("rapelle le décompte");
         }
     }
     
@@ -58,11 +74,4 @@ public class GameManager1 : MonoBehaviour
         Destroy(_decompteHUD.gameObject);
     }
     
-    private void Update()
-    {
-        foreach (GameObject Player in Players)
-        {
-           float positionX = transform.position.x;
-        }
-    }
 }

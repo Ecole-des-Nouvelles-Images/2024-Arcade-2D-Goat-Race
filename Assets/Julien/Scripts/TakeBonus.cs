@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Julien.Scripts
 {
@@ -8,6 +10,8 @@ namespace Julien.Scripts
       
       private SongSFX _songSFX;
       private AudioSource _audioSource;
+
+      private bool _canBeTake = true;
       private void Awake()
       {
          //_songSFX = GameObject.Find("SFXManager").GetComponent<SongSFX>();
@@ -22,16 +26,28 @@ namespace Julien.Scripts
          
             if (inventaryBonus.HaveBonus == false && inventaryBonus.IsUsingBonus == false)
             {
-               inventaryBonus.HaveBonus = true;
-               inventaryBonus.RandomBonus();
-               Debug.Log("attrape le bonus");
-               Destroy(gameObject);
+               if (_canBeTake)
+               {
+                  inventaryBonus.HaveBonus = true;
+                  inventaryBonus.RandomBonus();
+                  Debug.Log("attrape le bonus");
+                  StartCoroutine("Delay");
+                  _canBeTake = false;
+                  gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+               }
             }
             else
             {
                
             }
          }
+      }
+
+      public IEnumerator Delay()
+      {
+         yield return new WaitForSeconds(5f);
+         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+         _canBeTake = true;
       }
    }
 }

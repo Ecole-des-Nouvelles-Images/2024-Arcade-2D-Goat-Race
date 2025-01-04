@@ -16,7 +16,7 @@ public class PlayerTagSelection : MonoBehaviour
     private void Start()
     {
         _image = gameObject.GetComponent<Image>();
-        _playerNumber = _parent.GetComponent<Goat>().PlayerNummber;
+        _playerNumber = _parent.GetComponent<Goat>().PlayerNumber;
 
         if (_playerNumber == 1)
         {

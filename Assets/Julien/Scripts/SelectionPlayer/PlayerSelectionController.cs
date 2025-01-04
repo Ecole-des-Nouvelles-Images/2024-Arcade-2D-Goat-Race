@@ -91,8 +91,6 @@ namespace Julien.Scripts.SelectionPlayer
 
         private void Update()
         {
-            Debug.Log(NumberOfPlayer);
-            Debug.Log(NumberOfPlayerSelected);
             _curentSelectedButton = _eventSystem.currentSelectedGameObject;
             if (_playerInput.actions["UI/Submit"].triggered)
             {
@@ -107,12 +105,10 @@ namespace Julien.Scripts.SelectionPlayer
                         if (_hasSelectedP1)
                         {
                             ScriptableobjectPlayerOne = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 1 Goat" + ScriptableobjectPlayerOne);
                         }
                         else
                         {
                             ScriptableobjectPlayerOne = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 1 Goat" + ScriptableobjectPlayerOne);
 
                             NumberOfPlayerSelected++;
                             _hasSelectedP1 = true;
@@ -124,12 +120,10 @@ namespace Julien.Scripts.SelectionPlayer
                         if (_hasSelectedP2)
                         {
                             ScriptableobjectPlayerTwo = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 2 Goat" + ScriptableobjectPlayerTwo);
                         }
                         else
                         {
                             ScriptableobjectPlayerTwo = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 2 Goat" + ScriptableobjectPlayerTwo);
                             
                             NumberOfPlayerSelected++;
                             _hasSelectedP2 = true; 
@@ -142,12 +136,10 @@ namespace Julien.Scripts.SelectionPlayer
                         if (_hasSelectedP3)
                         {
                             ScriptableobjectPlayerThree = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 3 Goat" + ScriptableobjectPlayerThree);
                         }
                         else
                         {
                             ScriptableobjectPlayerThree = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 3 Goat" + ScriptableobjectPlayerThree);
                             
                             NumberOfPlayerSelected++;
                             _hasSelectedP3 = true; 
@@ -160,12 +152,10 @@ namespace Julien.Scripts.SelectionPlayer
                         if (_hasSelectedP4)
                         {
                             ScriptableobjectPlayerFour = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 4 Goat" + ScriptableobjectPlayerFour);
                         }
                         else
                         {
                             ScriptableobjectPlayerFour = _curentSelectedButton.GetComponent<ButtonSelectGoat>().GoatData;
-                            Debug.Log("Change Player 4 Goat" + ScriptableobjectPlayerFour);
                             
                             NumberOfPlayerSelected++;
                             _hasSelectedP4 = true; 

@@ -34,36 +34,39 @@ namespace Julien.Scripts.Player
             if (_playerNumber == 0)
             {
                 playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerOne;
-                playerInput.gameObject.GetComponent<Goat>().PlayerNummber = 1;
+                playerInput.gameObject.GetComponent<Goat>().PlayerNumber = 1;
+                GameManager1.IndexPlayer++;
+                
                 playerInput.gameObject.name = "PlayerOne";
                 NumberPlayerOnMap++;
-                Debug.Log(" Player One " + PlayerSelectionController.ScriptableobjectPlayerOne);
             }
             if (_playerNumber == 1)
             {
                 playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerTwo;
-                playerInput.gameObject.GetComponent<Goat>().PlayerNummber = 2;
+                playerInput.gameObject.GetComponent<Goat>().PlayerNumber = 2;
+                GameManager1.IndexPlayer++;
+                
                 playerInput.gameObject.name = "PlayerTwo";
                 NumberPlayerOnMap++;
-                Debug.Log(" Player Two " + PlayerSelectionController.ScriptableobjectPlayerTwo);
+            }
+            if (_playerNumber == 2)
+            {
+                playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerThree;
+                playerInput.gameObject.GetComponent<Goat>().PlayerNumber = 3;
+                GameManager1.IndexPlayer++;
+                
+                playerInput.gameObject.name = "PlayerThree";
+                NumberPlayerOnMap++;
             }
             if (_playerNumber == 3)
             {
-                playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerThree;
-                playerInput.gameObject.GetComponent<Goat>().PlayerNummber = 3;
-                playerInput.gameObject.name = "PlayerThree";
-                NumberPlayerOnMap++;
-                Debug.Log(" Player Three ");
-            }
-            if (_playerNumber == 4)
-            {
                 playerInput.gameObject.GetComponent<Goat>().GoatData = PlayerSelectionController.ScriptableobjectPlayerFour;
-                playerInput.gameObject.GetComponent<Goat>().PlayerNummber = 4;
+                playerInput.gameObject.GetComponent<Goat>().PlayerNumber = 4;
+                GameManager1.IndexPlayer++;
+                
                 playerInput.gameObject.name = "PlayerFour";
                 NumberPlayerOnMap++;
-                Debug.Log(" Player Four ");
             }
-            Debug.Log("Joined");
         }
     }
 }
