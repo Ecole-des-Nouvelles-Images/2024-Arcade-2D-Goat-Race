@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -8,9 +7,6 @@ using UnityEngine.UI;
 
 public class GameManager1 : MonoBehaviour
 {
-    //[SerializeField] private GameObject Player1;
-    //[SerializeField] private GameObject Player2;
-
     [SerializeField] private List<GameObject> Players;
     [SerializeField] private GameObject _decompteHUD;
     public List<Sprite> DecompteSprites;

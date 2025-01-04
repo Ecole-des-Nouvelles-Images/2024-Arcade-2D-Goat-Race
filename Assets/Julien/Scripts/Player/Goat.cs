@@ -9,6 +9,8 @@ namespace Julien.Scripts
 {
     public class Goat : MonoBehaviour
     {
+        public int PlayerNummber;
+        
         [SerializeField] private SongSFX songSfx;
         
         [Header("<color=green> DataChange </color>")]
@@ -95,8 +97,8 @@ namespace Julien.Scripts
         [Header("<color=blue> Attack </color>")]
         [SerializeField] private GameObject _stepParticle;
 
-        [Header("<color=pink> HUD </color>")] [SerializeField]
-        private GameObject _canDashHUD;
+        //[Header("<color=pink> HUD </color>")] [SerializeField]
+        //private GameObject _canDashHUD;
 
         private void Start()
         {
@@ -464,9 +466,6 @@ namespace Julien.Scripts
                 CanDash = false;
                 StartCoroutine(DashDelaying());
                 //_canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
-               
-
-               
             }
         }
         public IEnumerator DashDelaying()
@@ -477,8 +476,8 @@ namespace Julien.Scripts
             yield return new WaitForSeconds(_dashReload);
             
             CanDash = true;
-            _canDashHUD.GetComponent<Image>().color = new Color(1, 1, 1);
-            _canDashHUD.transform.DOShakeScale(0.3f, 0.4f, 1, 0);
+            //_canDashHUD.GetComponent<Image>().color = new Color(1, 1, 1);
+            //_canDashHUD.transform.DOShakeScale(0.3f, 0.4f, 1, 0);
         }
 
         public void OnStun()

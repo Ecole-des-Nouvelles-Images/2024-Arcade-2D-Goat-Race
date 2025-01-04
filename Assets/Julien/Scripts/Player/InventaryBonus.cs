@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Julien.Scripts.BonusScripts;
@@ -30,6 +31,31 @@ namespace Julien.Scripts
           _sfxManager = GameObject.Find("SFXManager");
           _songSFX = _sfxManager.GetComponent<SongSFX>();
           _audioSource = gameObject.GetComponent<AudioSource>();
+        }
+
+        private void Start()
+        {
+            
+        }
+
+        private void Update()
+        {
+            if (gameObject.GetComponent<Goat>().PlayerNummber == 1 && GameObject.Find("BonusLogo1") != null)
+            {
+                _bonusLogoHUD = GameObject.Find("BonusLogo1");
+            }
+            if (gameObject.GetComponent<Goat>().PlayerNummber == 2 && GameObject.Find("BonusLogo2") != null)
+            {
+                _bonusLogoHUD = GameObject.Find("BonusLogo2");
+            }
+            if (gameObject.GetComponent<Goat>().PlayerNummber == 3 && GameObject.Find("BonusLogo3") != null)
+            {
+                _bonusLogoHUD = GameObject.Find("BonusLogo3");
+            }
+            if (gameObject.GetComponent<Goat>().PlayerNummber == 4 && GameObject.Find("BonusLogo4") != null)
+            {
+                _bonusLogoHUD = GameObject.Find("BonusLogo4");
+            }
         }
 
         public void RandomBonus()
