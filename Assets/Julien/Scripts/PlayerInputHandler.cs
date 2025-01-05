@@ -149,7 +149,7 @@ namespace Julien.Scripts
 
         private void Pause(InputAction.CallbackContext context)
         {
-            _uiMenuManager.OpenPauseMenu();
+          GameObject.Find("MenuManager").GetComponent<UI_MenuManager>().OpenPauseMenu();
         }
     }
 }

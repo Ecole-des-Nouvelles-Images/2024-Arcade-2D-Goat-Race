@@ -434,7 +434,7 @@ namespace Julien.Scripts
                         
                         
                         _hitResult.collider.gameObject.GetComponent<Obstacle>().Destroyed();
-                        Destroy(_hitResult.collider.gameObject);
+                        ObstacleHit.GetComponent<Obstacle>().Destroyed();
                     }
                 }
             }
