@@ -97,25 +97,8 @@ namespace Julien.Scripts
 
         [Header("<color=blue> Attack </color>")]
         [SerializeField] private GameObject _stepParticle;
-
-        //[Header("<color=pink> HUD </color>")] [SerializeField]
-        //private GameObject _canDashHUD;
-
         private void Start()
         {
-            // foreach (GoatData goatData in GoatsDatas)
-            // {
-            //     if (PlayerOne && GlobalVariable.GoatNamePlayer1 == goatData.name)
-            //     {
-            //         GoatData = goatData;
-            //         //Debug.Log("Player 1 IN GAME " + goatData.name);
-            //     }
-            //     if (PlayerOne == false && GlobalVariable.GoatNamePlayer2 == goatData.name)
-            //     {
-            //         GoatData = goatData;
-            //         //Debug.Log("Player 2 IN GAME " + goatData.name);
-            //     }
-            // }
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _playerInputHandler = GetComponent<PlayerInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
@@ -451,18 +434,9 @@ namespace Julien.Scripts
         {
             if (IsDashing == false && CanDash && CanJump && IsDashing == false && _isStun == false)
             {
-                if (_spriteRenderer.flipX)
-                {
-                    _playerInputHandler.Move.x = _dashPower;
+                Speed = GoatData.Speed / 2;
                 
-                }
-                else
-                {
-                    _playerInputHandler.Move.x = -_dashPower;
-                
-                }
                 IsDashing = true;
-                
                 CanDash = false;
                 StartCoroutine(DashDelaying());
                 //_canDashHUD.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
@@ -472,7 +446,7 @@ namespace Julien.Scripts
         {
             yield return new WaitForSeconds(_dashDelay);
             IsDashing = false;
-            _playerInputHandler.Move.x = 0;
+            Speed = 0;
             yield return new WaitForSeconds(_dashReload);
             
             CanDash = true;
