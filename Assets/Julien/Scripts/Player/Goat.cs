@@ -71,9 +71,10 @@ namespace Julien.Scripts
         private float _colliderIsGroundedScaleX;
 
         // STUN
-        private bool _isStun;
+        public bool IsStun;
         private float _stunTimer = 2f;
         private float _stunForce = 500f;
+        [SerializeField] private InventaryBonus _InventaryBonus;
     
         private LayerMask _layerMaskGrounded;
         private float _rayDistance = 0.55f;
@@ -157,17 +158,17 @@ namespace Julien.Scripts
         private void Update()
         {
             // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
-            if (IsDashing == false)
-            {
-                if (_playerInputHandler.Move.x > 0)
-                {
-                    _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
-                }
-                else if (_playerInputHandler.Move.x < 0)
-                {
-                    _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
-                }  
-            }
+            // if (IsDashing == false)
+            // {
+            //     if (_playerInputHandler.Move.x > 0)
+            //     {
+            //         _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
+            //     }
+            //     else if (_playerInputHandler.Move.x < 0)
+            //     {
+            //         _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
+            //     }  
+            // }
             OnJumpStay();
             if (_playerInputHandler.Move.x > 0 || _playerInputHandler.Move.x < 0)
             {
@@ -208,25 +209,6 @@ namespace Julien.Scripts
             {
                 OnJumpStay();
             }
-            
-            // DASH STUN
-            if (IsDashing && _spriteRenderer.flipX)
-            {
-                _dashAttackColliderRight.SetActive(true);
-            }
-            else
-            {
-                _dashAttackColliderRight.SetActive(false);
-            }
-
-            if (IsDashing && _spriteRenderer.flipX == false)
-            {
-                _dashAttackColliderLeft.SetActive(true);
-            }
-            else
-            {
-                _dashAttackColliderLeft.SetActive(false);
-            }
 
             if (_isWalking  && _isGrounded || _isWalking && _isGrounded)
             {
@@ -246,7 +228,7 @@ namespace Julien.Scripts
             _animator.SetBool("IsDashing", IsDashing);
             //Debug.Log("<color=yellow> animator Dashing </color>" + IsDashing);
             
-            _animator.SetBool("IsStun", _isStun);
+            _animator.SetBool("IsStun", IsStun);
             //Debug.Log("<color=blue> animator IsStun </color>" + _isStun);
             
             _animator.SetBool("IsGrounded", _isGrounded);
@@ -256,7 +238,7 @@ namespace Julien.Scripts
 
         private void FixedUpdate()
         {
-            if (_isStun == false && CanMove)
+            if (IsStun == false && CanMove)
             {
                 OnMove();
             }
@@ -275,7 +257,7 @@ namespace Julien.Scripts
         {
             bool Release;
             
-            if (CanJump && _isJumping == false && _isStun == false)
+            if (CanJump && _isJumping == false && IsStun == false)
             {
                 rb2d.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
                 _isJumping = true;
@@ -366,7 +348,7 @@ namespace Julien.Scripts
         // ATTAQUE
         public void OnAttaque(float buttonValue)
         {
-            if (_canAttaque && rb2d.velocity.x is <= 0.1f and >= -0.1f && _isStun == false && CanJump)
+            if (_canAttaque && rb2d.velocity.x is <= 0.1f and >= -0.1f && IsStun == false && CanJump)
             {
                 // ATTAQUE DROITE
                 if (_spriteRenderer.flipX)
@@ -432,9 +414,17 @@ namespace Julien.Scripts
         // DASH
         public void OnDash()
         {
-            if (IsDashing == false && CanDash && CanJump && IsDashing == false && _isStun == false)
+            if (IsDashing == false && CanDash && CanJump && IsDashing == false && IsStun == false)
             {
-                Speed = GoatData.Speed / 2;
+                if (_spriteRenderer.flipX)
+                {
+                    _dashAttackColliderRight.SetActive(true);
+                }
+                else
+                {
+                    _dashAttackColliderLeft.SetActive(true);
+                }
+                Speed = Speed += 8;
                 
                 IsDashing = true;
                 CanDash = false;
@@ -446,7 +436,9 @@ namespace Julien.Scripts
         {
             yield return new WaitForSeconds(_dashDelay);
             IsDashing = false;
-            Speed = 0;
+            _dashAttackColliderLeft.SetActive(false);
+            _dashAttackColliderRight.SetActive(false);
+            Speed = Speed -= 8;
             yield return new WaitForSeconds(_dashReload);
             
             CanDash = true;
@@ -456,12 +448,16 @@ namespace Julien.Scripts
 
         public void OnStun()
         {
-            if (_isStun == false)
+            if (IsStun == false)
             {
-                _isStun = true;
+                IsStun = true;
                 StartCoroutine("DelayStun");
                 rb2d.AddForce(Vector2.up * _stunForce);
-            
+                _dashAttackColliderRight.SetActive(false);
+                _dashAttackColliderLeft.SetActive(false);
+                
+                _InventaryBonus.CanUse = false;
+                
                 _audioSource.clip = songSfx.AudioStun[Random.Range(0,songSfx.AudioStun.Count)];
                 _audioSource.Play();
             }
@@ -470,7 +466,8 @@ namespace Julien.Scripts
         private IEnumerator DelayStun()
         {
             yield return new WaitForSeconds(_stunTimer);
-            _isStun = false;
+            IsStun = false;
+            _InventaryBonus.CanUse = true;
         }
 
         public void Kill()

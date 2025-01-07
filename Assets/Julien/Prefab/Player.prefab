@@ -336,7 +336,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.39607844}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -511,7 +511,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.39607844}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635504da44f1cc44eb09181fdb1416a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNummber: 0
+  PlayerNumber: 0
   songSfx: {fileID: 7638202039884362325, guid: 96d7f801351ccf247b331bcd55ca1009, type: 3}
   GoatsDatas:
   - {fileID: 11400000, guid: c4676ae2a450813488cb734a1ae182f1, type: 2}
@@ -948,6 +948,8 @@ MonoBehaviour:
   _dashAttackColliderLeft: {fileID: 5174358018998683964}
   _dashAttackColliderRight: {fileID: 6544358628937452278}
   _ColliderGrounded: {fileID: 6899950638076243726}
+  IsStun: 0
+  _InventaryBonus: {fileID: 8115081932819604171}
   CanJump: 0
   _canAttaque: 1
   _layerMaskObstacle:
@@ -1069,7 +1071,9 @@ MonoBehaviour:
   HaveBonus: 0
   IsUsingBonus: 0
   BonusName: 
+  CanUse: 0
   _sfxManager: {fileID: 0}
+  _goat: {fileID: 6118669829489119256}
   Spike: {fileID: 952244095463115976}
   _bonusScripts:
   - {fileID: 11400000, guid: a92e44cddde03ac4aa53b94e30b1cc44, type: 2}
@@ -1169,8 +1173,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 818814073
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72f6968ea39abda4abb712879c59281a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

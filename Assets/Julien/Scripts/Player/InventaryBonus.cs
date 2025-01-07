@@ -15,10 +15,12 @@ namespace Julien.Scripts
         public bool IsUsingBonus;
         public string BonusName;
 
+        public bool CanUse;
         [SerializeField] private GameObject _sfxManager;
         private SongSFX _songSFX;
         private AudioSource _audioSource;
         
+        [SerializeField] Goat _goat;
         [SerializeField] private GameObject Spike;
         [SerializeField] private List<Bonus> _bonusScripts;
         [SerializeField] private GameObject _bonusLogoHUD;
@@ -63,8 +65,8 @@ namespace Julien.Scripts
             System.Action[] methods = new System.Action[]
             {
                 Bonus1,
-                Bonus2,
-                Bonus3
+                //Bonus2,
+                //Bonus3
             }; 
         
             int randomIndex = Random.Range(0, methods.Length);
@@ -75,21 +77,18 @@ namespace Julien.Scripts
         
         public void Bonus1()
         {
-            Debug.Log("Speed");
             BonusName = "Speed";
             Bonus = _bonusScripts[0];
            _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[0]._sprite;
         }
         public void Bonus2()
         {
-            Debug.Log("Traverser");
             BonusName = "Traverser";
             Bonus = _bonusScripts[1];
             _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[1]._sprite;
         }
         public void Bonus3()
         {
-            Debug.Log("Pic");
             BonusName = "Pic";
             Bonus = _bonusScripts[2];
             _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[2]._sprite;

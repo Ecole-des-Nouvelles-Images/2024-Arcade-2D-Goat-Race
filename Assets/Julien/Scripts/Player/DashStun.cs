@@ -12,7 +12,6 @@ public class DashStun : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Goat>().OnStun();
-            Debug.Log("<color=white> Stun le joueur </color>");
         }
     }
 }

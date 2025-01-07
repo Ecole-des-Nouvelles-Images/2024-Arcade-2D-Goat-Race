@@ -18,10 +18,8 @@ public class UI_SelectMapMenu : MonoBehaviour
     {
         GlobalVariable.GlobalNameMap = new string("ForetMap");
         Debug.Log(GlobalVariable.GlobalNameMap);
-        
-        _selectGoatMenu.SetActive(true);
-        _selectMapMenu.SetActive(false);
 
+        Scene.SceneManager.LoadScene("GoatSelection");
         //Scene.SceneManager.LoadScene("Game");
     }
     
@@ -29,9 +27,6 @@ public class UI_SelectMapMenu : MonoBehaviour
     {
         GlobalVariable.GlobalNameMap = new string("DesertMap");
         Debug.Log(GlobalVariable.GlobalNameMap);
-        
-        _selectGoatMenu.SetActive(true);
-        _selectMapMenu.SetActive(false);
         
         //Scene.SceneManager.LoadScene("Game");
     }

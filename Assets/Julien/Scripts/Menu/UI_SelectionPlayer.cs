@@ -9,12 +9,12 @@ public class UI_SelectionPlayer : MonoBehaviour
         if (PlayerSelectionController.NumberOfPlayerSelected == PlayerSelectionController.NumberOfPlayer)
         {
             Debug.Log("Play");
-            SceneManager.LoadScene("Julien/MultiplayerScene/GameJulien");
+            SceneManager.LoadScene("Game");
         }
     }
     public void Return()
     {
         Debug.Log("Return");
-        SceneManager.LoadScene("MainMenuJulien");
+        SceneManager.LoadScene("MainMenu");
     }
 }

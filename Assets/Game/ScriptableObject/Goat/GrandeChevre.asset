@@ -21,11 +21,11 @@ MonoBehaviour:
   JumpForce: 10
   RayDistance: 3.2
   OrderLayer: 1
-  Collider2DAxeX: 2.43
+  Collider2DAxeX: 1.53
   ColliderOfsetX: 1.37
   Collider2DAxeY: 2.2
   ColliderIsGroundedPositionY: 0
-  ColliderIsGroundedScaleX: -2.5
+  ColliderIsGroundedScaleX: -1.7
   CameraZ: -38.5
   CameraY: 0.55
   CameraX: 10

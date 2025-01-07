@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using Julien.Scripts.Player;
 using Julien.Scripts.SelectionPlayer;
@@ -34,13 +35,18 @@ public class SetUpCamera : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         _playerInputManager = GetComponent<PlayerInputManager>();
         _player1Camera = _player1CameraGameObject.GetComponent<Camera>();
         _player2Camera = _player2CameraGameObject.GetComponent<Camera>();
         _player3Camera = _player3CameraGameObject.GetComponent<Camera>();
         _player4Camera = _player4CameraGameObject.GetComponent<Camera>();
     }
-    
+
     private void Update()
     {
         if (PlayerSpawnHandler.NumberPlayerOnMap == PlayerSelectionController.NumberOfPlayer)

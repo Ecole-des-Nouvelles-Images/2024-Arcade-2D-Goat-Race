@@ -787,6 +787,10 @@ PrefabInstance:
       value: BreakStoneFinal
       objectReference: {fileID: 0}
     - target: {fileID: 7565529288959456495, guid: 53d8fe90d98f4394a8f656327bd34c0a, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565529288959456495, guid: 53d8fe90d98f4394a8f656327bd34c0a, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
       value: 58403
       objectReference: {fileID: 0}

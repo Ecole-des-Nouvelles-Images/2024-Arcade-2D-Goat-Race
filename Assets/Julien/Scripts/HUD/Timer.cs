@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +12,15 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        PlayTimer = true;
+        StartCoroutine("Delay");
     }
 
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(3);
+        PlayTimer = true;
+    }
+    
     private void Update()
     {
         if(PlayTimer)
