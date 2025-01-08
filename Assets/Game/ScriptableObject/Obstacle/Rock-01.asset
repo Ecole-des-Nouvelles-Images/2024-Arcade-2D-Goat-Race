@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstableName: 
   Sprite: {fileID: 21300000, guid: 7200c9afb0278d046ab2d1e76420f218, type: 3}
-  Health: 20
+  Health: 25
   Collider2DAxeX: 2.13
   Collider2DAxeY: 2.65
   OffsetColliderY: -0.77

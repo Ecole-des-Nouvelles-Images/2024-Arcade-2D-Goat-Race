@@ -10,7 +10,7 @@ namespace Julien.Scripts
 {
     public class InventaryBonus : MonoBehaviour
     {
-        public float BonusTime = 2f;
+        public float BonusTime;
         public bool HaveBonus;
         public bool IsUsingBonus;
         public string BonusName;
@@ -65,8 +65,8 @@ namespace Julien.Scripts
             System.Action[] methods = new System.Action[]
             {
                 Bonus1,
-                //Bonus2,
-                //Bonus3
+                Bonus2,
+                Bonus3
             }; 
         
             int randomIndex = Random.Range(0, methods.Length);
@@ -79,18 +79,21 @@ namespace Julien.Scripts
         {
             BonusName = "Speed";
             Bonus = _bonusScripts[0];
+            BonusTime = _bonusScripts[0].Timer;
            _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[0]._sprite;
         }
         public void Bonus2()
         {
             BonusName = "Traverser";
             Bonus = _bonusScripts[1];
+            BonusTime = _bonusScripts[1].Timer;
             _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[1]._sprite;
         }
         public void Bonus3()
         {
             BonusName = "Pic";
             Bonus = _bonusScripts[2];
+            BonusTime = _bonusScripts[2].Timer;
             _bonusLogoHUD.GetComponent<Image>().sprite = _bonusScripts[2]._sprite;
         }
 

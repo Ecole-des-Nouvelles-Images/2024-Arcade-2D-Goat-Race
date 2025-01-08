@@ -40,6 +40,8 @@ public class SetUpCamera : MonoBehaviour
 
     private void Start()
     {
+        PlayerSpawnHandler.NumberPlayerOnMap = 0;
+        
         _playerInputManager = GetComponent<PlayerInputManager>();
         _player1Camera = _player1CameraGameObject.GetComponent<Camera>();
         _player2Camera = _player2CameraGameObject.GetComponent<Camera>();

@@ -10,9 +10,11 @@ namespace Julien.Scripts.BonusScripts
         [SerializeField] private GameObject _audioSourcePrefab;
         
         private AudioSource _audioSource;
+        
         public override void BonusEffect(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
             Spike.SetActive(true);
+            Player.GetComponent<Goat>().CanBeStun = true;
             
             GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
             AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
@@ -22,11 +24,13 @@ namespace Julien.Scripts.BonusScripts
         public override void BonusReset(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
             GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
+            Player.GetComponent<Goat>().CanBeStun = false;
+            
             AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
             audioSourcePlayer.Play(songSfx.DisableBonus[Random.Range(0, songSfx.DisableBonus.Count)]);
             
             Goat goat = Player.GetComponent<Goat>();
-            goat.GetComponent<InventaryBonus>().IsUsingBonus = false;
+            goat.GetComponent<InventaryBonus>().IsUsingBonus = true;
             Spike.SetActive(false);
         }
 

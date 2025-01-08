@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Traverser
   m_EditorClassIdentifier: 
   _sprite: {fileID: 21300000, guid: 54a5cd1718e0cfd4084012323f83db8d, type: 3}
+  Timer: 0.5
   _audioSourcePrefab: {fileID: 3839940812532063408, guid: 8f2ea27f6d5b6474e86ee42782cdf9ea, type: 3}

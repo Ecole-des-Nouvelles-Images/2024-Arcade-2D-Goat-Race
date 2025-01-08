@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
+using DG.Tweening;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 using SpriteRenderer = UnityEngine.SpriteRenderer;
 
 public class Obstacle : MonoBehaviour
@@ -29,10 +33,14 @@ public class Obstacle : MonoBehaviour
    
    [SerializeField] private GameObject _damageParticle;
    [SerializeField] private GameObject _destroyParticle;
-
+   [SerializeField] private float _timer;
+   
    private Color _color;
    private BoxCollider2D _boxCollider2D;
    private bool _destroyed;
+   private bool _canRespawn;
+   private AudioSource _audioSource;
+  [SerializeField] private SongSFX _songSfx;
    
     private void Start()
     {
@@ -41,6 +49,8 @@ public class Obstacle : MonoBehaviour
         _maxHealth = Health;
         
         _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
+        _songSfx = GameObject.Find("SFXManager").GetComponent<SongSFX>();
     }
 
     private void Update()
@@ -70,6 +80,12 @@ public class Obstacle : MonoBehaviour
                 DecresseColor = false;
             } 
         }
+
+        bool DecressTimer;
+
+        if (_canRespawn) DecressTimer = true; else DecressTimer = false;
+        this.DecressTimer(DecressTimer);
+        
     }
 
     public void LoadObstacle()
@@ -90,10 +106,42 @@ public class Obstacle : MonoBehaviour
         BoxCollider2D.offset = new Vector2(0,OffsetY);
     }
 
-    public void Damaged()
+    public void DecressTimer(bool decress)
     {
-        _damageParticle.GetComponent<ParticleSystem>().Play();
+        if (decress)
+        {
+            _timer -= Time.deltaTime;
+            if (_timer <= 0) Respawn();
+        }
     }
+    
+    public void Damaged(int damage)
+    {
+        
+        _damageParticle.GetComponent<ParticleSystem>().Play();
+        Health -= damage;
+        Slider.gameObject.SetActive(true);
+        transform.transform.DOShakeScale(0.2f, 0.1f);
+        
+        _audioSource.clip = _songSfx.AudioDamage[Random.Range(0,_songSfx.AudioDamage.Count)];
+        _audioSource.Play();
+
+        if (Health <= 0)
+        {
+            Destroyed();
+            _audioSource.clip = _songSfx.AudioDestroy[Random.Range(0,_songSfx.AudioDestroy.Count)];
+            _audioSource.Play();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) _canRespawn = false;
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) _canRespawn = true;
+    }
+
     public void Destroyed()
     {
         GameObject NewParticle = _destroyParticle;
@@ -105,18 +153,16 @@ public class Obstacle : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         Slider.gameObject.SetActive(false);
         Debug.Log("change le color");
-        _boxCollider2D.enabled = false;
-
-        StartCoroutine("Respawn");
+        _boxCollider2D.isTrigger = true;
+        _canRespawn = true;
     }
-
-    public IEnumerator Respawn()
+    public void Respawn()
     {
-        yield return new WaitForSeconds(7f);
-        
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-        _boxCollider2D.enabled = true;
+        _boxCollider2D.isTrigger = false;
         _destroyed = false;
         Health = _maxHealth;
+        _timer = 7f;
+        _canRespawn = false;
     }
 }

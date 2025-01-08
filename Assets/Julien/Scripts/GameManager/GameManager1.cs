@@ -64,7 +64,6 @@ public class GameManager1 : MonoBehaviour
             _chronometer--;
             
             CallDecompte();
-            Debug.Log("rapelle le décompte");
         }
     }
     

@@ -6,9 +6,16 @@ public class UI_MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenu;
 
+    public static bool MenuOpened = false;
+    
     public void OpenPauseMenu()
     {
-      _pauseMenu.SetActive(true);
-      Time.timeScale = 0f;
+        if (!MenuOpened)
+        { 
+            _pauseMenu.SetActive(true); 
+            Time.timeScale = 0f;
+            
+            MenuOpened = true;
+        }
     }
 }

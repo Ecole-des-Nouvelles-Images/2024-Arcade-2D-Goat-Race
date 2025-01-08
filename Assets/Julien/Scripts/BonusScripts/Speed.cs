@@ -16,6 +16,7 @@ namespace Julien.Scripts.BonusScripts
         private  Goat _goat;
         private AudioSource _audioSource;
         
+        
         public override void BonusEffect(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
             Goat _goat = Player.GetComponent<Goat>();

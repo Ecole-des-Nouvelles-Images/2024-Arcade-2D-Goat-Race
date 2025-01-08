@@ -48,7 +48,7 @@ namespace Julien.Scripts
         private bool _isGrounded;
    
         // Dash
-        public bool CanDash = true;
+        public bool CanDash;
         public bool IsDashing;
         private float _dashDelay = 1.2f;
         private float _dashPower = 1.5f;
@@ -71,6 +71,7 @@ namespace Julien.Scripts
         private float _colliderIsGroundedScaleX;
 
         // STUN
+        public bool CanBeStun;
         public bool IsStun;
         private float _stunTimer = 2f;
         private float _stunForce = 500f;
@@ -106,7 +107,7 @@ namespace Julien.Scripts
             _animator = gameObject.GetComponent<Animator>();
             _animatorController = _animator.runtimeAnimatorController;
             LoadGoat();
-           
+            CanBeStun = true;
         }
 
         public void LoadGoat()
@@ -157,18 +158,18 @@ namespace Julien.Scripts
     
         private void Update()
         {
-            // RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
-            // if (IsDashing == false)
-            // {
-            //     if (_playerInputHandler.Move.x > 0)
-            //     {
-            //         _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
-            //     }
-            //     else if (_playerInputHandler.Move.x < 0)
-            //     {
-            //         _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
-            //     }  
-            // }
+            //RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
+            if (IsDashing == false)
+            {
+                if (_playerInputHandler.Move.x > 0)
+                {
+                    _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
+                }
+                else if (_playerInputHandler.Move.x < 0)
+                {
+                  _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
+                }  
+            }
             OnJumpStay();
             if (_playerInputHandler.Move.x > 0 || _playerInputHandler.Move.x < 0)
             {
@@ -372,9 +373,7 @@ namespace Julien.Scripts
                 
                     _canAttaque = false;
                     StartCoroutine("RealoadAttaque");
-                    
                     _animator.SetTrigger("IsAttack");
-                    //Debug.Log("<color=lime> animator Attaque </color>");
                 }
         
                 
@@ -383,28 +382,11 @@ namespace Julien.Scripts
                 {
                     GameObject ObstacleHit = _hitResult.collider.gameObject;
                     
-                    ObstacleHit.GetComponent<Obstacle>().Health -= _damage;
-                    ObstacleHit.GetComponent<Obstacle>().Damaged();
-                    ObstacleHit.GetComponent<Obstacle>().Slider.gameObject.SetActive(true);
-                    ObstacleHit.transform.transform.DOShakeScale(0.2f, 0.1f);
-                    
-                    _audioSource.clip = songSfx.AudioDamage[Random.Range(0,songSfx.AudioDamage.Count)];
-                    _audioSource.Play();
-                    
-                    
-                    if (_hitResult.collider.gameObject.GetComponent<Obstacle>().Health <= 0)
-                    {
-                        _audioSource.clip = songSfx.AudioDestroy[Random.Range(0,songSfx.AudioDestroy.Count)];
-                        _audioSource.Play();
-                        
-                        
-                        _hitResult.collider.gameObject.GetComponent<Obstacle>().Destroyed();
-                        ObstacleHit.GetComponent<Obstacle>().Destroyed();
-                    }
+                    ObstacleHit.GetComponent<Obstacle>().Damaged(_damage);
                 }
             }
         }
-
+        
         public IEnumerator RealoadAttaque()
         {
             yield return new WaitForSeconds(1f);
@@ -419,10 +401,12 @@ namespace Julien.Scripts
                 if (_spriteRenderer.flipX)
                 {
                     _dashAttackColliderRight.SetActive(true);
+                    _playerInputHandler.Move.x = 1;
                 }
                 else
                 {
                     _dashAttackColliderLeft.SetActive(true);
+                    _playerInputHandler.Move.x = -1;
                 }
                 Speed = Speed += 8;
                 
@@ -435,10 +419,15 @@ namespace Julien.Scripts
         public IEnumerator DashDelaying()
         {
             yield return new WaitForSeconds(_dashDelay);
+            if (_playerInputHandler.Move.x == 0)
+            {
+                
+            }
             IsDashing = false;
             _dashAttackColliderLeft.SetActive(false);
             _dashAttackColliderRight.SetActive(false);
             Speed = Speed -= 8;
+            
             yield return new WaitForSeconds(_dashReload);
             
             CanDash = true;
@@ -448,7 +437,7 @@ namespace Julien.Scripts
 
         public void OnStun()
         {
-            if (IsStun == false)
+            if (IsStun == false && CanBeStun)
             {
                 IsStun = true;
                 StartCoroutine("DelayStun");
