@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
 using DG.Tweening;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -121,7 +117,7 @@ public class Obstacle : MonoBehaviour
         _damageParticle.GetComponent<ParticleSystem>().Play();
         Health -= damage;
         Slider.gameObject.SetActive(true);
-        transform.transform.DOShakeScale(0.2f, 0.1f);
+        transform.transform.DOShakeScale(0.1f, new Vector3(-0.3f,0), 3);
         
         _audioSource.clip = _songSfx.AudioDamage[Random.Range(0,_songSfx.AudioDamage.Count)];
         _audioSource.Play();

@@ -25,6 +25,8 @@ public class SetUpCamera : MonoBehaviour
     [SerializeField] private GameObject _layoutTwoPlayer;
     [SerializeField] private GameObject _layoutThreePlayer;
     [SerializeField] private GameObject _layoutFourPlayer;
+
+    [SerializeField] private GameObject _mainCamera;
     
     private Camera _player1Camera;
     private Camera _player2Camera;
@@ -61,6 +63,8 @@ public class SetUpCamera : MonoBehaviour
     {
         if (PlayerSelectionController.NumberOfPlayer == 1)
         {
+            _mainCamera.SetActive(false);
+            
             _player1CameraGameObject.SetActive(true);
             
             _player1Camera.rect = new Rect(0, 0, 1, 1);
@@ -76,6 +80,8 @@ public class SetUpCamera : MonoBehaviour
         }
         if (PlayerSelectionController.NumberOfPlayer == 2)
         {
+            _mainCamera.SetActive(false);
+            
             _player1CameraGameObject.SetActive(true);
             _player2CameraGameObject.SetActive(true);
             
@@ -96,6 +102,8 @@ public class SetUpCamera : MonoBehaviour
         
         if (PlayerSelectionController.NumberOfPlayer == 3)
         {
+            _mainCamera.SetActive(false);
+            
             _player1CameraGameObject.SetActive(true);
             _player2CameraGameObject.SetActive(true);
             _player3CameraGameObject.SetActive(true);
@@ -119,6 +127,8 @@ public class SetUpCamera : MonoBehaviour
         }
         if (PlayerSelectionController.NumberOfPlayer == 4)
         {
+            _mainCamera.SetActive(false);
+            
             _player1CameraGameObject.SetActive(true);
             _player2CameraGameObject.SetActive(true);
             _player3CameraGameObject.SetActive(true);

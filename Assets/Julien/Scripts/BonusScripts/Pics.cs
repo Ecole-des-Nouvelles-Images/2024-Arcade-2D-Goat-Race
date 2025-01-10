@@ -14,7 +14,7 @@ namespace Julien.Scripts.BonusScripts
         public override void BonusEffect(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
             Spike.SetActive(true);
-            Player.GetComponent<Goat>().CanBeStun = true;
+            Player.GetComponent<Goat>().CanBeStun = false;
             
             GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
             AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
@@ -23,8 +23,8 @@ namespace Julien.Scripts.BonusScripts
         
         public override void BonusReset(GameObject Player, GameObject Spike, SongSFX songSfx)
         {
+            Player.GetComponent<Goat>().CanBeStun = true;
             GameObject instantiate = Instantiate(_audioSourcePrefab, Player.transform);
-            Player.GetComponent<Goat>().CanBeStun = false;
             
             AudioSourcePlayer audioSourcePlayer = instantiate.GetComponent<AudioSourcePlayer>();
             audioSourcePlayer.Play(songSfx.DisableBonus[Random.Range(0, songSfx.DisableBonus.Count)]);

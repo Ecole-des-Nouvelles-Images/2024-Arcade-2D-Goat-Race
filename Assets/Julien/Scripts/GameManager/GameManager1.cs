@@ -13,6 +13,7 @@ public class GameManager1 : MonoBehaviour
     [SerializeField] private List<GameObject> Players;
     [SerializeField] private GameObject _decompteHUD;
     public List<Sprite> DecompteSprites;
+    [SerializeField] private GameObject _textGameObject;
 
     [SerializeField] private bool _gameStarted = false;
     [SerializeField] private int _chronometer = 3;
@@ -27,6 +28,7 @@ public class GameManager1 : MonoBehaviour
         if (IndexPlayer == PlayerSelectionController.NumberOfPlayerSelected && !_gameStarted)
         {
             _gameStarted = true;
+            Destroy(_textGameObject);
             CallDecompte();
         }
     }
