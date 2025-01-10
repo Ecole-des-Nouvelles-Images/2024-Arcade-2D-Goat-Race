@@ -6,6 +6,11 @@
 
 ## Introduction
 
+### concept
+Goat race est un jeu de d'affrontement avec des chèvres sur une course, où les joueurs devront utiliser des bonus et se foncer dessus pour finir premiers.
+
+### contexte
+
 ## Équipe
 
 ## Gameplay
