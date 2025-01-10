@@ -40,18 +40,17 @@ This game was brought to life by
 
 ## Gameplay
 
+https://github.com/user-attachments/assets/65e36492-3a5d-4e55-9fe5-a88ee8f6d0ce
 
-
-https://github.com/user-attachments/assets/fc514a31-86b7-4afc-9335-59cd3c08a611
-
-
-
+Dans Goat race, il y a 2 chèvres différente avec des statistique différent. Et 3 bonus différents à trouver dans des coffres qui pourront changer la partie.
+![Perso+Bonus](https://github.com/user-attachments/assets/e3d2ee32-a321-4a8e-b354-8b90e28055f0)
 
 ## Universe
 In a small meadow, two rival goats decide to compete in a race to see who will get the right to graze the best patch of grass on the field.
 To win, they will have to put sticks in their feet and avoid the obstacles and traps of his opponent.
 
 ---
+##
 
 ## Release
 Goat race is available on PC, playable with the controller. You can install it on the release of this Github.
@@ -62,7 +61,8 @@ This game supports : <b>Windows<b>
 
 ## Development
 
-This project is currently in development Future updates might include Bug fixes, new gameplay features.  
+This project is currently in development Future updates might include Bug fixes, new gameplay features. ⚠️​ 
+
 ---
 
 ## Special Thanks
@@ -74,4 +74,4 @@ We would like to thank:
 ---
 
 ## Recommendations
-For the best experience, we recommend playing with **More than two players**
+For the best experience, we recommend playing with **More than two players** 🎮
