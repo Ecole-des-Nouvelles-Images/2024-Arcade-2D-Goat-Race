@@ -55,20 +55,14 @@ This game supports : <b>Windowns<b>
 ---
 
 ## Development
-This project is currently **[status: finished, in development, etc.]**. Future updates might include **[examples of planned features or fixes]**.  
-
-If you encounter any bugs or have suggestions, please open an **[issue ticket](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/issues/new)**.
-
+This project is currently in development Future updates might include Bug fixes, new gameplay features.  
 ---
 
 ## Special Thanks
 We would like to thank:
-- **[Name 1]**: [Contribution, e.g., mentorship, inspiration]
-- **[Name 2]**: [Contribution]
-- **[Name 3]**: [Contribution]
+- **École des nouvelles images**
 
 ---
 
 ## Recommendations
-For the best experience, we recommend playing with **[optimal player setup, equipment, or difficulty settings]**.  
-[Additional recommendations, such as tutorials or preparation tips.]
+For the best experience, we recommend playing with **More than two players**
