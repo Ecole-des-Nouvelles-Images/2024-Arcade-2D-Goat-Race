@@ -1,7 +1,6 @@
 
-# [Project Name]
-
-[A brief and engaging tagline or description of the game]
+# Goat race
+Goat race est un jeu de d'affrontement avec des chèvres sur une course, où les joueurs devront utiliser des bonus et se foncer dessus pour finir premiers.
 
 [![Unity Version](https://img.shields.io/badge/Unity-2022.3.47-blue?style=flat&logo=unity)](https://unity.com/)
 [![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/releases)
@@ -41,16 +40,12 @@ This game was brought to life by **[Team Name or "a group of X developers/artist
 ---
 
 ## Gameplay
-[Describe the core gameplay loop, mechanics, and objectives of the game. Include details like number of players, perspective, and unique gameplay features.]
-
-### Phase 1: [Phase Name]
-[Describe the first phase of gameplay, objectives, and player actions.]
-
-### Phase 2: [Phase Name]
-[Describe the second phase, any escalating challenges, and goals.]
 
 ![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
+## Concept
+
+## Contexte
 ---
 
 ## Universe
