@@ -50,7 +50,7 @@ This game was brought to life by
 ## Release
 Goat race is available on PC, playable with the controller. You can install it on the release of this Github.
 
-This game supports **[platform requirements, e.g., Android 5.1+]**.
+This game supports : <b>Windowns<b>
 
 ---
 
