@@ -43,7 +43,7 @@ This game was brought to life by
 ![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
 ## Universe
-[Provide a brief story or lore for the game world, highlighting key characters, locations, or events. Explain how the story ties into the gameplay.]
+Mettre le lore du jeu
 
 ---
 
