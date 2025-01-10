@@ -22,8 +22,7 @@ Goat race est un jeu de d'affrontement avec des chèvres sur une course, où les
 ---
 
 ## Introduction
-**Goat Race** is a racing game developed during **five weeks**.  
-This project was created as part of **a school project**.  
+**Goat Race** is a racing game developed during **five weeks**.  This project was created as part of **a school project**.  
 The development process included <b>Pre-production<b> ( one week ), <b>Production<b> ( trhee weeks ), <b>Post-production<b> ( one week ).
 
 ---
