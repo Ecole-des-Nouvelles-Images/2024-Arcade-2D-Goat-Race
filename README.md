@@ -40,27 +40,36 @@ This game was brought to life by
 
 ## Gameplay
 
-![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
+
+
+https://github.com/user-attachments/assets/fc514a31-86b7-4afc-9335-59cd3c08a611
+
+
+
 
 ## Universe
-Mettre le lore du jeu
+In a small meadow, two rival goats decide to compete in a race to see who will get the right to graze the best patch of grass on the field.
+To win, they will have to put sticks in their feet and avoid the obstacles and traps of his opponent.
 
 ---
 
 ## Release
 Goat race is available on PC, playable with the controller. You can install it on the release of this Github.
 
-This game supports : <b>Windowns<b>
+This game supports : <b>Windows<b>
 
 ---
 
 ## Development
+
 This project is currently in development Future updates might include Bug fixes, new gameplay features.  
 ---
 
 ## Special Thanks
 We would like to thank:
-- **École des nouvelles images**
+- **École des nouvelles images** <img src="https://github.com/user-attachments/assets/f91f4643-1a3b-4470-b24d-758ebbec57d4" alt="Image" height="50" width="50">
+
+
 
 ---
 
