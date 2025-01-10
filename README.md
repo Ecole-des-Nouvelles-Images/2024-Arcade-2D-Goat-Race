@@ -22,9 +22,9 @@ Goat race est un jeu de d'affrontement avec des chèvres sur une course, où les
 ---
 
 ## Introduction
-**[Project Name]** is a [genre of the game] developed by **[Team/Organization Name]** during **[timeframe]**.  
-This project was created as part of **[context, e.g., a school project, game jam, or indie initiative]**.  
-The development process included **[key phases, such as preproduction, production, etc.]**.
+**Goat Race** is a racing game developed during **five weeks**.  
+This project was created as part of **a school project**.  
+The development process included ** Pre-production ( one week ), Production ( trhee weeks ), Post-production ( one week )]**.
 
 ---
 
