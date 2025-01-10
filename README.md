@@ -42,12 +42,10 @@ This game was brought to life by
 
 https://github.com/user-attachments/assets/65e36492-3a5d-4e55-9fe5-a88ee8f6d0ce
 
-Dans Goat race, il y a 2 chèvres différente avec des statistique différent. Et 3 bonus différents à trouver dans des coffres qui pourront changer la partie.
+In Goat race, there are 2 different goats with different statistics. And 3 different bonuses to find in chests that can change the game.
 ![Perso+Bonus](https://github.com/user-attachments/assets/e3d2ee32-a321-4a8e-b354-8b90e28055f0)
 
 ## Universe
-In a small meadow, two rival goats decide to compete in a race to see who will get the right to graze the best patch of grass on the field.
-To win, they will have to put sticks in their feet and avoid the obstacles and traps of his opponent.
 
 ---
 ##
