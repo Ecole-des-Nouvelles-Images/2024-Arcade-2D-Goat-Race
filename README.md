@@ -29,9 +29,9 @@ The development process included <b>Pre-production<b> ( one week ), <b>Productio
 
 ## Team
 This game was brought to life by **[Team Name or "a group of X developers/artists"]**:
-- **[Name 1]**: [Role and contributions]
-- **[Name 2]**: [Role and contributions]
-- **[Name 3]**: [Role and contributions]
+- <b>Bilore Sasha<b> [Role and contributions]
+- <b>Baron Hugo<b>: [Role and contributions]
+- <b>Durand Julien<b>: [Role and contributions]
 - **[Name 4]**: [Role and contributions]
 
 ![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
