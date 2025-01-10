@@ -1,6 +1,6 @@
 
 # Goat race
-Goat race est un jeu de d'affrontement avec des chèvres sur une course, où les joueurs devront utiliser des bonus et se foncer dessus pour finir premiers.
+Goat race is a game of showdown with goats on a race, where players will have to use bonuses and go for it to finish first.
 
 [![Unity Version](https://img.shields.io/badge/Unity-2022.3.47-blue?style=flat&logo=unity)](https://unity.com/)
 [![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/releases)
@@ -28,11 +28,11 @@ The development process included <b>Pre-production<b> ( one week ), <b>Productio
 ---
 
 ## Team
-This game was brought to life by **[Team Name or "a group of X developers/artists"]**:
-- <b>Bilore Sasha<b> [Role and contributions]
-- <b>Baron Hugo<b>: [Role and contributions]
-- <b>Durand Julien<b>: [Role and contributions]
-- **[Name 4]**: [Role and contributions]
+This game was brought to life by
+
+- <b>Bilore Sasha<b> : Game artist
+- <b>Baron Hugo<b>: Game artist
+- <b>Durand Julien<b>: Game developer
 
 ![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
 
@@ -42,18 +42,13 @@ This game was brought to life by **[Team Name or "a group of X developers/artist
 
 ![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
-## Concept
-
-## Contexte
----
-
 ## Universe
 [Provide a brief story or lore for the game world, highlighting key characters, locations, or events. Explain how the story ties into the gameplay.]
 
 ---
 
 ## Release
-[Provide details about the platform, availability, and installation instructions. Mention if the game is available on PC, console, or mobile, and provide links to download or install.]
+Goat race is available on PC, playable with the controller. You can install it on the release of this Github.
 
 This game supports **[platform requirements, e.g., Android 5.1+]**.
 
