@@ -3,7 +3,7 @@
 Goat race is a game of showdown with goats on a race, where players will have to use bonuses and go for it to finish first.
 
 [![Unity Version](https://img.shields.io/badge/Unity-2022.3.47-blue?style=flat&logo=unity)](https://unity.com/)
-[![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race)](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race/releases)
 [![License](https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race?color=lightgrey)]([https://github.com/Ecole-des-Nouvelles-Images/Unity-Template](https://github.com/Ecole-des-Nouvelles-Images/2024-Arcade-2D-Goat-Race))
 
