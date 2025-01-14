@@ -30,11 +30,11 @@ The development process included <b>Pre-production<b> ( one week ), <b>Productio
 ## Team
 This game was brought to life by
 
-- <b>Bilore Sasha<b> : Game artist
 - <b>Baron Hugo<b>: Game artist
 - <b>Durand Julien<b>: Game developer
+- <b>Bilore Sasha<b> : Game artist
 
-![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
+  ![Illustration_sans_titre-3](https://github.com/user-attachments/assets/010c6a8c-cbd3-4ce2-a1f4-02e1f7ff2474)
 
 ---
 
