@@ -16,7 +16,8 @@ public class GameManager1 : MonoBehaviour
     [SerializeField] private GameObject _textGameObject;
 
     [SerializeField] private bool _gameStarted = false;
-    [SerializeField] private int _chronometer = 3;
+    [SerializeField] private int _chronometer = 4;
+    
     private void Start()
     {
         //CallDecompte();
@@ -56,6 +57,7 @@ public class GameManager1 : MonoBehaviour
         if (_chronometer == 0)
         {
             StartCoroutine("Destroy");
+;            Debug.Log("Chronometer Finish");
         }
         else
         {
@@ -68,7 +70,6 @@ public class GameManager1 : MonoBehaviour
             CallDecompte();
         }
     }
-    
     private IEnumerator Destroy()
     {
         yield return new WaitForSeconds(1f);

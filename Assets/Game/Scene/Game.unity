@@ -95237,7 +95237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1759047907}
   - component: {fileID: 1759047909}
-  - component: {fileID: 1759047908}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -95260,14 +95259,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1709269623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1759047908
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759047906}
-  m_Enabled: 1
 --- !u!20 &1759047909
 Camera:
   m_ObjectHideFlags: 0
@@ -116035,8 +116026,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2068580936}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
+      propertyPath: _arrow
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
+      propertyPath: _chronometer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: _decompteHUD
@@ -116060,18 +116059,22 @@ PrefabInstance:
       objectReference: {fileID: 749764238}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: DecompteSprites.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: DecompteSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 244954d3ef223924ea7843079aa65d55, type: 3}
+      objectReference: {fileID: 21300000, guid: 530f1de832f176d4bbc5f1c9d64933d1, type: 3}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: DecompteSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 29428fb1adb49ff4e988ce7fafb71d54, type: 3}
+      objectReference: {fileID: 21300000, guid: 244954d3ef223924ea7843079aa65d55, type: 3}
     - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: DecompteSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 29428fb1adb49ff4e988ce7fafb71d54, type: 3}
+    - target: {fileID: 2628662218261348055, guid: c5671d59a958788429315c709a210e39, type: 3}
+      propertyPath: DecompteSprites.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: 03a7d5a6794ac43479f99648483c8103, type: 3}
     - target: {fileID: 4057358115543161523, guid: c5671d59a958788429315c709a210e39, type: 3}
