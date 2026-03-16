@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Julien.Scripts
 {
-    public class PlayerInputHandler : MonoBehaviour
+    public class GoatInputHandler : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
         public static event Action<bool> OnInputDeviceChanged;

@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Julien.Scripts
@@ -43,7 +40,7 @@ namespace Julien.Scripts
         public float Speed; 
         private float _jumpForce = 3f;
         private Vector2 _movementInput;
-        private PlayerInputHandler _playerInputHandler;
+        private GoatInputHandler _goatInputHandler;
         private bool _isFalling;
         private bool _isGrounded;
    
@@ -102,7 +99,7 @@ namespace Julien.Scripts
         private void Start()
         {
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            _playerInputHandler = GetComponent<PlayerInputHandler>();
+            _goatInputHandler = GetComponent<GoatInputHandler>();
             rb2d = GetComponent<Rigidbody2D>();
             _animator = gameObject.GetComponent<Animator>();
             _animatorController = _animator.runtimeAnimatorController;
@@ -161,17 +158,17 @@ namespace Julien.Scripts
             //RENDRE LE DEPLACEMENT DE X TOUJOURS A 1 OU -1
             if (IsDashing == false)
             {
-                if (_playerInputHandler.Move.x > 0)
+                if (_goatInputHandler.Move.x > 0)
                 {
-                    _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, 1, 1);
+                    _goatInputHandler.Move.x = Mathf.Clamp(_goatInputHandler.Move.x, 1, 1);
                 }
-                else if (_playerInputHandler.Move.x < 0)
+                else if (_goatInputHandler.Move.x < 0)
                 {
-                  _playerInputHandler.Move.x = Mathf.Clamp(_playerInputHandler.Move.x, -1, -1);
+                  _goatInputHandler.Move.x = Mathf.Clamp(_goatInputHandler.Move.x, -1, -1);
                 }  
             }
             OnJumpStay();
-            if (_playerInputHandler.Move.x > 0 || _playerInputHandler.Move.x < 0)
+            if (_goatInputHandler.Move.x > 0 || _goatInputHandler.Move.x < 0)
             {
                 _isWalking = true;
             }
@@ -256,8 +253,6 @@ namespace Julien.Scripts
         // SAUT
         public void OnJump()
         {
-            bool Release;
-            
             if (CanJump && _isJumping == false && IsStun == false)
             {
                 rb2d.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
@@ -303,14 +298,14 @@ namespace Julien.Scripts
         // DEPLACEMENT 
         public void OnMove()
         {
-            float Horizontal = _playerInputHandler.Move.x;
+            float Horizontal = _goatInputHandler.Move.x;
             Vector2 Velocity = rb2d.velocity;
             Velocity.x = Horizontal * (Speed + GoatData.Speed);
         
             rb2d.velocity = Velocity;
             
             // FLIP LE SPRITE
-            if (_playerInputHandler.Move.x > 0)
+            if (_goatInputHandler.Move.x > 0)
             {
                 _spriteRenderer.flipX = true;
                 if (_playingStepSound == false && _isGrounded)
@@ -318,7 +313,7 @@ namespace Julien.Scripts
                     StartCoroutine("SoundStep");
                 }
             }
-            else if (_playerInputHandler.Move.x < 0)
+            else if (_goatInputHandler.Move.x < 0)
             {
                 _spriteRenderer.flipX = false;
                 if (_playingStepSound == false && _isGrounded)
@@ -401,12 +396,12 @@ namespace Julien.Scripts
                 if (_spriteRenderer.flipX)
                 {
                     _dashAttackColliderRight.SetActive(true);
-                    _playerInputHandler.Move.x = 1;
+                    _goatInputHandler.Move.x = 1;
                 }
                 else
                 {
                     _dashAttackColliderLeft.SetActive(true);
-                    _playerInputHandler.Move.x = -1;
+                    _goatInputHandler.Move.x = -1;
                 }
                 Speed = Speed += 8;
                 
@@ -419,7 +414,7 @@ namespace Julien.Scripts
         public IEnumerator DashDelaying()
         {
             yield return new WaitForSeconds(_dashDelay);
-            if (_playerInputHandler.Move.x == 0)
+            if (_goatInputHandler.Move.x == 0)
             {
                 
             }
@@ -461,7 +456,7 @@ namespace Julien.Scripts
 
         public void Kill()
         {
-            _playerInputHandler.Move.x = 0;
+            _goatInputHandler.Move.x = 0;
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             IsDashing = false;
         }

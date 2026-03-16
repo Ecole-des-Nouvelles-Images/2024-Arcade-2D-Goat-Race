@@ -1,7 +1,6 @@
 using DG.Tweening;
 using Julien.Scripts;
 using UnityEngine;
-
 using Random = UnityEngine.Random;
 
 public class EndGame : MonoBehaviour
