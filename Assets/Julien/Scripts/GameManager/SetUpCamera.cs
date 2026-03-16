@@ -1,4 +1,3 @@
-using System;
 using Cinemachine;
 using Julien.Scripts.Player;
 using Julien.Scripts.SelectionPlayer;
@@ -34,11 +33,6 @@ public class SetUpCamera : MonoBehaviour
     private Camera _player4Camera;
     private PlayerInputManager _playerInputManager;
     
-
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {
