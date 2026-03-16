@@ -30,6 +30,12 @@ public class PlayerInputHandler : MonoBehaviour
         
         _playerInput.actions["Jump"].started += OnJump;
         _playerInput.actions["Jump"].canceled += OnJumpCancel;
+        
+        _playerInput.actions["Attaque"].performed += OnAttack;
+        
+        _playerInput.actions["Dash"].performed += OnDash;
+        
+        _playerInput.actions["UseBonus"].performed += OnUseBonus;
     }
 
     private void OnDisable()
@@ -41,22 +47,42 @@ public class PlayerInputHandler : MonoBehaviour
         
         _playerInput.actions["Jump"].started -= OnJump;
         _playerInput.actions["Jump"].canceled -= OnJumpCancel;
+        
+        _playerInput.actions["Attaque"].performed -= OnAttack;
+        
+        _playerInput.actions["Dash"].performed -= OnDash;
+        
+        _playerInput.actions["UseBonus"].performed -= OnUseBonus;
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
         _player.MoveDirection = context.ReadValue<Vector2>().x;
     }
-
+    
     private void OnJump(InputAction.CallbackContext context)
     {
         _player.Jump();
     }
-    private void OnJumpCancel(InputAction.CallbackContext obj)
+    private void OnJumpCancel(InputAction.CallbackContext context)
     {
         
     }
+    
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        _player.Attack();
+    }
 
+    private void OnDash(InputAction.CallbackContext context)
+    {
+        if(_player.CanDash) _player.Dash();
+    }
+
+    private void OnUseBonus(InputAction.CallbackContext context)
+    {
+        _player.UseBonus();
+    }
     
     
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)

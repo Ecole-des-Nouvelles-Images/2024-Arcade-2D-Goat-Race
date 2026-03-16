@@ -5,11 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45dca7af-7237-408a-8354-83422ef7ede2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/EndGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/EndGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Player/Goat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Player/Goat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/GoatInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/PlayerInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/GoatInputHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/PetiteChevre.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/PetiteChevre.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Bumper.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Bumper.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Stone.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Stone.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/VisualGoat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Invisibility.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Invisibility.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Speed.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Speed.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Spike.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/ScriptableObjects/Spike.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Interfaces/IObstacle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Interfaces/IObstacle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Speed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Speed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PetiteChèvre.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PetiteChèvre.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Stone.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Stone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Prefab/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Data/GoatData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Data/GoatData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/GroundChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/GroundChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/GroundChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/GroundChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +67,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Julien/Scripts/Player/StunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/GroundChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Stone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -113,7 +163,7 @@
       <updated>1762168292987</updated>
       <workItem from="1762168294039" duration="1158000" />
       <workItem from="1763637587937" duration="1936000" />
-      <workItem from="1773651037794" duration="5515000" />
+      <workItem from="1773651037794" duration="19248000" />
     </task>
     <servers />
   </component>
