@@ -13,6 +13,7 @@ public class SelectionGoat : MonoBehaviour
     [SerializeField] private int index;
     [SerializeField] private List<PlayerData> playerData = new List<PlayerData>();
     [SerializeField] private Image _goatImage;
+    [SerializeField] private GameObject _readyPanel;
     
     private PlayerInput playerInput;
     private InputSystemUIInputModule uiModule;
@@ -57,6 +58,11 @@ public class SelectionGoat : MonoBehaviour
         if (index < 0) index = playerData.Count - 1;
         CurentSelectedData = playerData[index];
         RefreshVisual();
+    }
+
+    public void GetReady()
+    {
+        _readyPanel.SetActive(true);
     }
 
     private void RefreshVisual()

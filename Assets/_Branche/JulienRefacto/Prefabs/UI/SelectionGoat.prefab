@@ -63,6 +63,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b89f71e852fcec4a824493d93bce53b, type: 2}
   - {fileID: 11400000, guid: 08bf5e16140bc8642b8cb5ba8d146898, type: 2}
   _goatImage: {fileID: 5034315952925100348}
+  _readyPanel: {fileID: 8955304805663621024}
 --- !u!222 &7752876672184631305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1223,7 +1224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9036851699971713192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8407615017767333897}
+        m_TargetAssemblyTypeName: SelectionGoat, Assembly-CSharp
+        m_MethodName: GetReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7532563642826785315
 GameObject:
   m_ObjectHideFlags: 0
