@@ -6,7 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="45dca7af-7237-408a-8354-83422ef7ede2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/GameManager/SetUpCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/GameManager/SetUpCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Prefab/PLayerSelection/PlayerSelectionPrefab 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Prefab/PLayerSelection/PlayerSelectionPrefab 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Button/ButtonSelectGoat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Button/ButtonSelectGoat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Menu/UI_SelectionPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Menu/UI_SelectionPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerSelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerSelectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/GrandeChevre.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/GrandeChevre.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/GrandeChevre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/GrandeChevre.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +30,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Julien/Scripts/Player/StunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerDatas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,26 +69,30 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race" />
       <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race" />
       <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -86,9 +103,10 @@
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -99,6 +117,7 @@
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
@@ -117,6 +136,7 @@
       <workItem from="1773651037794" duration="19248000" />
       <workItem from="1773688298667" duration="2000" />
       <workItem from="1773688303477" duration="831000" />
+      <workItem from="1773910279883" duration="5921000" />
     </task>
     <servers />
   </component>

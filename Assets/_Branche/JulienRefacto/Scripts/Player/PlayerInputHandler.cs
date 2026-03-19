@@ -10,12 +10,12 @@ public class PlayerInputHandler : MonoBehaviour
     
     public static event Action<bool> OnInputDeviceChanged;
     private bool _isControllerConnected;
-    private PlayerInput _playerInput;
+    [SerializeField] private PlayerInput _playerInput;
     
     private void Awake()
     {
         _player = GetComponent<Player>();
-        _playerInput = GetComponent<PlayerInput>();
+        //_playerInput = GetComponent<PlayerInput>();
         
         if (_playerInput == null) throw new NullReferenceException("PlayerInputManager is null");
     }

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scene/Game.unity
     guid: add8bc066c0950147bebbc2e3b1fd724
+  - enabled: 1
+    path: Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity
+    guid: fc17f7de939b49941a8f4503441c0a3c
   m_configObjects: {}

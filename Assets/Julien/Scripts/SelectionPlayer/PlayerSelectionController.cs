@@ -62,7 +62,7 @@ namespace Julien.Scripts.SelectionPlayer
             
             DevicesID.Add(_playerInput.devices[0].deviceId);
             Debug.Log(" Device ID : " + _playerInput.devices[0].deviceId);
-
+            
             if (_playerNumber == 1)
             {
                 _layout1.SetActive(true);

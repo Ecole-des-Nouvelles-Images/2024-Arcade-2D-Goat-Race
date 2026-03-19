@@ -48,12 +48,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8099774111824956401, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: CollideLeft
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099774111824956401, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+      propertyPath: CollideRight
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8140188591608927331, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
       propertyPath: m_Name
       value: NewGoat Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 322066195990610626, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
+    - {fileID: 9097743744264106770, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4082a0e4bce484b43a5e26e294dde438, type: 3}

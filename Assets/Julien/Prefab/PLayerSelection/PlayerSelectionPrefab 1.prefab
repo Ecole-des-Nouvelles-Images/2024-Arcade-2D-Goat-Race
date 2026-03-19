@@ -684,6 +684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963de026b6008e643896b4412a8922fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NameSceneMenu: MainMenuJulien
+  NameSceneToOpen: RefactoTest
 --- !u!223 &4273893213813138741
 Canvas:
   m_ObjectHideFlags: 0

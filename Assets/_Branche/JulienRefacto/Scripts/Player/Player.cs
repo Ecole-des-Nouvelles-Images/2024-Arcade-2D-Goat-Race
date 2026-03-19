@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [Header("Private")] 
-    private PlayerInputHandler _playerInputHandler;
+    [SerializeField] private PlayerInputHandler _playerInputHandler;
 
     [Header("Power")]
     public Power EquipedPower;

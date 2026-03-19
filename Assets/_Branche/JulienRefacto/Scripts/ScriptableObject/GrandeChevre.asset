@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93822470534e07439ee807d6f1f556e, type: 3}
   m_Name: GrandeChevre
   m_EditorClassIdentifier: 
-  Speed: 0
-  Damage: 0
-  VisuelPrefab: {fileID: 0}
+  Speed: 8
+  Damage: 15
+  VisuelPrefab: {fileID: 3110460213281919971, guid: bab49b380bbdbf94f8b5866b585ce36f, type: 3}

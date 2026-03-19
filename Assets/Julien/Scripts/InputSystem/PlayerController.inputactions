@@ -85,11 +85,33 @@
                 },
                 {
                     "name": "",
+                    "id": "3bf304d8-475c-48cd-b8b6-8bfb01eb4434",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Controller1;Controller2",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4c4a0f13-50bb-4471-b53a-8fc3ea52161b",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Controller1;Controller2",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59740139-d458-4a32-8bb3-a802b7072ac9",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -109,7 +131,7 @@
                     "name": "ZQSD",
                     "id": "773b5788-89e2-420c-a352-d0d38d9f08cc",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Movement",
