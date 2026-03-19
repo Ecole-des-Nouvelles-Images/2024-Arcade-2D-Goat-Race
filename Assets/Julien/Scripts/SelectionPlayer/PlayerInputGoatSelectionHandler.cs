@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,10 +6,14 @@ namespace Julien.Scripts.SelectionPlayer
 {
     public class PlayerInputGoatSelectionHandler : MonoBehaviour
     {
+        public static PlayerInputGoatSelectionHandler Instance;
+        public List<PlayerData> PlayerData = new List<PlayerData>();
         private PlayerInputManager _playerInputManager;
 
         private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
             _playerInputManager = GetComponent<PlayerInputManager>();
         }
 
@@ -24,6 +29,9 @@ namespace Julien.Scripts.SelectionPlayer
 
         private void OnPlayerJoined(PlayerInput playerInput)
         {
+            Debug.Log("PlayerJoind" +  playerInput.playerIndex);
+            PlayerData.Add(null);
+            
             if (playerInput.playerIndex == 0)
             {
                 playerInput.gameObject.GetComponent<PlayerSelectionController>()._playerNumber = playerInput.playerIndex + 1;

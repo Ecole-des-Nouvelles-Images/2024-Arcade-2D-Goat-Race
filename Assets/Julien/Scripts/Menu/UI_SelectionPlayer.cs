@@ -10,11 +10,11 @@ public class UI_SelectionPlayer : MonoBehaviour
     
     public void Play()
     {
-        if (PlayerSelectionController.NumberOfPlayerSelected == PlayerSelectionController.NumberOfPlayer)
+        foreach (PlayerData data in PlayerInputGoatSelectionHandler.Instance.PlayerData)
         {
-            Debug.Log("Play");
-            SceneManager.LoadScene(NameSceneToOpen);
+            if (data == null) return;
         }
+        SceneManager.LoadScene(NameSceneToOpen);
     }
     public void Return()
     {

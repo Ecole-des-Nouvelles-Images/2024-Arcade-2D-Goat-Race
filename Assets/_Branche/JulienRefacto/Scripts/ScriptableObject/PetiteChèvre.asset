@@ -15,3 +15,4 @@ MonoBehaviour:
   Speed: 10
   Damage: 10
   VisuelPrefab: {fileID: 3110460213281919971, guid: 0d28e71052c76744782836a75599f47f, type: 3}
+  Sprite: {fileID: 21300000, guid: 08089cf9b38a69a43af170af856473be, type: 3}

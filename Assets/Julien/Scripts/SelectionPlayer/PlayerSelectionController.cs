@@ -1,16 +1,14 @@
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.HID;
-using UnityEngine.Serialization;
 
 namespace Julien.Scripts.SelectionPlayer
 {
     public class PlayerSelectionController : MonoBehaviour
     {
+        public PlayerData SelectedData;
+        
         public static GoatData ScriptableobjectPlayerOne;
         public static GoatData ScriptableobjectPlayerTwo;
         public static GoatData ScriptableobjectPlayerThree;
@@ -94,6 +92,12 @@ namespace Julien.Scripts.SelectionPlayer
             _curentSelectedButton = _eventSystem.currentSelectedGameObject;
             if (_playerInput.actions["UI/Submit"].triggered)
             {
+                if (_curentSelectedButton.GetComponent<DataButton>() == true)
+                {
+                    SelectedData = _curentSelectedButton.GetComponent<DataButton>().PlayerData;
+                    PlayerInputGoatSelectionHandler.Instance.PlayerData[_playerNumber - 1] = SelectedData;
+                }
+                
                 if (_curentSelectedButton.gameObject.GetComponent<ButtonSelectGoat>() == null)
                 {
                     

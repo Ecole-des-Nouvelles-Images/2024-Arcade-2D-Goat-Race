@@ -7,4 +7,7 @@ public class PlayerData : ScriptableObject
     public float Damage;
 
     public GameObject VisuelPrefab;
+
+    [Header("InMenu")] 
+    public Sprite Sprite;
 }

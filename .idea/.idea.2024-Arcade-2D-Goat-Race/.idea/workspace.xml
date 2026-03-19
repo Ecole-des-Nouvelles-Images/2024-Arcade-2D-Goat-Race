@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45dca7af-7237-408a-8354-83422ef7ede2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/PlayerSelectionPrefab 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/PlayerSelectionPrefab 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/DataButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/DataButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Prefab/PLayerSelection/PlayerSelectionPrefab 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Prefab/PLayerSelection/PlayerSelectionPrefab 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Button/ButtonSelectGoat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Button/ButtonSelectGoat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/Menu/UI_SelectionPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/Menu/UI_SelectionPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerSelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerSelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/GrandeChevre.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Animator/GrandeChevre.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/NewGoat Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/PlayerInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/GrandeChevre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/GrandeChevre.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +30,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Julien/Scripts/Player/StunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerDatas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Stone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/AssetEditor/InputBindingPropertiesView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInputManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
