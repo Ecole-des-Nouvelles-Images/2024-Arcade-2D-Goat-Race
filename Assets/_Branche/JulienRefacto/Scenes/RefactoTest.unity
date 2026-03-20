@@ -37313,26 +37313,6 @@ PrefabInstance:
       value: Manager
       objectReference: {fileID: 0}
     - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
-      propertyPath: _datas.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
-      propertyPath: _datas.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 08bf5e16140bc8642b8cb5ba8d146898, type: 2}
-    - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
-      propertyPath: _datas.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 08bf5e16140bc8642b8cb5ba8d146898, type: 2}
-    - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
-      propertyPath: _datas.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 08bf5e16140bc8642b8cb5ba8d146898, type: 2}
-    - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
-      propertyPath: _datas.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 08bf5e16140bc8642b8cb5ba8d146898, type: 2}
-    - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: Players.Array.data[0]
       value: 
       objectReference: {fileID: 1676259628}
@@ -37351,19 +37331,19 @@ PrefabInstance:
     - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: PlayerInputs.Array.data[0]
       value: 
-      objectReference: {fileID: 1077954777}
+      objectReference: {fileID: 256039942}
     - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: PlayerInputs.Array.data[1]
       value: 
-      objectReference: {fileID: 450187314}
+      objectReference: {fileID: 2041754033}
     - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: PlayerInputs.Array.data[2]
       value: 
-      objectReference: {fileID: 256039942}
+      objectReference: {fileID: 1077954777}
     - target: {fileID: 474726207206013484, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: PlayerInputs.Array.data[3]
       value: 
-      objectReference: {fileID: 2041754033}
+      objectReference: {fileID: 450187314}
     - target: {fileID: 3050731860402963931, guid: ee9a0f6fcc189c241af3e9f970fcfc62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 915.836

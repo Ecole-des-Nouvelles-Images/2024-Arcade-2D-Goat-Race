@@ -27,7 +27,6 @@ public class PlayerManager : MonoBehaviour
         for (int i = 0; i < PlayerInputs.Length; i++)
         {
             var devices = PlayerInputs[i].devices;
-    
             if (devices.Count > 0)
             {
                 Debug.Log($"Player {i} → {devices[0].displayName}");
@@ -39,17 +38,9 @@ public class PlayerManager : MonoBehaviour
     private void AssignDataToPlayer()
     {
         //PlayerData = PlayerInputGoatSelectionHandler.Instance.PlayerData;
-        for (int i = 0; i < Players.Length; i++)
-        {
-            Players[i].GetComponent<Player>().PlayerData =  _datas[i];
-        }
-    }
-
-    private void ActivePlayer()
-    {
         for (int i = 0; i < _datas.Count; i++)
         {
-            Players[i].gameObject.SetActive(true);
+            Players[i].GetComponent<Player>().PlayerData =  _datas[i];
         }
     }
 
@@ -57,7 +48,7 @@ public class PlayerManager : MonoBehaviour
     {
         var gamepad = Gamepad.all;
         
-        for (int i = 0; i < PlayerInputs.Length; i++)
+        for (int i = 0; i < _datas.Count; i++)
         {
             if (i < gamepad.Count)
             {

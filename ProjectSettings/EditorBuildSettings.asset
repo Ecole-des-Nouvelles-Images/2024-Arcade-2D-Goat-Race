@@ -20,4 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity
     guid: fc17f7de939b49941a8f4503441c0a3c
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 6b4d34ccaed5c544eb1c4f0fff27da0c, type: 2}

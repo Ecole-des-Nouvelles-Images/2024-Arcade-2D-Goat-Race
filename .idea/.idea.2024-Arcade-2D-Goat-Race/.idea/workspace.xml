@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="45dca7af-7237-408a-8354-83422ef7ede2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/SelectionGoat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/SelectionGoat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/Manager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionGoat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionGoat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionPlayerPanelManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionPlayerPanelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
