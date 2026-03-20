@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Julien.Scripts.SelectionPlayer;
 using UnityEngine;
@@ -10,26 +9,47 @@ public class PlayerManager : MonoBehaviour
     
     public PlayerInput[] PlayerInputs;
     public Player[] Players;
-    public List<PlayerData> PlayerData = new List<PlayerData>();
+    
+    [SerializeField] private List<PlayerData> _datas = new List<PlayerData>();
+    public static List<PlayerData> PlayerData = new List<PlayerData>();
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        _datas = PlayerData;
         Instance =  this;
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
     {
         AssignDataToPlayer();
+        //ActivePlayer();
+        for (int i = 0; i < PlayerInputs.Length; i++)
+        {
+            var devices = PlayerInputs[i].devices;
+    
+            if (devices.Count > 0)
+            {
+                Debug.Log($"Player {i} → {devices[0].displayName}");
+            }
+        }
         AssignGamePad();
     }
 
     private void AssignDataToPlayer()
     {
-        PlayerData = PlayerInputGoatSelectionHandler.Instance.PlayerData;
+        //PlayerData = PlayerInputGoatSelectionHandler.Instance.PlayerData;
         for (int i = 0; i < Players.Length; i++)
         {
-            Players[i].GetComponent<Player>().PlayerData =  PlayerData[i];
+            Players[i].GetComponent<Player>().PlayerData =  _datas[i];
+        }
+    }
+
+    private void ActivePlayer()
+    {
+        for (int i = 0; i < _datas.Count; i++)
+        {
+            Players[i].gameObject.SetActive(true);
         }
     }
 
@@ -43,7 +63,6 @@ public class PlayerManager : MonoBehaviour
             {
                 PlayerInputs[i].SwitchCurrentControlScheme(gamepad[i]);
                 Players[i].gameObject.SetActive(true);
-                //Players[i].GetComponent<Player>().PlayerData = PlayerData[i];
             }
         }
     }

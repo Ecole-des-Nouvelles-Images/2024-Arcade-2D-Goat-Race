@@ -867,8 +867,6 @@ GameObject:
   m_Component:
   - component: {fileID: 412557523}
   - component: {fileID: 412557527}
-  - component: {fileID: 412557526}
-  - component: {fileID: 412557528}
   - component: {fileID: 412557525}
   - component: {fileID: 412557524}
   m_Layer: 5
@@ -953,19 +951,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &412557526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412557522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ee66e0f62642a4eb432ba8b27c7e59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerData: []
 --- !u!222 &412557527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -974,58 +959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412557522}
   m_CullTransparentMesh: 1
---- !u!114 &412557528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412557522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 1
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Join
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: fe0e66fa-44f1-4e84-aa7c-7ac181a5e155
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: ae42164a-28e1-451b-b21b-dc260b0bfec3
-        m_Path: <Gamepad>/buttonSouth
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 1033724442349257585, guid: 2ade01d6a127cb9409d9af1f3ea3fa22, type: 3}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!1 &420159145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128382833284155511, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5950745803946049362, guid: c5671d59a958788429315c709a210e39, type: 3}
       propertyPath: m_Enabled
@@ -1955,6 +1888,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1394174910}
   - component: {fileID: 1394174911}
+  - component: {fileID: 1394174912}
+  - component: {fileID: 1394174913}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -1984,12 +1919,78 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394174908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d39ec311346f7f24eb9e755a57fef73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberPlayer: 0
+  NumberPlayerReady: 0
   PlayerData: []
+--- !u!114 &1394174912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394174908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6957a9d151cbf943abc82a23a4aaedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1394174913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394174908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: 4
+  m_AllowJoining: 1
+  m_JoinBehavior: 1
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Join
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: fe0e66fa-44f1-4e84-aa7c-7ac181a5e155
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: ae42164a-28e1-451b-b21b-dc260b0bfec3
+        m_Path: <Gamepad>/buttonSouth
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 1033724442349257585, guid: 2ade01d6a127cb9409d9af1f3ea3fa22, type: 3}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1658815978
 GameObject:
   m_ObjectHideFlags: 0

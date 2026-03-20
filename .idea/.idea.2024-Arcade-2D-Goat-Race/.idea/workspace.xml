@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45dca7af-7237-408a-8354-83422ef7ede2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024-Arcade-2D-Goat-Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/InputSystem/PlayerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Julien/Scripts/SelectionPlayer/PlayerInputGoatSelectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/SelectionGoat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Prefabs/UI/SelectionGoat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/GoatSelectionJulien.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scenes/RefactoTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionGoat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionGoat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionPlayerPanelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionPlayerPanelManager.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +27,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Julien/Scripts/Player/StunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Player/DashStunPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Invisible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Power.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/Bonus/Spike.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/ScriptableObject/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/Stone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Branche/JulienRefacto/Scripts/UI/SelectionGoat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/AssetEditor/InputBindingPropertiesView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInputManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,7 +69,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -72,7 +81,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\j.durand\Desktop\LocalRepository\2024-Arcade-2D-Goat-Race" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -128,6 +137,7 @@
       <workItem from="1773688298667" duration="2000" />
       <workItem from="1773688303477" duration="831000" />
       <workItem from="1773910279883" duration="5921000" />
+      <workItem from="1773996895733" duration="2597000" />
     </task>
     <servers />
   </component>
