@@ -148,14 +148,13 @@ public class Obstacle : MonoBehaviour
         _destroyed = true;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         Slider.gameObject.SetActive(false);
-        Debug.Log("change le color");
-        _boxCollider2D.isTrigger = true;
+        _boxCollider2D.enabled = false;
         _canRespawn = true;
     }
     public void Respawn()
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-        _boxCollider2D.isTrigger = false;
+        _boxCollider2D.enabled = true;
         _destroyed = false;
         Health = _maxHealth;
         _timer = 7f;

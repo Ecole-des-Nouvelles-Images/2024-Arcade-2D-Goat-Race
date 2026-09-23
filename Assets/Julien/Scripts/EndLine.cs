@@ -41,6 +41,7 @@ public class EndLine : MonoBehaviour
                 if (LapPlayerOne == MaxLaps)
                 {
                     GameObject.Find("Timer1").GetComponent<Timer>().PlayTimer = false;
+                    EndGame(other.gameObject.GetComponent<Goat>());
                 }
             }
             
@@ -56,6 +57,7 @@ public class EndLine : MonoBehaviour
                 if (LapPlayerTwo == MaxLaps)
                 {
                     GameObject.Find("Timer2").GetComponent<Timer>().PlayTimer = false;
+                    EndGame(other.gameObject.GetComponent<Goat>());
                 }
             }
             
@@ -71,6 +73,7 @@ public class EndLine : MonoBehaviour
                 if (LapPlayerThree == MaxLaps)
                 {
                     GameObject.Find("Timer3").GetComponent<Timer>().PlayTimer = false;
+                    EndGame(other.gameObject.GetComponent<Goat>());
                 }
             }
             
@@ -86,8 +89,14 @@ public class EndLine : MonoBehaviour
                 if (LapPlayerFour == MaxLaps)
                 {
                     GameObject.Find("Timer4").GetComponent<Timer>().PlayTimer = false;
+                    EndGame(other.gameObject.GetComponent<Goat>());
                 }
             }
         }
+    }
+
+    private void EndGame(Goat player)
+    {
+      
     }
 }

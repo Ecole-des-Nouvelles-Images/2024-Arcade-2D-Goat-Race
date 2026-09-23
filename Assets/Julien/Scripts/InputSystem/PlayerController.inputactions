@@ -85,6 +85,17 @@
                 },
                 {
                     "name": "",
+                    "id": "15a66ab7-b18f-4726-ad53-50c3a948f3cf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4c4a0f13-50bb-4471-b53a-8fc3ea52161b",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "Press",
@@ -96,11 +107,33 @@
                 },
                 {
                     "name": "",
+                    "id": "e9efb515-a5e8-4835-8494-ae5d9d31296b",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6ed0a455-29d8-4300-a60f-58136b70954d",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Controller1;Controller2",
+                    "action": "Attaque",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edc332d4-c31a-478b-a805-1dd4c3725ca8",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Attaque",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -173,8 +206,30 @@
                 },
                 {
                     "name": "",
+                    "id": "a87f2498-aa63-4426-8065-d546b8c5f342",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseBonus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6da43f06-466a-425d-882d-00b9b24a448e",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "775d2b6d-e42f-4ba1-9286-f1750c8f77b9",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
